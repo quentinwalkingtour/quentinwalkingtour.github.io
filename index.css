@@ -1145,90 +1145,89 @@ button:hover {
   padding-top: 4rem;
 
   background-color: #00000088;
+}
 
-  .booking-section-container {
-    position: relative;
-    margin: auto;
-    max-width: calc(100vw - 2rem);
-    width: 420px;
-    /* background-color: white; */
-    background-color: var(--blanc);
-    /* background-color: var(--bleu-clair); */
-    /* color: var(--blanc); */
-    /* color: white; */
-    border-radius: 1.25rem;
-    padding: 1.25rem;
-  }
+.booking-section .booking-section-container {
+  position: relative;
+  margin: auto;
+  max-width: calc(100vw - 2rem);
+  width: 420px;
+  /* background-color: white; */
+  background-color: var(--blanc);
+  /* background-color: var(--bleu-clair); */
+  /* color: var(--blanc); */
+  /* color: white; */
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+}
 
-  h2 {
-    margin-top: 2.5rem;
-    margin-bottom: 1rem;
-  }
+.booking-section h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
 
-  ul {
-    padding-left: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin: -0.25rem;
-  }
+.booking-section ul {
+  padding-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: -0.25rem;
+}
 
-  li {
-    margin-bottom: 0.25rem;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 auto;
-            flex: 1 1 auto;
-    padding: 0.25rem;
+.booking-section li {
+  margin-bottom: 0.25rem;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 0.25rem;
 
 
-  }
+}
 
-  li>a {
-    position: relative;
-    background-color: white;
-    display: block;
-    text-decoration: none;
-    border-radius: 0.5rem;
-    border: 1px solid #e0e0e0;
-    padding: 1rem;
-    font-weight: 500;
-    font-size: 1rem;
+.booking-section li a {
+  position: relative;
+  background-color: white;
+  display: block;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  border: 1px solid #e0e0e0;
+  padding: 1rem;
+  font-weight: 500;
+  font-size: 1rem;
 
-    max-width: calc(100vw - 4.5rem);
-    white-space: nowrap;
-    -o-text-overflow: ellipsis;
-       text-overflow: ellipsis;
-    overflow: hidden;
+  max-width: calc(100vw - 4.5rem);
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
 
-  }
+}
 
-  li>a>div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+.booking-section li a>div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 
-    white-space: nowrap;
-    -o-text-overflow: ellipsis;
-       text-overflow: ellipsis;
-  }
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
 
-  li>a svg {
-    height: 1.5rem;
-    width: 1.5rem;
-    display: block;
-  }
+.booking-section li a svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  display: block;
+}
 
-  li>a .canal {
-    margin-left: 1rem;
+.booking-section li a .canal {
+  margin-left: 1rem;
 
-    white-space: nowrap;
-    -o-text-overflow: ellipsis;
-       text-overflow: ellipsis;
-  }
-
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
 }
