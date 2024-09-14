@@ -1077,42 +1077,46 @@ button:hover {
     flex: 1 1 auto;
     padding: 0.25rem;
 
-    a {
-      position: relative;
-      background-color: white;
-      display: block;
-      text-decoration: none;
-      border-radius: 0.5rem;
-      border: 1px solid #e0e0e0;
-      padding: 1rem;
-      font-weight: 500;
-      font-size: 1rem;
 
-      max-width: calc(100vw - 4.5rem);
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      overflow: hidden;
-
-      &>div {
-        display: flex;
-        align-items: center;
-
-        white-space: nowrap;
-        text-overflow: ellipsis;
-      }
-
-      svg {
-        height: 1.5rem;
-        width: 1.5rem;
-        display: block;
-      }
-
-      .canal {
-        margin-left: 1rem;
-
-        white-space: nowrap;
-        text-overflow: ellipsis;
-      }
-    }
   }
+
+  li>a {
+    position: relative;
+    background-color: white;
+    display: block;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    border: 1px solid #e0e0e0;
+    padding: 1rem;
+    font-weight: 500;
+    font-size: 1rem;
+
+    max-width: calc(100vw - 4.5rem);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+  }
+
+  li>a>div {
+    display: flex;
+    align-items: center;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  li>a svg {
+    height: 1.5rem;
+    width: 1.5rem;
+    display: block;
+  }
+
+  li>a .canal {
+    margin-left: 1rem;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
 }
