@@ -1,5 +1,5 @@
 {
-    "name": "",
+    "name": "Quentin Walking Tour",
     "short_name": "",
     "icons": [
         {
@@ -15,5 +15,4 @@
     ],
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
-    "display": "standalone"
 }
