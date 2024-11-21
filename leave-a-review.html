@@ -3,16 +3,17 @@
 
 <head>
 
-  <base href="./">  
+  <base href="./">
   <meta charset="utf-8" />
   <meta name="google-site-verification" content="WhVI1ZPmXv0eC_pabQ-P5D43AC33qD6M_P371DumlkU" />
-  <title>Quentin's Free Walking Tour of Lyon – Join Us for a Small Group Tour</title>
+  <title>Quentin's Free Walking Tour of Lyon – Join Us for a City Tour</title>
 
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta property="og:site_name" content="Quentin's Free Walking Tour" />
   <meta property="og:title" content="Quentin's Free Walking Tour" />
   <meta property="og:type" content="website" />
-  <meta name="description" content="Join us for a free walking tour of Lyon's must-see sights in small groups. Every day at 5 p.m., I offer a tour to uncover the secrets of Vieux Lyon." />
+  <meta name="description"
+    content="Join us for a free walking tour of Lyon's must-see sights in small groups. Every day at 5 p.m., I offer a tour to uncover the secrets of Vieux Lyon." />
   <meta property="og:description"
     content="Join us for a free walking tour of Lyon's must-see sights in small groups. Every day at 5 p.m., I offer a tour to uncover the secrets of Vieux Lyon." />
   <meta property="og:image" content="https://quentinwalkingtour.com/assets/images/talking-carlos-close.jpg" />
@@ -51,13 +52,16 @@
 
     gtag('config', 'AW-16699236593');
   </script> -->
+
+
+
 </head>
 
 <body style="background-color:var(--blanc);">
- 
+
 
   <!-- Target Section -->
-  <section class="leave-a-review-section" >
+  <section class="leave-a-review-section">
 
     <div class="leave-a-review-container" style="z-index: 1; box-shadow: 0 0 28rem #00000024;">
 
@@ -70,138 +74,198 @@
       </div>
 
       <h2> <span style="color: var(--rouge-clair)">Thank You So Much</span> for Joining Me!</h2>
+
       <p>If you enjoyed the tour, you can support me by <b>leaving a review</b> 💖 </p>
-      
-      <h4>On which platform did you book the tour?</h3>
-      <ul >
+      <div id="allPlateformsSection">
+        <h4>On which platform did you book the tour?</h3>
 
-        <!-- GuruWalk -->
-        <li>
-          <a target="_blank" class="contact-item" href="https://www.guruwalk.com/walks/57263-uncover-lyon-s-history-and-must-sees-with-a-lyonnais/reviews/new?origen=tour_page" target="_blank" aria-label="WhatsApp">
-            <div>
+          <ul>
+
+            <!-- GuruWalk -->
+            <li>
+              <a target="_blank" class="contact-item" id="guruwalk" href="#">
+                <div>
+                  <div>
+                    <img src="assets/images/icons/guruwalk.png" alt="GuruWalk Logo"
+                      style="height: 1.5rem; width: 1.5rem; margin-right: 0.5rem;">
+
+                  </div>
+                  <div class="canal">
+                    <span>GuruWalk</span>
+                  </div>
+                </div>
+
+                <div style="position: absolute; right: 0.5rem;top: 0; height: 100%;">
+                  <div style="padding: 0.5rem; background: white;">
+                    <svg style="height: 1.6rem; width: 1.6rem;" xmlns="http://www.w3.org/2000/svg" class="ionicon"
+                      viewBox="0 0 512 512">
+                      <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="48" d="M184 112l144 144-144 144" />
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <!-- GetYourGuide -->
+            <li>
+              <a target="_blank" class="contact-item" id="getyourguide" href="#">
+                <div>
+                  <div>
+                    <img src="assets/images/icons/getyourguide.png" alt="GetYourGuide Logo"
+                      style="height: 1.5rem; width: 1.5rem; margin-right: 0.5rem;">
+
+                  </div>
+                  <div class="canal">
+                    <span>GetYourGuide</span>
+                  </div>
+                </div>
+
+                <div style="position: absolute; right: 0;top: 0; height: 100%;">
+                  <div style="padding: 0.5rem 1rem 0.5rem 0.5rem; background: white;">
+                    <svg style="height: 1.6rem; width: 1.6rem;" xmlns="http://www.w3.org/2000/svg" class="ionicon"
+                      viewBox="0 0 512 512">
+                      <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="48" d="M184 112l144 144-144 144" />
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <!-- Tripadvisor -->
+            <li>
+              <a target="_blank" class="contact-item" id="tripadvisor" href="#">
+                <div>
+                  <div>
+                    <img src="assets/images/icons/tripadvisor-icon.png" alt="Tripadvisor Logo"
+                      style="height: 1.5rem; width: 1.5rem; margin-right: 0.5rem;">
+
+                  </div>
+                  <div class="canal">
+                    <span>Tripadvisor</span>
+                    <div style="font-size: 0.8rem; color: #6b6b6b; font-weight: 400; margin-top: 0.4rem;">Viator</div>
+                  </div>
+                </div>
+
+                <div style="position: absolute; right: 0;top: 0; height: 100%;">
+                  <div style="padding: 0.5rem 1rem 0.5rem 0.5rem; background: white;">
+                    <svg style="height: 1.6rem; width: 1.6rem;" xmlns="http://www.w3.org/2000/svg" class="ionicon"
+                      viewBox="0 0 512 512">
+                      <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="48" d="M184 112l144 144-144 144" />
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+
+
+          </ul>
+
+          
+
+      </div>
+      <div id="onlyTripadvisorSection">
+        <ul>
+          <!-- Only Tripadvisor -->
+          <li>
+            <a target="_blank" class="contact-item" id="onlyTripadvisor" href="#">
               <div>
-                <img src="assets/images/icons/guruwalk.png" alt="GuruWalk Logo" style="height: 1.5rem; width: 1.5rem; margin-right: 0.5rem;">
-
+                <div>
+                  <img src="assets/images/icons/tripadvisor-icon.png" alt="Tripadvisor Logo"
+                    style="height: 1.5rem; width: 1.5rem; margin-right: 0.5rem;">
+  
+                </div>
+                <div class="canal">
+                  <span>Tripadvisor</span>
+                  
+                </div>
               </div>
-              <div class="canal">
-                <span>GuruWalk</span>
-                <!-- <div style="font-size: 0.8rem; color: #a8a8a8; font-weight: 400; margin-top: 0.4rem;">Whatsapp</div> -->
+  
+              <div style="position: absolute; right: 0;top: 0; height: 100%;">
+                <div style="padding: 0.5rem 1rem 0.5rem 0.5rem; background: white;">
+                  <svg style="height: 1.6rem; width: 1.6rem;" xmlns="http://www.w3.org/2000/svg" class="ionicon"
+                    viewBox="0 0 512 512">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="48" d="M184 112l144 144-144 144" />
+                  </svg>
+                </div>
               </div>
-            </div>
-
-            <div style="position: absolute; right: 0.5rem;top: 0; height: 100%;">
-              <div style="padding: 0.5rem; background: white;">
-                <svg style="height: 1.6rem; width: 1.6rem;" xmlns="http://www.w3.org/2000/svg" class="ionicon"
-                  viewBox="0 0 512 512">
-                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                    stroke-width="48" d="M184 112l144 144-144 144" />
-                </svg>
-              </div>
-            </div>
-          </a>
-        </li>
-
-        <!-- GetYourGuide -->
-        <li>
-          <a class="contact-item" href="https://www.getyourguide.com/lyon-l295/lyon-guided-walking-tour-with-a-local-in-small-group-t814552/"  target="_blank" aria-label="Email">
-            <div>
-              <div>
-                <img src="assets/images/icons/getyourguide.png" alt="GetYourGuide Logo" style="height: 1.5rem; width: 1.5rem; margin-right: 0.5rem;">
-
-              </div>
-              <div class="canal">
-                <span>GetYourGuide</span>
-                <!-- <div style="font-size: 0.8rem; color: #a8a8a8; font-weight: 400; margin-top: 0.4rem;">E-mail</div> -->
-              </div>
-            </div>
-
-            <div style="position: absolute; right: 0;top: 0; height: 100%;">
-              <div style="padding: 0.5rem 1rem 0.5rem 0.5rem; background: white;">
-                <svg style="height: 1.6rem; width: 1.6rem;" xmlns="http://www.w3.org/2000/svg" class="ionicon"
-                  viewBox="0 0 512 512">
-                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                    stroke-width="48" d="M184 112l144 144-144 144" />
-                </svg>
-              </div>
-            </div>
-          </a>
-        </li>
-  <!-- Tripadvisor -->
-  <li>
-    <a class="contact-item" href="https://www.tripadvisor.com/UserReviewEdit-g187265-d28211242-Lyon_s_History_and_Must_Sees_with_a_Local_English_Walking_Tour-Lyon_Rhone_Auvergne_Rhone_Al.html"  target="_blank" aria-label="Email">
-      <div>
-        <div>
-          <img src="assets/images/icons/tripadvisor-icon.png" alt="Viator Logo" style="height: 1.5rem; width: 1.5rem; margin-right: 0.5rem;">
-
-        </div>
-        <div class="canal">
-          <span>Tripadvisor</span>
-        </div>
+            </a>
+          </li>
+  
+  
+  
+        </ul>
       </div>
 
-      <div style="position: absolute; right: 0;top: 0; height: 100%;">
-        <div style="padding: 0.5rem 1rem 0.5rem 0.5rem; background: white;">
-          <svg style="height: 1.6rem; width: 1.6rem;" xmlns="http://www.w3.org/2000/svg" class="ionicon"
-            viewBox="0 0 512 512">
-            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-              stroke-width="48" d="M184 112l144 144-144 144" />
-          </svg>
-        </div>
-      </div>
-    </a>
-  </li>
+      <p>🤓 Wherever you booked, you can always leave a review on <b style="color: #00AF87">Tripadvisor</b>.</p>
+      <a class="contact-item" href="https://quentinwalkingtour.com/"
+    style="display: flex; align-items: center; background-color: var(--blanc); border: none; text-decoration: none; color: inherit; margin-top: 2.5rem"
+    target="_blank" aria-label="website">
 
-      <!-- Viator -->
-      <li>
-        <a class="contact-item" href="https://www.viator.com/tours/Lyon/Join-me-for-an-authentic-tour-with-a-Lyonnais/d829-5511082P1"  target="_blank" aria-label="Email">
-          <div>
-            <div>
-              <img src="assets/images/icons/viator.png" alt="Viator Logo" style="height: 1.5rem; width: 1.5rem; margin-right: 0.5rem;">
+    <div style="padding: 0.5rem 1rem 0.5rem 0.5rem;">
+      <svg style="height: 1.6rem; width: 1.6rem; transform: scaleX(-1);" xmlns="http://www.w3.org/2000/svg"
+        class="ionicon" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
+          d="M184 112l144 144-144 144" />
+      </svg>
+    </div>
 
-            </div>
-            <div class="canal">
-              <span>Viator</span>
-            </div>
-          </div>
+    <span style="font-weight: 500;font-size: 1rem;">Back to website</span>
 
-          <div style="position: absolute; right: 0;top: 0; height: 100%;">
-            <div style="padding: 0.5rem 1rem 0.5rem 0.5rem; background: white;">
-              <svg style="height: 1.6rem; width: 1.6rem;" xmlns="http://www.w3.org/2000/svg" class="ionicon"
-                viewBox="0 0 512 512">
-                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                  stroke-width="48" d="M184 112l144 144-144 144" />
-              </svg>
-            </div>
-          </div>
-        </a>
-      </li>
-
-      </ul>
-
-
-          <a class="contact-item" 
-             href="https://quentinwalkingtour.com/"  
-             style="display: flex; align-items: center; background-color: var(--blanc); border: none; text-decoration: none; color: inherit; margin-top: 2.5rem" 
-             target="_blank" 
-             aria-label="website">
-            
-            <div style="padding: 0.5rem 1rem 0.5rem 0.5rem;">
-              <svg style="height: 1.6rem; width: 1.6rem; transform: scaleX(-1);" xmlns="http://www.w3.org/2000/svg" class="ionicon"
-                viewBox="0 0 512 512">
-                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                  stroke-width="48" d="M184 112l144 144-144 144" />
-              </svg>
-            </div>
-            
-            <span style="font-weight: 500;font-size: 1rem;">Back to website</span>
-            
-          </a>
-
+  </a>
     </div>
 
   </section>
 
+  <script>
+    // Map tour-specific links
+    const reviewLinks = {
+      vieuxlyon: {
+        tripadvisor: "https://www.tripadvisor.com/UserReviewEdit-g187265-d28211242-Lyon_s_History_and_Must_Sees_with_a_Local_English_Walking_Tour-Lyon_Rhone_Auvergne_Rhone_Al.html",
+        guruwalk: "https://www.guruwalk.com/walks/57263-uncover-lyon-s-history-and-must-sees-with-a-lyonnais/reviews/new?origen=tour_page",
+        getyourguide: "https://www.getyourguide.com/lyon-l295/lyon-guided-walking-tour-with-a-local-in-small-group-t814552/"
+      },
+      croixrousse: {
+        // A changer quand j'aurais le tour sur tripadvisor
+        tripadvisor: "https://www.tripadvisor.com/UserReviewEdit-g187265-d28211242-Lyon_s_History_and_Must_Sees_with_a_Local_English_Walking_Tour-Lyon_Rhone_Auvergne_Rhone_Al.html",
+        guruwalk: "https://www.guruwalk.com/walks/59213-discover-croix-rousse-hill-without-having-to-climb-up/reviews/new?origen=tour_page",
+        getyourguide: "https://www.getyourguide.com/lyon-l295/lyon-croix-rousse-guided-walking-tour-without-climbing--t875834"
+      }
+    };
 
+    // Get the URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const tour = urlParams.get("tour");
+    const onlyTripadvisor = urlParams.get("onlyTripadvisor") === "true";
+
+    // Update links based on the tour parameter
+    if (reviewLinks[tour]) {
+      document.getElementById("tripadvisor").href = reviewLinks[tour].tripadvisor;
+      document.getElementById("onlyTripadvisor").href = reviewLinks[tour].tripadvisor;
+      document.getElementById("guruwalk").href = reviewLinks[tour].guruwalk;
+      document.getElementById("getyourguide").href = reviewLinks[tour].getyourguide;
+    } else {
+      // Par défaut je renvoie sur le vieux-lyon
+      document.getElementById("tripadvisor").href = reviewLinks["vieuxlyon"].tripadvisor;
+      document.getElementById("onlyTripadvisor").href = reviewLinks["vieuxlyon"].tripadvisor;
+      document.getElementById("guruwalk").href = reviewLinks["vieuxlyon"].guruwalk;
+      document.getElementById("getyourguide").href = reviewLinks["vieuxlyon"].getyourguide;
+    }
+
+    if (onlyTripadvisor) {
+      document.getElementById("allPlateformsSection").style.display = "none";
+      document.getElementById("onlyTripadvisorSection").style.display = "true";
+      document.getElementById("onlyTripadvisor").style.display = "true";
+    }    else {
+      document.getElementById("allPlateformsSection").style.display = "true";
+      document.getElementById("onlyTripadvisorSection").style.display = "none";
+      document.getElementById("onlyTripadvisor").style.display = "none";
+    }
+  </script>
 </body>
 
 </html>
