@@ -121,19 +121,19 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
     /* Style the Croix-Rousse column with a red background for actual days with a tour */
     .tour-schedule td:nth-child(2):not(:empty) {
-      /* background-color: var(--rouge-clair); */
+      background-color: var(--rouge-clair);
       font-size: 0.8rem;
       /* Red for Croix-Rousse */
-      /* color: white; */
+      color: white;
       /* White text on red */
     }
 
     /* Style the Vieux Lyon column with a blue background for actual days with a tour */
     .tour-schedule td:nth-child(3):not(:empty) {
-      /* background-color: var(--bleu-clair); */
+      background-color: var(--bleu-clair);
       font-size: 0.8rem;
       /* Blue for Vieux Lyon */
-      /* color: white; */
+      color: white;
       /* White text on blue */
     }
 
@@ -197,9 +197,9 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 </p>
                 <p style="font-size: 1.5rem ;">🚀 <strong>Join our <span style="color: var(--rouge-clair)">free walking tours</span> 
                   and explore <span style="color:var(--bleu-clair)">Lyon's top sights!</span></strong></p>
-                <p>🏛️ <b>Discover Vieux-Lyon and the Presque-île.</b> My main tour takes you through the historic old town to the city center.
+                <p>🏛️ <b>Discover Vieux-Lyon and the Presque-île.</b> My main tour takes you through the historic old town to the city center, revealing hidden gems along the way.
                 </p>
-                <p>⛰️ <b>The Croix-Rousse hill</b> completes the city overview! 🥳 Here’s the tour: starting at the top of the hill and winding down to the city center!
+                <p>⛰️ <b>The Croix-Rousse hill</b> was missing for a complete overview of the city… 🥳 So here’s the tour I created, starting at the top of the hill and winding down to the city center!
                 </p>
 
                 <table class="tour-schedule">
@@ -207,9 +207,9 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     <tr>
                       <th></th>
                       <th>⛰️ <span style="white-space: nowrap;">Croix-Rousse</span> <br><span
-                          style="font-size: 0.8rem; color: #7a7a7a; font-weight: 400;">The Secrets of the Silk Hill</span></th>
+                          style="font-size: 0.8rem; color: rgb(107, 107, 107); font-weight: 400;">The Secrets of the Silk Hill</span></th>
                       <th>🏛️ <span style="white-space: nowrap;">Vieux Lyon</span><br><span
-                          style="font-size: 0.8rem; color: #7a7a7a; font-weight: 400;">Lyon's Must-See Places</span></th>
+                          style="font-size: 0.8rem; color: rgb(107, 107, 107); font-weight: 400;">Lyon's Must-See Places</span></th>
                     </tr>
                   </thead>
                   <tbody>
@@ -280,26 +280,24 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
       </div>
 
       <h2>Ready to Explore Lyon?</h2>
-      <p>📅 Just tell me when you’d like to join our group, and I'll share all the info you need!</p>
+      <p>Just tell me when you’d like to join our group, and I'll share all the info you need!</p>
 
       <ul>
-        <!-- Vieux-Lyon & Presque-île -->
-        <li>
-          <a target="_blank" class="contact-item"
+        <li><a style="background-image: linear-gradient(45deg, #30b0ff, #19c99d);" target="_blank" class="contact-item"
             href="https://www.guruwalk.com/walks/57263-uncover-lyon-s-history-and-must-sees-with-a-lyonnais"
-             aria-label="WhatsApp">
+            target="_blank" aria-label="WhatsApp">
             <div>
-              <div style="width:20px;text-align: center;">
-                🏛️
+              <div>
+                📅
               </div>
               <div class="canal">
-                <span>Vieux-Lyon & Presque-île</span>
-                <div style="font-size: 0.8rem; color: #a8a8a8; font-weight: 400; margin-top: 0.4rem;">Lyon's Must-See Places</div>
+                <span style="color:white">Book a spot for free!</span>
+                <div style="font-size: 0.8rem; color: white; font-weight: 400; margin-top: 0.4rem;">Fill the form</div>
               </div>
             </div>
-            
+
             <div style="position: absolute; right: 0.5rem;top: 0; height: 100%;">
-              <div style="padding: 0.5rem; background: white;">
+              <div style="padding: 0.5rem; background: transparent;color:white">
                 <svg style="height: 1.6rem; width: 1.6rem;" xmlns="http://www.w3.org/2000/svg" class="ionicon"
                   viewBox="0 0 512 512">
                   <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -307,36 +305,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 </svg>
               </div>
             </div>
-          </a>
-        </li>
-
-        <!-- Croix-Rousse -->
-        <li>
-          <a class="contact-item"
-            href="https://www.getyourguide.com/lyon-l295/lyon-croix-rousse-guided-walking-tour-without-climbing--t875834/"
-            target="_blank" aria-label="Email">
-            <div>
-              <div style="width:20px;text-align: center;">
-                ⛰️
-              </div>
-              <div class="canal">
-                <span>Croix-Rousse</span>
-                <div style="font-size: 0.8rem; color: #a8a8a8; font-weight: 400; margin-top: 0.4rem;">The Secrets of the Silk Hill</div>
-              </div>
-            </div>
-
-            <div style="position: absolute; right: 0;top: 0; height: 100%;">
-              <div style="padding: 0.5rem 1rem 0.5rem 0.5rem; background: white;">
-                <svg style="height: 1.6rem; width: 1.6rem;" xmlns="http://www.w3.org/2000/svg" class="ionicon"
-                  viewBox="0 0 512 512">
-                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                    stroke-width="48" d="M184 112l144 144-144 144" />
-                </svg>
-              </div>
-            </div>
-          </a>
-        </li>
-
+          </a></li>
       </ul>
       <h4>If you have any questions, feel free to contact me!</h4>
 
