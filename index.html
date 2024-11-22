@@ -111,8 +111,15 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
       border-bottom-left-radius: 20px;
       border-bottom-right-radius: 20px;
       color: white;
-      /* font-size: 1rem; */
+      border: none; cursor: pointer;
+      padding:1rem;
     }
+
+    .tour-schedule-grid .tour-column-footer:hover {
+  /* Neutralize other hover effects */
+  transform: none; /* Prevent scaling or other transformations */
+  box-shadow: none; /* Prevent shadow effects */
+}
 
     .tour-schedule-grid .tour-column-footer a {
       display: inline-flex;
@@ -248,21 +255,26 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                   <div class="croixrousse day-Sun">11 AM</div>
                   <div class="vieuxlyon day-Sun">2 PM</div>
 
-                  <div></div>
-                  <div class="tour-column-footer croixrousse" style="background-image: linear-gradient(45deg, #e2212e, #f78032);"><a target="_blank"
-                      href="https://www.getyourguide.com/lyon-l295/croix-rousse-walking-tour-in-lyon-s-most-vibrant-area-t875834/">
-                      Book <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="arrow-icon" fill="none"
-                        stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M9 18l6-6-6-6"></path>
-                      </svg>
-                    </a></div>
-                  <div class="tour-column-footer vieuxlyon" style="background-image: linear-gradient(45deg, #30b0ff, #19c99d);"><a target="_blank"
-                      href="https://www.guruwalk.com/walks/57263-uncover-lyon-s-history-and-must-sees-with-a-lyonnais">
-                      Book <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="arrow-icon" fill="none"
-                        stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M9 18l6-6-6-6"></path>
-                      </svg>
-                    </a></div>
+                  
+                    <div></div>
+                    <button class="tour-column-footer croixrousse" style="background-image: linear-gradient(45deg, #e2212e, #f78032);">
+                      <a target="_blank" href="https://www.getyourguide.com/lyon-l295/croix-rousse-walking-tour-in-lyon-s-most-vibrant-area-t875834/" style="text-decoration: none; color: inherit;">
+                        Book
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="arrow-icon" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M9 18l6-6-6-6"></path>
+                        </svg>
+                      </a>
+                    </button>
+                    
+                    <button class="tour-column-footer vieuxlyon" style="background-image: linear-gradient(45deg, #30b0ff, #19c99d);">
+                      <a target="_blank" href="https://www.guruwalk.com/walks/57263-uncover-lyon-s-history-and-must-sees-with-a-lyonnais" style="text-decoration: none; color: inherit;">
+                        Book
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="arrow-icon" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M9 18l6-6-6-6"></path>
+                        </svg>
+                      </a>
+                    </button>
+                    
                 </div>
 
 
