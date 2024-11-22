@@ -121,11 +121,31 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     .tour-schedule-grid .tour-column-footer {
       border-bottom-left-radius: 20px;
       border-bottom-right-radius: 20px;
+      color: white;
       /* font-size: 1rem; */
     }
 
+    .tour-schedule-grid .tour-column-footer a {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      /* Space between text and icon */
+      font-weight: bold;
+      font-size: 1rem;
+      text-decoration: none;
+    }
+
+    .arrow-icon {
+      width: 16px;
+      /* Adjust size */
+      height: 16px;
+      /* Adjust size */
+      stroke: #fff;
+      /* Arrow color */
+    }
+
     .tour-schedule-grid .day {
-      /* padding: 10px; */
+      padding-left: 0px;
       text-align: left;
     }
 
@@ -150,13 +170,6 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     .vieuxlyon {
       background-color: rgba(28, 148, 223, 0.1);
       margin-left: 5px;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 400px) {
-      .tour-schedule-grid {
-        /* font-size: 0.8rem; */
-      }
     }
   </style>
 </head>
@@ -222,12 +235,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     </div>
                   </div>
 
-                  <div class="day-Wed">Wed</div>
-                  <div class="croixrousse"></div>
+                  <div class="day">Wed</div>
+                  <div class="croixrousse">-</div>
                   <div class="vieuxlyon">2 PM</div>
 
                   <div class="day">Thu</div>
-                  <div class="croixrousse"></div>
+                  <div class="croixrousse">-</div>
                   <div class="vieuxlyon">2 PM</div>
 
                   <div class="day">Fri</div>
@@ -243,14 +256,20 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                   <div class="vieuxlyon">2 PM</div>
 
                   <div></div>
-                  <div class="tour-column-footer croixrousse"><a
+                  <div class="tour-column-footer croixrousse" style="background-image: linear-gradient(45deg, #e2212e, #f78032);"><a target="_blank"
                       href="https://www.getyourguide.com/lyon-l295/croix-rousse-walking-tour-in-lyon-s-most-vibrant-area-t875834/">
-                      Book
+                      Book <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="arrow-icon" fill="none"
+                        stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 18l6-6-6-6"></path>
+                      </svg>
                     </a></div>
-                  <div class="tour-column-footer vieuxlyon"><a
-                    href="https://www.guruwalk.com/walks/57263-uncover-lyon-s-history-and-must-sees-with-a-lyonnais">
-                    Book
-                  </a></div>
+                  <div class="tour-column-footer vieuxlyon" style="background-image: linear-gradient(45deg, #30b0ff, #19c99d);"><a target="_blank"
+                      href="https://www.guruwalk.com/walks/57263-uncover-lyon-s-history-and-must-sees-with-a-lyonnais">
+                      Book <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="arrow-icon" fill="none"
+                        stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 18l6-6-6-6"></path>
+                      </svg>
+                    </a></div>
                 </div>
 
 
