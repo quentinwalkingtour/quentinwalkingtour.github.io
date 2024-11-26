@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        #reviews-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+        .review-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            max-width: 240px;
+            min-width: 240px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        .review-header h3 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        .review-header .rating {
+            font-size: 0.9em;
+            color: #ff9800;
+        }
+        .review-text {
+            font-size: 0.95em;
+            margin: 10px 0;
+            flex-grow: 1;
+        }
+        .review-footer {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8em;
+            color: #666;
+            margin-top: 10px;
+        }
+        .review-footer .country {
+            text-align: left;
+        }
+        .review-footer .platform {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Customer Reviews</h1>
+    <div id="reviews-container">
+        <!-- Les avis seront insérés ici dynamiquement -->
+    </div>
+    <script src="reviews.js">
+      
+    </script>
+</body>
+</html>
