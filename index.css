@@ -2,7 +2,7 @@
   --rouge-fonce: #780000;
   --rouge-clair: #C1121F;
   --blanc: #FDF0D5;
-  --bleu-fonce: rgb(0, 48, 73);
+  --bleu-fonce: #003049;
   --bleu-fonce-rgb: 0, 48, 73;
   --bleu-clair: #669BBC;
 
@@ -1160,12 +1160,12 @@ button:hover {
   padding: 1.25rem;
 }
 
-.booking-section h2 {
+.booking-section-container h2 {
   margin-top: 2.5rem;
   margin-bottom: 1rem;
 }
 
-.booking-section ul {
+.booking-section-container ul {
   padding-left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1175,7 +1175,7 @@ button:hover {
   margin: -0.25rem;
 }
 
-.booking-section li {
+.booking-section-container li {
   margin-bottom: 0.25rem;
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
@@ -1185,7 +1185,7 @@ button:hover {
 
 }
 
-.booking-section li a {
+.booking-section-container li a {
   position: relative;
   background-color: white;
   display: block;
@@ -1195,7 +1195,7 @@ button:hover {
   padding: 1rem;
   font-weight: 500;
   font-size: 1rem;
-
+  color:black;
   max-width: calc(100vw - 4.5rem);
   white-space: nowrap;
   -o-text-overflow: ellipsis;
@@ -1204,7 +1204,7 @@ button:hover {
 
 }
 
-.booking-section li a>div {
+.booking-section-container li a>div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1217,13 +1217,13 @@ button:hover {
   text-overflow: ellipsis;
 }
 
-.booking-section li a svg {
+.booking-section-container li a svg {
   height: 1.5rem;
   width: 1.5rem;
   display: block;
 }
 
-.booking-section li a .canal {
+.booking-section-container li a .canal {
   margin-left: 1rem;
 
   white-space: nowrap;
@@ -1330,4 +1330,110 @@ button:hover {
   text-overflow: ellipsis;
 }
 
+.tour-schedule-grid {
+  display: grid;
+  grid-template-columns: auto repeat(2, 1fr);
+  /* gap: 5px; */
+  margin: 20px 0px;
+}
 
+.tour-schedule-grid .header {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+
+.tour-schedule-grid .tour-column {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  /* font-size: 1rem; */
+}
+
+.tour-schedule-grid .tour-column-footer {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color: white;
+  border: none; cursor: pointer;
+  padding:1rem;
+}
+
+.tour-schedule-grid .tour-column-footer:hover {
+/* Neutralize other hover effects */
+transform: none; /* Prevent scaling or other transformations */
+box-shadow: none; /* Prevent shadow effects */
+}
+
+.tour-schedule-grid .tour-column-footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  /* Space between text and icon */
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.arrow-icon {
+  width: 16px;
+  /* Adjust size */
+  height: 16px;
+  /* Adjust size */
+  stroke: #fff;
+  /* Arrow color */
+}
+
+.tour-schedule-grid .day {
+  padding-left: 0px;
+  text-align: left;
+}
+
+.tour-schedule-grid div {
+  padding: 10px;
+  text-align: center;
+
+  /* border-radius: 10px; */
+}
+
+.tour-schedule-grid a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.croixrousse {
+  background-color: rgba(193, 18, 31, 0.06);
+  margin-right: 5px;
+}
+
+.vieuxlyon {
+  background-color: rgba(28, 148, 223, 0.1);
+  margin-left: 5px;
+}
+
+.bold-day {
+font-weight: bold;
+}
+
+.contact-item{
+  cursor: pointer;
+}
+
+
+/* Full-width container */
+.tripadvisor-widget-container {
+  width: 100%; /* Take the full width of the page */
+  margin: 0 auto; /* Center the container */
+  background-color: #f8f8f8; /* Optional background color */
+  padding: 20px 0; /* Add vertical padding for better spacing */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+/* Image styling to ensure responsiveness */
+.tripadvisor-widget-container img {
+  max-width: 100%; /* Scale down if larger than container */
+  height: auto; /* Maintain aspect ratio */
+}
