@@ -147,7 +147,9 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
         />
       </symbol>
     </svg>
-    <div class="main">
+
+    <!-- Intro section -->
+    <section class="main">
       <div class="inner">
         <div id="container01" class="container columns">
           <div class="wrapper">
@@ -311,9 +313,9 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Target Section -->
+    <!-- Booking Section -->
     <section
       class="booking-section"
       style="
@@ -592,9 +594,20 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
       </div>
     </section>
 
-    
+    <!-- Review section -->
+    <section class="review-section-container">
+      <h2>What Others Travelers Think Of This Tour 🤠</h2>
+      <div class="reviews-section">
+        <!-- Reviews will be inserted here dynamically -->
+      </div>
 
-    <div class="main">
+      <script src="reviews.js">
+    
+      </script>
+  </section>
+
+    <!-- Practical Informations section -->
+    <section class="main">
       <div class="inner">
         <div id="container01" class="container columns">
           <div class="wrapper">
@@ -639,8 +652,10 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
           </div>
         </div>
       </div>
-    </div>
-    <div class="main">
+    </section>
+
+    <!-- Historical Informations section -->
+    <section class="main">
       <div class="inner">
         <div id="container01" class="container columns">
           <div class="wrapper">
@@ -689,9 +704,10 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="main">
+    <!-- Contact section -->
+    <section class="main">
       <div class="inner">
         <div id="container01" class="container columns">
           <div class="wrapper">
@@ -784,7 +800,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <div style="z-index: 1; position: fixed; bottom: 0; left: 0; width: 100%">
       <div style="margin: auto; max-width: 450px; padding: 1rem">
@@ -819,6 +835,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
         <!-- </a> -->
       </div>
     </div>
+
     <script>
       // Get the current day as a string (e.g., 'Wed', 'Thu')
       const currentDay = new Date().toLocaleString("en-US", {

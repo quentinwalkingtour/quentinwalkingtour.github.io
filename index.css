@@ -979,17 +979,22 @@ body:after {
   color: var(--bleu-fonce) !important;
 }
 
-.main:nth-of-type(2) {
+.main:nth-of-type(3) {
+  background: #00b76c;
+}
+
+
+.main:nth-of-type(4) {
   background: var(--bleu-fonce);
   color: var(--blanc) !important;
 }
 
-.main:nth-of-type(3) {
+.main:nth-of-type(5) {
   background: var(--blanc);
   color: var(--rouge-fonce) !important;
 }
 
-.main:nth-of-type(4) {
+.main:nth-of-type(6) {
   background: var(--rouge-fonce);
   color: var(--blanc) !important;
 }
@@ -1436,4 +1441,103 @@ font-weight: bold;
 .tripadvisor-widget-container img {
   max-width: 100%; /* Scale down if larger than container */
   height: auto; /* Maintain aspect ratio */
+}
+
+
+/* REVIEWS SECTION */
+.review-section-container {
+  background-image: linear-gradient(-45deg,#00ac64,  #00cf79);
+  padding: 3rem 0;
+}
+
+@media (max-width: 736px) {
+  .review-section-container {
+    padding: 1rem 0 !important;
+  }
+  .review-section-container h2 {
+    margin-bottom: 2rem !important;
+
+  }
+}
+
+.review-section-container h2 {
+  color: var(--blanc);
+  text-align: center;
+  margin-top:1rem;
+  margin-bottom: 3rem;
+  padding: 0 2rem;
+}
+
+.reviews-section {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 0 2rem;
+  margin-left: 1rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
+}
+
+.reviews-section::-webkit-scrollbar {
+  height: 8px;
+}
+
+.reviews-section::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.reviews-section::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+}
+
+.review-card {
+  min-width: 280px;
+  height: 320px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  scroll-snap-align: start;
+  white-space: normal;
+}
+
+.review-section-container .platform-info {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 17px;
+  color: rgb(82, 82, 82);
+  font-weight: 500;
+}
+
+.review-section-container .platform-logo {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid #dadada;
+}
+
+.review-section-container .reviewer {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.review-section-container .content {
+  margin-top: 10px;
+  font-size: 16px;
+  flex-grow: 1;
+}
+
+.review-section-container .date {
+  font-size: 16px;
+  color: gray;
+  margin-top: 10px;
 }
