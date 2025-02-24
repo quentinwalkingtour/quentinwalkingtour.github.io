@@ -565,7 +565,7 @@ h3 {
 #container01 {
   display: flex;
   width: 100%;
-  min-height: 24rem;
+  /* min-height: 24rem; */
   align-items: center;
   justify-content: center;
   background-image: linear-gradient(45deg, #ffffff, rgb(255, 241, 230));
@@ -1033,21 +1033,20 @@ body:after {
   color: var(--bleu-fonce) !important;
 }
 
-.main:nth-of-type(3) {
-  background: #00b76c;
-}
 
-.main:nth-of-type(4) {
+
+.main:nth-of-type(5) {
   background: var(--bleu-fonce);
   color: var(--blanc) !important;
 }
 
-.main:nth-of-type(5) {
+.main:nth-of-type(6) {
   background: var(--blanc);
   color: var(--rouge-fonce) !important;
 }
 
-.main:nth-of-type(6) {
+
+.main:nth-of-type(7) {
   background: var(--rouge-fonce);
   color: var(--blanc) !important;
 }
@@ -1492,17 +1491,20 @@ li > a .canal-info {
 }
 
 /* REVIEWS SECTION */
-.review-section-container {
-  background-image: linear-gradient(-45deg, #00ac64, #00cf79);
 
-  padding: 3rem 0;
+.review-section-container{
+  background-image: linear-gradient(90deg, #00ac64, #00cf79)
+}
+
+.review-section-container .inner{
+  --padding-vertical: 1rem !important;
 }
 
 .review-section-container h2 {
   /* color: var(--blanc); */
   text-align: center;
 
-  margin-top: 0rem;
+  /* margin-top: 0rem; */
   color: white;
   text-shadow: 0 0px 8px rgba(0, 0, 0, 0.1);
 
@@ -1511,10 +1513,14 @@ li > a .canal-info {
 
 @media (max-width: 736px) {
   .review-section-container {
-    padding: 2rem 0 !important;
+    padding: 0rem 0rem 2rem 0 !important;
   }
   .review-section-container h2 {
-    margin-bottom: 2rem !important;
+    margin: 2rem 0 !important;
+  }
+
+  .reviews-section{
+    padding:0rem !important;
   }
 }
 
@@ -1522,7 +1528,7 @@ li > a .canal-info {
   display: flex;
   gap: 20px;
   overflow-x: auto;
-  padding: 0 2rem;
+  padding: 2rem 2rem;
   margin-left: 1rem;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
@@ -1568,10 +1574,8 @@ li > a .canal-info {
 }
 
 .review-section-container .platform-logo {
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  border: 1px solid #dadada;
+  width: 25px;
+  height: 25px;
 }
 
 .review-section-container .reviewer {
@@ -1590,4 +1594,30 @@ li > a .canal-info {
   font-size: 16px;
   color: gray;
   margin-top: 10px;
+}
+
+/* Platforms rate */
+.platform-rates-container {
+  display: flex;
+  flex-direction: column; /* Stack the cards in a column */
+}
+
+.platform-rates-row {
+  display: flex;
+  flex-direction: column; /* Arrange the cards vertically */
+  gap: 20px;
+}
+
+.platform-rate-card {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  gap:0.5rem;
+  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.1);
+}
+
+.platform-rate-info {
+justify-content: baseline;
 }

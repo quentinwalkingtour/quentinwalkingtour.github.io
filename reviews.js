@@ -136,7 +136,7 @@ async function fetchReviews(url, options = {}) {
     .filter((review) => review.rating > 4)
     .filter((review) => !!review.text)
     .sort((a, b) => b.date - a.date) // Sort by date descending
-    .slice(0, 10); // Limit to 10 reviews
+    .slice(0, 20); // Limit to 10 reviews
 }
 
 function displayReviews(reviews) {
