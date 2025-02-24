@@ -1576,6 +1576,7 @@ li > a .canal-info {
 .review-section-container .platform-logo {
   width: 25px;
   height: 25px;
+  border-radius: 60px;
 }
 
 .review-section-container .reviewer {
@@ -1599,6 +1600,7 @@ li > a .canal-info {
 /* Platforms rate */
 .platform-rates-container {
   display: flex;
+
   flex-direction: column; /* Stack the cards in a column */
 }
 
@@ -1611,8 +1613,9 @@ li > a .canal-info {
 .platform-rate-card {
   display: flex;
   align-items: center;
-  background-color: white;
-  padding: 10px;
+  color:white;
+  background-color: #009758;
+    padding: 10px;
   border-radius: 8px;
   gap:0.5rem;
   box-shadow: 0 0px 8px rgba(0, 0, 0, 0.1);
