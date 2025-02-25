@@ -9,6 +9,10 @@ on:
       - 'assets/images/**'
   workflow_dispatch:  # Allows manual triggering from GitHub UI
 
+# Add permissions to allow GitHub Actions to push to the repository
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
