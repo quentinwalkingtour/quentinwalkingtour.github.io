@@ -5,6 +5,7 @@ import shutil
 import argparse
 import json
 import re
+from datetime import datetime
 
 def generate_blog_posts(config_file='blog-posts.yaml', template_file='template-blog.html', output_dir='blog', index_file='index.html'):
     # Create output directory if it doesn't exist
@@ -24,15 +25,30 @@ def generate_blog_posts(config_file='blog-posts.yaml', template_file='template-b
     # Generate each post
     for post in posts:
         # Convert markdown content to HTML
-        content_html = markdown.markdown(post['content'])
+        content_html = markdown.markdown(post['content'], extensions=['extra'])
         
-        # Fill template
+        # Get current date if not specified
+        post_date = post.get('date', datetime.now().strftime('%Y-%m-%d'))
+        modified_date = post.get('modified_date', post_date)
+        
+        # Create a slug if not provided
+        slug = post.get('slug', post['title'].lower().replace(' ', '-').replace("'", '').replace('"', ''))
+        
+        # Fill template with basic content
         post_html = template.replace('{{title}}', post['title'])
         post_html = post_html.replace('{{image}}', post['image'])
         post_html = post_html.replace('{{content}}', content_html)
         
-        # Generate filename from title
-        filename = post['title'].lower().replace(' ', '-').replace("'", '').replace('"', '') + '.html'
+        # Add SEO meta tags
+        post_html = post_html.replace('{{description}}', post.get('description', f"Learn about {post['title']} with Quentin Walking Tour in Lyon"))
+        post_html = post_html.replace('{{keywords}}', post.get('keywords', f"Lyon, tour, {post['title']}, walking tour"))
+        post_html = post_html.replace('{{author}}', post.get('author', 'Quentin'))
+        post_html = post_html.replace('{{date}}', post_date)
+        post_html = post_html.replace('{{modified_date}}', modified_date)
+        post_html = post_html.replace('{{category}}', post.get('category', 'Lyon Tours'))
+        
+        # Generate filename from slug
+        filename = f"{slug}.html"
         output_path = Path(output_dir) / filename
         
         # Write the file
@@ -48,8 +64,14 @@ def generate_blog_posts(config_file='blog-posts.yaml', template_file='template-b
         # Add post to the list for index
         post_list.append({
             'title': post['title'],
-            'url': f"{output_dir}/{filename}"
+            'url': f"{output_dir}/{filename}",
+            'description': post.get('description', ''),
+            'date': post_date,
+            'category': post.get('category', 'Lyon Tours')
         })
+    
+    # Sort posts by date (newest first)
+    post_list.sort(key=lambda x: x['date'], reverse=True)
     
     # Update the index.html with the blog post list
     if Path(index_file).exists():

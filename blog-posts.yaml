@@ -1,23 +1,27 @@
 - title: "Discover Old Lyon's Traboules"
   image: "assets/images/Tour rose 2.jpg"
+  slug: "discover-old-lyon-traboules"  # URL-friendly version of the title
+  description: "Explore the hidden Renaissance passageways of Old Lyon with an expert local guide. Learn the history of Lyon's famous traboules."
+  keywords: "traboules, Old Lyon, Renaissance passageways, Lyon tours, secret passages"
+  author: "Quentin"
+  date: "2024-02-20"  # Publication date for search engines
+  modified_date: "2024-02-25"  # Last update date (optional)
+  category: "Historic Tours"
   content: |
     # Explore the Hidden Passageways of Old Lyon
     
-    The traboules ofeeee Old Lyon are Renaissance-era passageways that wind through 
+    The traboules of Old Lyon are Renaissance-era passageways that wind through 
     buildings and courtyards. These hidden corridors were originally used by 
     silk merchants to transport their goods...
 
 - title: "Croix-Rousse Silk District Tour"
   image: "assets/images/Groupe cours italienne.jpeg"
-  content: |
-    # The Historic Silk District of Lyon
-    
-    The Croix-Rousse district was once the heart of Lyon's silk industry.
-    In this neighborhood, you can still see the tall buildings designed 
-    specifically for silk workers...
-
-- title: "Where to have a drink in Lyon?"
-  image: "assets/images/Facade cathedrale.jpeg"
+  slug: "croix-rousse-silk-district-tour"
+  description: "Discover Lyon's historic silk industry in the Croix-Rousse district. Visit workshops, see demonstrations, and learn about Lyon's silk-weaving heritage."
+  keywords: "Croix-Rousse, silk district, canuts, Lyon silk industry, weaving workshops"
+  author: "Quentin"
+  date: "2024-02-18"
+  category: "Cultural Tours"
   content: |
     # The Historic Silk District of Lyon
     

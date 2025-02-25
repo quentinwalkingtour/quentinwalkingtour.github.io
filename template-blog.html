@@ -1,13 +1,71 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
     <title>{{title}} - Quentin Walking Tour Lyon</title>
-    <!-- You can include your shared head content here -->
-    <link rel="stylesheet" href="../index.css">
-    <!-- Add any SEO meta tags -->
-    <meta name="description" content="Discover {{title}} with Quentin Walking Tour in Lyon, France">
+    <meta name="title" content="{{title}} - Quentin Walking Tour Lyon">
+    <meta name="description" content="{{description}}">
+    <meta name="keywords" content="{{keywords}}">
+    <meta name="author" content="{{author}}">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://quentinwalkingtour.github.io/blog/{{slug}}.html">
+    <meta property="og:title" content="{{title}} - Quentin Walking Tour Lyon">
+    <meta property="og:description" content="{{description}}">
+    <meta property="og:image" content="https://quentinwalkingtour.github.io/{{image}}">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://quentinwalkingtour.github.io/blog/{{slug}}.html">
+    <meta property="twitter:title" content="{{title}} - Quentin Walking Tour Lyon">
+    <meta property="twitter:description" content="{{description}}">
+    <meta property="twitter:image" content="https://quentinwalkingtour.github.io/{{image}}">
+    
+    <!-- Article specific metadata -->
+    <meta property="article:published_time" content="{{date}}">
+    <meta property="article:modified_time" content="{{modified_date}}">
+    <meta property="article:section" content="{{category}}">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://quentinwalkingtour.github.io/blog/{{slug}}.html">
+    
+    <!-- Structured Data / Schema.org for TourActivity -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "{{title}}",
+        "image": "https://quentinwalkingtour.github.io/{{image}}",
+        "datePublished": "{{date}}",
+        "dateModified": "{{modified_date}}",
+        "author": {
+            "@type": "Person",
+            "name": "{{author}}"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Quentin Walking Tour Lyon",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://quentinwalkingtour.github.io/assets/favicon/android-chrome-192x192.png"
+            }
+        },
+        "description": "{{description}}"
+    }
+    </script>
+    
+    <!-- CSS and other resources -->
+    <link rel="stylesheet" href="./index.css">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
 </head>
 <body style="background-color: var(--blanc);">
     <section class="main">
@@ -25,6 +83,9 @@
               <div class="full">
                 <div class="text">
                   <h2>{{title}}</h2>
+                  <div class="article-meta">
+                    <h4>{{category}} - {{date}}</h4>
+                </div>
                   {{content}}
 
                  
@@ -137,6 +198,166 @@
                       </li>
                     </ul>
                   </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="main">
+      <div class="inner">
+        <div id="container01" class="container columns">
+          <div class="wrapper">
+            <div class="inner">
+              <div class="full">
+                <div id="image01" class="image full" data-position="top">
+                  <span class="frame"
+                    ><img
+                      src="assets/images/Discussion groupe.jpeg"
+                      alt="Tour of Lyon"
+                  /></span>
+                </div>
+              </div>
+              <div class="full">
+                <div class="text">
+                  <h2>
+                    🚀Join My
+                      <span style="white-space: nowrap;color: var(--rouge-clair)"
+                        >Free Walking Tours</span
+                      >
+                      and Explore
+                      <span style="white-space: nowrap;color: var(--bleu-clair)"
+                        >Lyon’s Top Sights!</span
+                      >
+                  </h2>
+                  <p>
+                    👋 Bonjour! <br />I’m <b>Quentin</b>, a Lyonnais passionate about sharing
+                    French culture and history with foreigners.
+                  </p>
+                  
+                  <p>
+                    🏛️ <b>Discover Vieux-Lyon and the Presque-île.</b> This tour
+                    takes you from Lyon's historic old town to the
+                    heart of the city center.
+                  </p>
+                  <p>
+                    ⛰️ <b>The Croix-Rousse hill.</b> Enjoy stunning views as we
+                    begin at the hilltop and descend to the city center, see Lyon from every angle!
+                  </p>
+
+                  <div class="tour-schedule-grid">
+                    <div class="header"></div>
+                    <div class="header tour-column croixrousse">
+                      <div class="tour-title">
+                        ⛰️ <span style="white-space: nowrap">Croix-Rousse</span
+                        ><br />
+                        <span
+                          style="
+                            display: block;
+                            font-size: 0.8rem;
+                            color: #7a7a7a;
+                            font-weight: 400;
+                          "
+                          >The Secrets of the Silk Hill</span
+                        >
+                      </div>
+                    </div>
+                    <div class="header tour-column vieuxlyon">
+                      <div class="tour-title">
+                        🏛️ <span style="white-space: nowrap">Vieux-Lyon</span
+                        ><br />
+                        <span
+                          style="
+                            display: block;
+                            font-size: 0.8rem;
+                            color: #7a7a7a;
+                            font-weight: 400;
+                          "
+                          >Old town gems</span
+                        >
+                      </div>
+                    </div>
+                    <div class="day day-Thu">Thu</div>
+                    <div class="croixrousse day-Thu">-</div>
+                    <div class="vieuxlyon day-Thu">2 PM</div>
+
+                    <div class="day day-Fri">Fri</div>
+                    <div class="croixrousse day-Fri">11 AM</div>
+                    <div class="vieuxlyon day-Fri">2 PM</div>
+
+                    <div class="day day-Sat">Sat</div>
+                    <div class="croixrousse day-Sat">11 AM</div>
+                    <div class="vieuxlyon day-Sat">2 PM</div>
+
+                    <div class="day day-Sun">Sun</div>
+                    <div class="croixrousse day-Sun">11 AM</div>
+                    <div class="vieuxlyon day-Sun">2 PM</div>
+
+                    <div></div>
+                    <button
+                      class="tour-column-footer croixrousse"
+                      style="
+                        background-image: linear-gradient(
+                          45deg,
+                          #e2212e,
+                          #f78032
+                        );
+                      "
+                      onclick="gtag_report_conversion('book/croix-rousse-booking.html')"
+                    >
+                      <a
+                        target="_blank"
+                        style="text-decoration: none; color: inherit"
+                      >
+                        Book
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          class="arrow-icon"
+                          fill="none"
+                          stroke="#fff"
+                          stroke-width="3"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M9 18l6-6-6-6"></path>
+                        </svg>
+                      </a>
+                    </button>
+
+                    <button
+                      class="tour-column-footer vieuxlyon"
+                      style="
+                        background-image: linear-gradient(
+                          45deg,
+                          #30b0ff,
+                          #19c99d
+                        );
+                      "
+                      onclick="gtag_report_conversion('book/vieux-lyon-booking.html')"
+                    >
+                      <a
+                        target="_blank"
+                        style="text-decoration: none; color: inherit"
+                      >
+                        Book
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          class="arrow-icon"
+                          fill="none"
+                          stroke="#fff"
+                          stroke-width="3"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M9 18l6-6-6-6"></path>
+                        </svg>
+                      </a>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
