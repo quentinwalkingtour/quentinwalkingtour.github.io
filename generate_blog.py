@@ -83,7 +83,8 @@ def update_index_with_posts(index_file, post_list):
         content = f.read()
     
     # Encode the content to prevent issues with special characters (like emojis)
-    content = content.encode('unicode_escape').decode('utf-8')
+    content = re.sub(r'\\', r'\\\\', content)  # Escape backslashes before applying regex
+
 
     # Create the JavaScript array of blog posts
     blog_posts_js = json.dumps(post_list, indent=2)
@@ -98,10 +99,7 @@ def update_index_with_posts(index_file, post_list):
         # If the blog section doesn't exist yet, don't modify the file
         print("Blog posts section not found in index.html")
         return
-    
-        # Decode back the Unicode escape sequences into actual characters
-    updated_content = updated_content.encode('utf-8').decode('unicode_escape')
-    
+        
     # Write the updated content back to the index file
     with open(index_file, 'w', encoding='utf-8') as f:
         f.write(updated_content)
