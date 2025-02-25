@@ -26,7 +26,7 @@ body {
 
   /* font-family: 'Courier Prime', Courier, monospace;
     font-family: 'Inter', Courier, monospace; */
-  font-family: "Archivo", Courier, monospace;
+  font-family: "Archivo", Courier, Arial;
 }
 
 article,
@@ -177,7 +177,7 @@ em {
 code {
   background-color: rgba(144, 144, 144, 0.25);
   border-radius: 0.25em;
-  font-family: "Lucida Console", "Courier New", monospace;
+  font-family: "Archivo", courier, Arial;
   font-size: 0.9em;
   font-weight: normal;
   letter-spacing: 0;
