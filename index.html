@@ -320,6 +320,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     <!-- Booking Section -->
     <section
       class="booking-section"
+      id="booking-section"
       style="
         display: none;
         max-height: 100%;
@@ -379,7 +380,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
           </div>
         </div>
 
-        <h2>Ready to Explore Lyon?</h2>
+        <h2>Ready to <span style="color: var(--bleu-clair)">Explore</span> Lyon?</h2>
         <p>
           📅 Just tell me when you’d like to join our group, and
           <b>I'll share all the info you need!</b>
@@ -667,6 +668,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
       </div>
     </section>
 
+
     <!-- Historical Informations section -->
     <section class="main">
       <div class="inner">
@@ -719,6 +721,18 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
       </div>
     </section>
 
+<!-- Blog Posts Section -->
+<section class="blog-section" id="blog-posts">
+  <h2><span style="color:var(--bleu-fonce)">A Question on Lyon?</span><br>I’ve Got Answers! 🔍</h2>
+  
+  <div class="blog-posts-container">
+    <div class="blog-posts-list" id="blogPostsList">
+      <!-- This will be filled dynamically with JavaScript -->
+    </div>
+    
+    <button class="show-more-btn" id="showMoreBtn">Show more</button>
+  </div>
+</section>
     <!-- Contact section -->
     <section class="main">
       <div class="inner">
@@ -871,6 +885,53 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             console.error("Could not copy text: ", err);
           });
       }
+
+      document.addEventListener('DOMContentLoaded', function() {
+    // This array will be replaced by your blog generator to include all posts
+    const blogPosts = [
+      { title: "Discover Old Lyon's Traboules", url: "blog/discover-old-lyon's-traboules.html" },
+      { title: "Croix-Rousse Silk District Tour", url: "blog/croix-rousse-silk-district-tour.html" },
+      { title: "Discover Old Lyon's Traboules", url: "blog/discover-old-lyon's-traboules.html" },
+      { title: "Croix-Rousse Silk District Tour", url: "blog/croix-rousse-silk-district-tour.html" },{ title: "Discover Old Lyon's Traboules", url: "blog/discover-old-lyon's-traboules.html" },
+      { title: "Croix-Rousse Silk District Tour", url: "blog/croix-rousse-silk-district-tour.html" },{ title: "Discover Old Lyon's Traboules", url: "blog/discover-old-lyon's-traboules.html" },
+      { title: "Croix-Rousse Silk District Tour", url: "blog/croix-rousse-silk-district-tour.html" }
+      // More posts will be added automatically by your generator
+    ];
+    
+    const blogPostsList = document.getElementById('blogPostsList');
+    const showMoreBtn = document.getElementById('showMoreBtn');
+    
+    // Initial display count
+    const initialPostsToShow = 4;
+    let displayedPosts = 0;
+    
+    // Function to show posts
+    function showPosts(count) {
+      for (let i = displayedPosts; i < Math.min(displayedPosts + count, blogPosts.length); i++) {
+        const post = blogPosts[i];
+        const postElement = document.createElement('a');
+        postElement.className = 'blog-post-link';
+        postElement.href = post.url;
+        postElement.textContent = post.title;
+        blogPostsList.appendChild(postElement);
+      }
+      
+      displayedPosts = Math.min(displayedPosts + count, blogPosts.length);
+      
+      // Hide the button if all posts are displayed
+      if (displayedPosts >= blogPosts.length) {
+        showMoreBtn.style.display = 'none';
+      }
+    }
+    
+    // Show initial posts
+    showPosts(initialPostsToShow);
+    
+    // Add event listener to the "Show more" button
+    showMoreBtn.addEventListener('click', function() {
+      showPosts(4); // Show 4 more posts on each click
+    });
+  });
     </script>
   </body>
 </html>

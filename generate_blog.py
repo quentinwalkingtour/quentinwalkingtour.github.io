@@ -3,8 +3,10 @@ import markdown
 from pathlib import Path
 import shutil
 import argparse
+import json
+import re
 
-def generate_blog_posts(config_file='blog-posts.yaml', template_file='template-blog.html', output_dir='blog'):
+def generate_blog_posts(config_file='blog-posts.yaml', template_file='template-blog.html', output_dir='blog', index_file='index.html'):
     # Create output directory if it doesn't exist
     Path(output_dir).mkdir(exist_ok=True)
     
@@ -15,6 +17,9 @@ def generate_blog_posts(config_file='blog-posts.yaml', template_file='template-b
     # Read posts configuration
     with open(config_file, 'r', encoding='utf-8') as f:
         posts = yaml.safe_load(f)
+    
+    # Prepare post list for the index
+    post_list = []
     
     # Generate each post
     for post in posts:
@@ -27,7 +32,7 @@ def generate_blog_posts(config_file='blog-posts.yaml', template_file='template-b
         post_html = post_html.replace('{{content}}', content_html)
         
         # Generate filename from title
-        filename = post['title'].lower().replace(' ', '-') + '.html'
+        filename = post['title'].lower().replace(' ', '-').replace("'", '').replace('"', '') + '.html'
         output_path = Path(output_dir) / filename
         
         # Write the file
@@ -39,21 +44,54 @@ def generate_blog_posts(config_file='blog-posts.yaml', template_file='template-b
         if image_path.exists():
             # Copy image to output directory
             shutil.copy2(image_path, Path(output_dir) / image_path.name)
+        
+        # Add post to the list for index
+        post_list.append({
+            'title': post['title'],
+            'url': f"{output_dir}/{filename}"
+        })
+    
+    # Update the index.html with the blog post list
+    if Path(index_file).exists():
+        update_index_with_posts(index_file, post_list)
+
+def update_index_with_posts(index_file, post_list):
+    # Read the index file
+    with open(index_file, 'r', encoding='utf-8') as f:
+        content = f.read()
+    
+    # Create the JavaScript array of blog posts
+    blog_posts_js = json.dumps(post_list, indent=2)
+    
+    # Replace the placeholder in the script section
+    if 'const blogPosts = [' in content:
+        # Use regex to replace the existing array with the updated one
+        pattern = r'const blogPosts = \[.*?\];'
+        replacement = f'const blogPosts = {blog_posts_js};'
+        updated_content = re.sub(pattern, replacement, content, flags=re.DOTALL)
+    else:
+        # If the blog section doesn't exist yet, don't modify the file
+        print("Blog posts section not found in index.html")
+        return
+    
+    # Write the updated content back to the index file
+    with open(index_file, 'w', encoding='utf-8') as f:
+        f.write(updated_content)
 
 def main():
     parser = argparse.ArgumentParser(description='Generate static blog posts')
     parser.add_argument('--config_file', default='blog-posts.yaml', help='YAML file containing blog post data')
     parser.add_argument('--template_file', default='template-blog.html', help='HTML template file')
     parser.add_argument('--output_dir', default='blog', help='Output directory for generated files')
+    parser.add_argument('--index_file', default='index.html', help='Index file to update with blog posts')
     args = parser.parse_args()
     
     generate_blog_posts(
         config_file=args.config_file,
         template_file=args.template_file,
-        output_dir=args.output_dir
+        output_dir=args.output_dir,
+        index_file=args.index_file
     )
 
 if __name__ == '__main__':
     main()
-
-
