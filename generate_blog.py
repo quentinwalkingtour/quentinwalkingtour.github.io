@@ -71,7 +71,7 @@ def generate_blog_posts(config_file='blog-posts.yaml', template_file='template-b
         })
     
     # Sort posts by date (newest first)
-    post_list.sort(key=lambda x: x['date'], reverse=True)
+    # post_list.sort(key=lambda x: x['date'], reverse=True)
     
     # Update the index.html with the blog post list
     if Path(index_file).exists():
