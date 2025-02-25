@@ -1,68 +1,15 @@
-
-- title: "Exploring Lyon's Traboules"
-  image: "assets/images/traboule.jpg"
-  slug: "exploring-lyon-traboules"
-  description: "Discover the hidden passageways of Lyon, called traboules, and learn how to explore them responsibly."
-  keywords: "traboules, Lyon, hidden passageways, Vieux Lyon, Croix-Rousse, walking tours"
+- title: "Discover Old Lyon's Traboules"
+  image: "assets/images/Tour rose 2.jpg"
+  slug: "discover-old-lyon-traboules"  # URL-friendly version of the title
+  description: "Explore the hidden Renaissance passageways of Old Lyon with an expert local guide. Learn the history of Lyon's famous traboules."
+  keywords: "traboules, Old Lyon, Renaissance passageways, Lyon tours, secret passages"
   author: "Quentin"
-  date: "2025-02-25"
-  modified_date: "2025-02-25"
+  date: "2024-02-20"  # Publication date for search engines
+  modified_date: "2024-02-25"  # Last update date (optional)
   category: "Historic Tours"
-  content: |   
-    Lyon is known for its hidden passageways, called traboules, which are often tucked between buildings. Here's how you can explore them while being respectful to the residents.
-
-    ## How to Access Traboules
-
-    Some traboules are open to the public thanks to agreements between their residents and the city. There are officially 31 open to visitors, and we’ve listed the most interesting ones below.
-
-    ## Visiting Closed Traboules
-
-    Want to visit a closed traboule? You can try early in the morning when the doors are sometimes open for the trash collectors or the postman. Just press the open button, star, or zero and see if it works. 
-
-    **Be careful while walking through traboules:** Many people live in these buildings, so please be discreet. Speak quietly, and wait until you're back on the street before chatting or making noise.
-
-    ## Some Notable Traboules in Vieux Lyon
-
-    - **La Longue Traboule**: This is the most famous traboule in Vieux Lyon. It connects Rue Saint-Jean to Rue du Bœuf through 3 courtyards and 4 buildings.  
-    - **Entrance**: 54 Rue Saint-Jean.
-
-    - **Traboules of Croix-Rousse**: The traboule at the Cour des Voraces, between Place Colbert and Rue Imbert-Colomès, is both a passageway and a staircase. It's a must-see for its history and impressive architecture, with 6 floors and many steps.  
-    - **Entrance**: 9 Place Colbert.
-
-    These traboules are included in our guided tours of Vieux Lyon and its passageways.
-
-- title: "Perfect Day Trips from Lyon"
-  image: "assets/images/perouges.jpg"
-  slug: "perfect-day-trips-from-lyon"
-  description: "Looking for a day trip outside Lyon? Discover beautiful medieval villages, scenic lakes, and picturesque wine valleys—all just a short drive or bus ride away!"
-  keywords: "day trips from Lyon, Pérouges, Annecy, Vienne, Condrieu, medieval villages, lake, wineries, French countryside"
-  author: "Quentin"
-  date: "2025-02-25"
-  modified_date: "2025-02-25"
-  category: "Day Trips"
-  content: |    
-    If you're looking for an day trip from Lyon, there are a few nice destinations to consider. Whether you're into history, nature, or wine, these places are all easily accessible from Lyon, and each offers its own charm.
-
-    ## 1. **Pérouges** – A Beautiful Medieval Village
-
-    Just a short trip from Lyon, Pérouges is one of France’s most beautiful medieval villages. 
-    It’s incredibly well-preserved, giving visitors an idea of what life was like in the Middle Ages. Wander through its streets, admire the charming stone houses, and take in the views of the surrounding countryside.
-
-    - **How to Get There**: You can reach Pérouges by bus in just about 45 minutes from Lyon.
-    - **Highlights**: Don’t forget to try the "Galette de Pérouges," a local pastry.
-
-    ## 2. **Annecy** – A Picturesque City by the Lake
-
-    Annecy, often referred to as the "Venice of the Alps," is a beautiful city located around 1.5 hours from Lyon. With its stunning lake, crystal-clear waters, and charming canals, Annecy is a perfect destination for those looking for a mix of nature, culture, and relaxation. If you were thinking about visiting Geneva, Annecy offers a more tranquil and scenic experience.
-
-    - **How to Get There**: Take a train or bus from Lyon to Annecy, which takes about 1.5 to 2 hours.
-    - **Highlights**: Stroll along the lake, explore the Old Town with its colorful buildings and winding canals, and hike up to the Château d'Annecy for panoramic views.
-
-    ## 3. **Vienne & Condrieu** – Wine Valley Escape
-
-    If you're a wine lover, a trip to Vienne and Condrieu, located south of Lyon, is a must. These charming towns are set along the Rhône River and are home to some of the best wineries in the region. Enjoy a leisurely walk around the valley, take in the stunning landscapes, and stop by some vineyards for wine tastings.
-
-    - **How to Get There**: Vienne is about 30 minutes by train from Lyon. Condrieu is a little further, but you can also reach it by bus or car.
-    - **Highlights**: Visit the Roman ruins in Vienne, including the Temple of Augustus and Livia, and explore the local wineries in Condrieu.
-
-    Let me know if you'd like more details or help planning your trip!
+  content: |
+    # Explore the Hidden Passageways of Old Lyon
+    
+    The traboules of Old Lyon are Renaissance-era passageways that wind through 
+    buildings and courtyards. These hidden corridors were originally used by 
+    silk merchants to transport their goods...
