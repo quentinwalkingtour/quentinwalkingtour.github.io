@@ -1636,7 +1636,6 @@ justify-content: baseline;
 .blog-section h2 {
   text-align: center;
   margin-top: 0;
-  color: var(--blanc) !important;
 }
 
 .blog-posts-container {
@@ -1657,7 +1656,7 @@ justify-content: baseline;
   border-radius: 6px;
   box-shadow: 0 0px 8px rgba(0,0,0,0.1);
   text-decoration: none;
-  background: var(--blanc);
+  background: white;
   color:var(--bleu-fonce);
     transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -1667,7 +1666,7 @@ justify-content: baseline;
   margin: 0 auto;
   padding: 0.5rem 1rem;
   box-shadow: 0 0px 8px rgba(0,0,0,0.1);
-  color: var(--blanc);
+  color: white;
   background-color: var(--bleu-fonce);
   border: none;
   border-radius: 4px;
