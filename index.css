@@ -1616,8 +1616,6 @@ li > a .canal-info {
   padding: 10px;
   border-radius: 8px;
   gap:0.5rem;
-  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.1);
-
 }
 
 .platform-rate-info {
