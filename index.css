@@ -1420,7 +1420,6 @@ li > a .canal-info {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  /* Space between text and icon */
   font-weight: bold;
   font-size: 1rem;
   text-decoration: none;
@@ -1680,8 +1679,10 @@ justify-content: baseline;
   .blog-posts-list {
     grid-template-columns: 1fr 1fr;
   }
+
+  #blog-posts {
+    scroll-margin-top: -100px; /* Ajuste selon ton besoin */
+  }
 }
 
-#blog-posts {
-  scroll-margin-top: 80px; /* Ajuste selon ton besoin */
-}
+
