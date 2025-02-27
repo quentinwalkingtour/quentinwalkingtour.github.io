@@ -1681,3 +1681,7 @@ justify-content: baseline;
     grid-template-columns: 1fr 1fr;
   }
 }
+
+#blog-posts {
+  scroll-margin-top: 80px; /* Ajuste selon ton besoin */
+}
