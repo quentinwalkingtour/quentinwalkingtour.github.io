@@ -147,7 +147,7 @@
               </a>
             </li>
             <li>
-              <a target="_blank" class="contact-item" id="tripadvisor">
+              <a target="_blank" class="contact-item" id="tripadvisor" style="display: none">
                 <div>
                   <div>
                     <img
@@ -200,7 +200,7 @@
           <ul>
             <!-- GetYourGuide -->
             <li>
-              <a target="_blank" class="contact-item" id="getyourguide">
+              <a target="_blank" class="contact-item" id="getyourguide" style="display: none">
                 <div>
                   <div style="display: flex">
                     <img
@@ -246,7 +246,7 @@
             </li>
             <!-- GuruWalk -->
             <li>
-              <a target="_blank" class="contact-item" id="guruwalk" href="#">
+              <a target="_blank" class="contact-item" id="guruwalk" href="#" style="display: none">
                 <div>
                   <div style="display: flex">
                     <img
@@ -297,7 +297,7 @@
 
             <!-- Freetours -->
             <li>
-              <a target="_blank" class="contact-item" id="freetours">
+              <a target="_blank" class="contact-item" id="freetours" style="display: none">
                 <div>
                   <div style="display: flex">
                     <img
@@ -391,13 +391,11 @@
             "https://www.tripadvisor.com/UserReviewEdit-g187265-d28211242-Lyon_s_History_and_Must_Sees_with_a_Local_English_Walking_Tour-Lyon_Rhone_Auvergne_Rhone_Al.html",
           guruwalk:
             "https://www.guruwalk.com/walks/57263-uncover-lyon-s-history-and-must-sees-with-a-lyonnais/reviews/new?origen=tour_page",
-          getyourguide:
-            "https://www.getyourguide.com/lyon-l295/lyon-guided-walking-tour-with-a-local-in-small-group-t814552/",
+
           freetours:
             "https://www.freetour.com/lyon/discover-lyons-history-must-sees-with-a-lyonnais",
         },
         croixrousse: {
-          // A changer quand j'aurais le tour sur tripadvisor
           tripadvisor:
             "https://www.tripadvisor.com/UserReviewEdit-g187265-d32876559-Explore_Lyons_Iconic_Views_and_Hidden_Stories_In_English-Lyon_Rhone_Auvergne_Rhone_Alpes.html",
           guruwalk:
@@ -416,24 +414,20 @@
 
       // Update links based on the tour parameter
       if (reviewLinks[tour]) {
-        document.getElementById("guruwalk").href = reviewLinks[tour].guruwalk;
-        document.getElementById("getyourguide").href =
-          reviewLinks[tour].getyourguide;
-        document.getElementById("freetours").href = reviewLinks[tour].freetours;
-        document.getElementById("tripadvisor").href =
-          reviewLinks[tour].tripadvisor;
-
+        // Loop through all platforms in reviewLinks[tour]
+        Object.keys(reviewLinks[tour]).forEach(platform => {
+          // Update each link by platform ID
+          document.getElementById(platform).href = reviewLinks[tour][platform];
+          document.getElementById(platform).style.display = "block";
+        });
       } else {
-        // Par défaut je renvoie sur la croix-rousse
-        document.getElementById("guruwalk").href =
-          reviewLinks["croixrousse"].guruwalk;
-        document.getElementById("getyourguide").href =
-          reviewLinks["croixrousse"].getyourguide;
-        document.getElementById("freetours").href =
-          reviewLinks["croixrousse"].freetours;
-        document.getElementById("tripadvisor").href =
-          reviewLinks["croixrousse"].tripadvisor;
-
+        // Default to croixrousse if tour not found
+        // Loop through all platforms in the default tour
+        Object.keys(reviewLinks["croixrousse"]).forEach(platform => {
+          // Update each link by platform ID
+          document.getElementById(platform).href = reviewLinks["croixrousse"][platform];
+          document.getElementById(platform).style.display = "block";
+        });
       }
 
       if (onlyTripadvisor) {
