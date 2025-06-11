@@ -1035,18 +1035,17 @@ body:after {
 
 
 
-.main:nth-of-type(5) {
+.main:nth-of-type(6) {
   background: var(--bleu-fonce);
   color: var(--blanc) !important;
 }
 
 
-
-
-.main:nth-of-type(6) {
+.main:nth-of-type(7) {
   background: var(--blanc);
   color: var(--rouge-fonce) !important;
 }
+
 
 .main:nth-of-type(8) {
   background: var(--rouge-fonce);

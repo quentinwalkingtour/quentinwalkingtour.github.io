@@ -11,7 +11,7 @@
     Lyon is a fantastic city to visit, especially if you enjoy walking. Each neighborhood has something unique to offer, and in just one or two days, you can see a lot. Here's a simple itinerary to make the most of your time.  
 
     ### 1. The Basilica of Fourvière  
-    <span style="color:orange;">*Summary: viewpoint, Basilica, amphitheatre.*</span>
+    <span style="color:green;">* **Summary**: viewpoint, Basilica, amphitheatre.*</span>
 
     Start your visit by taking the funicular up to the **Basilica of Fourvière** *(2€ metro ticket from Vieux-Lyon station, line F2)*.
     
@@ -21,7 +21,7 @@
 
 
     ### 2. Old Lyon – The Renaissance District  
-    <span style="color:orange;">*Summary: cathedral, Italian Renaissance architecture, traditional food, traboules (passageways), museums...*</span>
+    <span style="color:green;">* **Summary**: cathedral, Italian Renaissance architecture, traditional food, traboules (passageways), museums...*</span>
 
     This **UNESCO-protected area** is one of the best-preserved Renaissance neighborhoods in Europe. The colorful Italian-style buildings, **Saint-Jean Cathedral**, and the hidden **traboules** (secret passageways) make it a must-see. Take your time wandering the narrow streets, and maybe stop for a local snack like a praline brioche.  
 
@@ -31,7 +31,7 @@
 
 
     ### 3. Croix-Rousse – The Silkworkers' Hill  
-    <span style="color:orange;">*Summary: food market, silk history, vintage shops, hipster area, local restaurants, cafés & bars.*</span>
+    <span style="color:green;">* **Summary**: food market, silk history, vintage shops, hipster area, local restaurants, cafés & bars.*</span>
 
 
     Take the funicular up to **Croix-Rousse**, the historic silk district. This neighborhood has a special atmosphere, with street art, markets, and history around every corner. Walk down the hill and pass by:  
@@ -46,7 +46,7 @@
 
 
     ### 4. The City Center – La Presqu'île  
-    <span style="color:orange;">*Summary: shopping, 19th century architecture, city hall, museums, restaurants.*</span>
+    <span style="color:green;">* **Summary**: shopping, 19th century architecture, city hall, museums, restaurants.*</span>
 
     Between the **Saône** and **Rhône** rivers, this is the lively heart of Lyon. Here, you'll find:  
     - **Place Bellecour**, one of the largest squares in Europe  
@@ -73,7 +73,7 @@
   content: |
     Moving around Lyon is easy and cheap. Note that it's a super walkable city but here are the three main options you can use to explore the city without your feet.
 
-    ### 1. 🚇 <span style="color:blue;">Public Transport (TCL)</span>
+    ###<span style="color:blue;"> 1. 🚇 Public Transport (TCL)</span>
 
     In Lyon, we're quite proud of our public transport. It's **clean, efficient**, and way better than in many cities (<span style="font-style:italic;">hi Parisians 👋</span>).
 
@@ -84,9 +84,9 @@
 
     Buses are also **very reliable**. If your map suggests one, take it... it's usually a good idea.
 
-    ### 2. 🎫 <span style="color:red;">Lyon City Card (for activities)</span>
+    ### <span style="color:red;">2. 🎫 Lyon City Card (for activities)</span>
 
-    As we said in the other article, the **metro is already cheap and easy**, so you don't need a special card just to ride.
+    As I said, the **metro is already cheap and easy**, so you don't need a special card just to ride.
 
     But the **Lyon City Card** can be a **good deal if you plan to do some activities** like museums, river cruises, or guided visits.
 
@@ -94,7 +94,7 @@
 
     You can buy it at the **Tourist Office**, or on their [official website](https://boutique.visiterlyon.com/lyon-city-card). 
 
-    ### 3. 🚲 <span style="color:green;">Rent a Bike (Vélov')</span>
+    ### <span style="color:green;">3. 🚲 Rent a Bike (Vélov')</span>
 
     **Vélov'** is the city bike system in Lyon. You'll see the **red bikes** (regular) and the **green ones** (electric) all over the place.
 
@@ -109,7 +109,7 @@
 
 - title: "How to explore Lyon's traboules?"
   image: "assets/images/traboule.jpg"
-  slug: "How-to-explore-lyon-traboules" # URL-friendly version of the title
+  slug: "How-to-explore-lyon-traboules"
   description: "Discover the hidden passageways of Lyon, called traboules, and learn how to explore them responsibly."
   keywords: "traboules, Lyon, hidden passageways, Vieux Lyon, Croix-Rousse, walking tours"
   author: "Quentin"
@@ -123,16 +123,16 @@
 
     **Be careful while walking through traboules:** Many people live in these buildings, so please be discreet. Speak quietly, and wait until you're back on the street before chatting or making noise.
 
-    #### Some Notable Traboules of Lyon
+    ### Some Notable Traboules of Lyon
 
     - **<span style="color:blue;">La Longue Traboule</span>**: This is the most famous traboule in Vieux Lyon. It connects Rue Saint-Jean to Rue du Bœuf through 3 courtyards and 4 buildings.  
     - *<span style="color:blue;">Entrance: 54 Rue Saint-Jean.</span>*
 
-    - **<span style="color:blue;">La Tour Rose</span>**: A former traboules (you can't got all the way through anymore) where you can still admire a surprisingly pink tower :)*
-    - *<span style="color:blue;">Entrance: 22 Rue du Bœuf.</span>*
+    - **<span style="color:pink;">La Tour Rose</span>**: A former traboules (you can't got all the way through anymore) where you can still admire a surprisingly pink tower :)*
+    - *<span style="color:pink;">Entrance: 22 Rue du Bœuf.</span>*
 
-    - **<span style="color:blue;">La cour des Voraces</span>**: In the downhill of Croix-Rousse, between Place Colbert and Rue Imbert-Colomès. It's a must-see for its history and impressive architecture, with 6 floors and many steps.
-    - *<span style="color:blue;">Entrance: 9 Place Colbert.</span>*
+    - **<span style="color:orange;">La cour des Voraces</span>**: In the downhill of Croix-Rousse, between Place Colbert and Rue Imbert-Colomès. It's a must-see for its history and impressive architecture, with 6 floors and many steps.
+    - *<span style="color:orange;">Entrance: 9 Place Colbert.</span>*
 
     **You can discover even more traboules in my guided tours of Lyon and its passageways :)**
 
