@@ -891,35 +891,42 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     // This array will be replaced by your blog generator to include all posts
     const blogPosts = [
   {
-    "title": "What to Do in Lyon in One or Two Days?",
+    "title": "What to Do in Lyon in <b>One or Two Days</b>?",
     "url": "blog/what-to-do-in-lyon-1-or-2-days.html",
     "description": "A simple itinerary to explore Lyon in one or two days, covering Fourviere, Vieux Lyon, La Presqu'ile, Croix-Rousse, and more.",
     "date": "2025-03-07",
     "category": "Travel Guides"
   },
   {
-    "title": "How to explore Lyon's traboules?",
+    "title": "How to <b>Go Around</b> Lyon?",
+    "url": "blog/how-to-go-around-lyon.html",
+    "description": "Wondering how to get around in Lyon? Here are the best ways to move around the city: metro, bus, funicular, bikes, and tips on the Lyon City Card.",
+    "date": "2025-06-11",
+    "category": "Practical Info"
+  },
+  {
+    "title": "How to explore Lyon's <b>traboules</b>?",
     "url": "blog/How-to-explore-lyon-traboules.html",
     "description": "Discover the hidden passageways of Lyon, called traboules, and learn how to explore them responsibly.",
     "date": "2025-02-25",
     "category": "Historic Tours"
   },
   {
-    "title": "What to Do in Croix-Rousse?",
+    "title": "What to Do in <b>Croix-Rousse</b>?",
     "url": "blog/what-to-do-in-croix-rousse.html",
     "description": "Discover the vibrant Croix-Rousse neighborhood with its unique culture, history, and amazing views of Lyon. From murals to museums, there's so much to explore!",
     "date": "2025-02-25",
     "category": "City Visit"
   },
   {
-    "title": "Where to Party in Lyon?",
+    "title": "Where to <b>Party</b> in Lyon?",
     "url": "blog/party-in-lyon.html",
     "description": "Looking for the best places to party in Lyon? Check out these hot spots for an unforgettable night out, from boat bars to techno clubs!",
     "date": "2025-02-25",
     "category": "Lyon Nightlife"
   },
   {
-    "title": "Perfect Day Trips from Lyon",
+    "title": "Perfect <b>Day Trips</b> from Lyon",
     "url": "blog/perfect-day-trip-from-lyon.html",
     "description": "Looking for a day trip outside Lyon? Discover beautiful medieval villages, scenic lakes, and picturesque wine valleys just a short drive or bus ride away!",
     "date": "2025-02-25",
@@ -931,7 +938,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     const showMoreBtn = document.getElementById('showMoreBtn');
     
     // Initial display count
-    const initialPostsToShow = 4;
+    const initialPostsToShow = 8;
     let displayedPosts = 0;
     
     // Function to show posts
