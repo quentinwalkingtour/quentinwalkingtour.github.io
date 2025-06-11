@@ -10,7 +10,7 @@
   content: |
     Lyon is a fantastic city to visit, especially if you enjoy walking. Each neighborhood has something unique to offer, and in just one or two days, you can see a lot. Here's a simple itinerary to make the most of your time.  
 
-    ### 1. The Basilica of Fourvière  
+    ###<span style="color:blue;"> 1. The Basilica of Fourvière  </span>
     <span style="color:green;">* **Summary**: viewpoint, Basilica, amphitheatre.*</span>
 
     Start your visit by taking the funicular up to the **Basilica of Fourvière** *(2€ metro ticket from Vieux-Lyon station, line F2)*.
@@ -20,7 +20,7 @@
     On your way down, stop by the **Roman theaters of Fourvière**. These ancient ruins, with the city in the background, are really impressive. Walk downhill, and you'll arrive in the heart of **Vieux Lyon** (Old Lyon).  
 
 
-    ### 2. Old Lyon – The Renaissance District  
+    ###<span style="color:red;"> 2. Old Lyon – The Renaissance District  </span>
     <span style="color:green;">* **Summary**: cathedral, Italian Renaissance architecture, traditional food, traboules (passageways), museums...*</span>
 
     This **UNESCO-protected area** is one of the best-preserved Renaissance neighborhoods in Europe. The colorful Italian-style buildings, **Saint-Jean Cathedral**, and the hidden **traboules** (secret passageways) make it a must-see. Take your time wandering the narrow streets, and maybe stop for a local snack like a praline brioche.  
@@ -30,7 +30,7 @@
     **<span style="color:red;">The best way to explore Vieux Lyon is by taking [my guided tour of Lyon and its passageways](https://quentinwalkingtour.com/book/vieux-lyon-booking.html) :)</span>**
 
 
-    ### 3. Croix-Rousse – The Silkworkers' Hill  
+    ###<span style="color:orange;"> 3. Croix-Rousse – The Silkworkers' Hill  </span>
     <span style="color:green;">* **Summary**: food market, silk history, vintage shops, hipster area, local restaurants, cafés & bars.*</span>
 
 
@@ -45,7 +45,7 @@
     **<span style="color:red;">The best way to explore Croix-Rousse is by taking [my guided tour of Croix-Rousse](https://quentinwalkingtour.com/book/croix-rousse-booking.html) :)</span>**
 
 
-    ### 4. The City Center – La Presqu'île  
+    ### 4.<span style="color:grey;"> The City Center – La Presqu'île  </span>
     <span style="color:green;">* **Summary**: shopping, 19th century architecture, city hall, museums, restaurants.*</span>
 
     Between the **Saône** and **Rhône** rivers, this is the lively heart of Lyon. Here, you'll find:  
@@ -56,7 +56,7 @@
     This part of the city was developed in the 19th and early 20th centuries and is full of elegant architecture, shops, and cafés.  
 
     
-    ### 5. Modern Lyon – La Part-Dieu & Les Halles  
+    ### 5.<span style="color:pink;"> Modern Lyon – La Part-Dieu & Les Halles  </span>
     If you have time, explore the modern part of the city beyond the Rhône River. You can visit **La Part-Dieu**, Lyon's business district, or stop by **Les Halles Paul Bocuse**, the famous food market where you can taste Lyon's traditional specialties.  
 
     In just a day or two, you'll get a great feel for Lyon's history, architecture, and food. The best way to explore? Just walk and enjoy the city!
@@ -73,7 +73,7 @@
   content: |
     Moving around Lyon is easy and cheap. Note that it's a super walkable city but here are the three main options you can use to explore the city without your feet.
 
-    ###<span style="color:blue;"> 1. 🚇 Public Transport (TCL)</span>
+    ###<span style="color:red;"> 1. 🚇 Public Transport (TCL)</span>
 
     In Lyon, we're quite proud of our public transport. It's **clean, efficient**, and way better than in many cities (<span style="font-style:italic;">hi Parisians 👋</span>).
 
@@ -84,7 +84,7 @@
 
     Buses are also **very reliable**. If your map suggests one, take it... it's usually a good idea.
 
-    ### <span style="color:red;">2. 🎫 Lyon City Card (for activities)</span>
+    ### <span style="color:blue;">2. 🎫 Lyon City Card (for activities)</span>
 
     As I said, the **metro is already cheap and easy**, so you don't need a special card just to ride.
 
