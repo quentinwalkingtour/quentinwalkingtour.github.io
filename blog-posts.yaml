@@ -73,18 +73,18 @@
   content: |
     Moving around Lyon is easy and cheap. Note that it's a super walkable city but here are the three main options you can use to explore the city without your feet.
 
-    ###<span style="color:red;"> 1. 🚇 Public Transport (TCL)</span>
+    ###<span style="color:var(--bleu-clair);"> 1. 🚇 Public Transport (TCL)</span>
 
     In Lyon, we're quite proud of our public transport. It's **clean, efficient**, and way better than in many cities (<span style="font-style:italic;">hi Parisians 👋</span>).
 
     To use the **metro, tram, bus, or funicular**, you can simply **tap your credit card** at the entrance gate (usually a red box).  
     A ride costs **2€**, and the ticket is valid for **1 hour**, so you can switch lines without paying again.
 
-    Don't miss the **funicular** that goes up to **Croix-Rousse** and **Fourvière**. It's included in the metro system and gives you a nice little ride up the hills.
+    👉 Don't miss the **funicular** that goes up to **Croix-Rousse** and **Fourvière**. It's included in the metro system and gives you a nice little ride up the hills.
 
-    Buses are also **very reliable**. If your map suggests one, take it... it's usually a good idea.
+    👉 Buses are also **very reliable**. If your map suggests one, take it... it's usually a good idea.
 
-    ### <span style="color:blue;">2. 🎫 Lyon City Card (for activities)</span>
+    ### <span style="color:var(--orange);">2. 🎫 Lyon City Card (for activities)</span>
 
     As I said, the **metro is already cheap and easy**, so you don't need a special card just to ride.
 
@@ -92,19 +92,17 @@
 
     For me, if you want to do **more than 3 activities** during your stay, it's worth it.
 
-    You can buy it at the **Tourist Office**, or on their [official website](https://boutique.visiterlyon.com/lyon-city-card). 
+    👉 You can buy it at the **Tourist Office**, or on their [official website](https://boutique.visiterlyon.com/lyon-city-card). 
 
-    ### <span style="color:green;">3. 🚲 Rent a Bike (Vélov')</span>
+    ### <span style="color:var(--rouge-clair);">3. 🚲 Rent a Bike (Vélov')</span>
 
     **Vélov'** is the city bike system in Lyon. You'll see the **red bikes** (regular) and the **green ones** (electric) all over the place.
 
     It's really cheap — about **2€ for 30 minutes**. You can rent one using the **Vélov' app** or directly through their **website**.
 
-    <span style="font-style:italic;">To be honest, the app can be buggy. I usually go with the web version as it works better.</span>
-
     ⚠️ Just make sure there's a **bike station where you're going**, so you can return the bike easily. Don't worry, there are stations pretty much everywhere in the city.
 
-    For me, renting a bike is the best option **if you dare to face the terrible app 😂.**
+    For me, renting a bike is the best option **if you dare to face the app 😂.** To be honest, the app can be buggy. I usually go with the web version as it works better.
 
 
 - title: "How to explore Lyon's traboules?"
@@ -119,22 +117,22 @@
   content: |
     Lyon is known for its hidden passageways, called traboules, which are often tucked between buildings. Some traboules are open to the public thanks to agreements between their residents and the city. 
     
-    *<span style="color:green;">There are officially 31 open to visitors. You can find the open traboules on some maps, **[here is one of them](https://traboules.fr/carte.html)**.</span>*
+    *<span style="color:var(--bleu-clair);">There are officially 31 open to visitors. You can find the open traboules on some maps, **[here is one of them](https://traboules.fr/carte.html)**.</span>*
 
     **Be careful while walking through traboules:** Many people live in these buildings, so please be discreet. Speak quietly, and wait until you're back on the street before chatting or making noise.
 
     ### Some Notable Traboules of Lyon
 
-    - **<span style="color:blue;">La Longue Traboule</span>**: This is the most famous traboule in Vieux Lyon. It connects Rue Saint-Jean to Rue du Bœuf through 3 courtyards and 4 buildings.  
-    - *<span style="color:blue;">Entrance: 54 Rue Saint-Jean.</span>*
+    - **La Longue Traboule** -  54 Rue Saint-Jean
+    - This is the most famous traboule in Vieux Lyon. It connects Rue Saint-Jean to Rue du Bœuf through 3 courtyards and 4 buildings.  
 
-    - **<span style="color:pink;">La Tour Rose</span>**: A former traboules (you can't got all the way through anymore) where you can still admire a surprisingly pink tower :)*
-    - *<span style="color:pink;">Entrance: 22 Rue du Bœuf.</span>*
+    - **La Tour Rose** - 22 Rue du Bœuf
+    - A former traboules (you can't got all the way through anymore) where you can still admire a surprisingly pink tower :)*
 
-    - **<span style="color:orange;">La cour des Voraces</span>**: In the downhill of Croix-Rousse, between Place Colbert and Rue Imbert-Colomès. It's a must-see for its history and impressive architecture, with 6 floors and many steps.
-    - *<span style="color:orange;">Entrance: 9 Place Colbert.</span>*
+    - **La cour des Voraces** - 9 Place Colbert
+    - In the downhill of Croix-Rousse, between Place Colbert and Rue Imbert-Colomès. It's a must-see for its history and impressive architecture, with 6 floors and many steps.
 
-    **You can discover even more traboules in my guided tours of Lyon and its passageways :)**
+    **👉 You can discover even more traboules in my guided tours of Lyon and its passageways :)**
 
 - title: "Is the Lyon City Card Worth It?"
   image: "assets/images/lyon-city-card.jpg"
@@ -148,7 +146,7 @@
   content: |
     The **Lyon City Card** is a tourist pass that gives you **free access to museums**, **public transport**, **river cruises**, and **guided visits**. But is it really worth it? Here's a simple breakdown to help you decide.
 
-    #### 🎟️ <span style="color:#FFC300;">What's included?</span>
+    ### 🎟️ What's included?
 
     With the card, you get:
 
@@ -160,7 +158,7 @@
 
     You can choose between **1, 2, 3 or 4-day cards**.
 
-    #### 💰 <span style="color:green;">How much does it cost?</span>
+    ### 💰 How much does it cost?
 
     - **1 day**: about 30€
     - **2 days**: about 40€
@@ -169,7 +167,7 @@
 
     (There are discounts for kids and students.)
 
-    #### 🤔 <span style="color:blue;">So… is it worth it?</span>
+    ### 🤔 So… is it worth it?
 
     It really depends on your plans.
 
@@ -184,7 +182,7 @@
 
     If you only plan to walk around and visit places from outside, then maybe not. The metro is cheap (2€ per ride), easy to use and many beautiful places are free to explore. Here is my article on [how to move around Lyon](https://quentinwalkingtour.com/blog/how-to-go-around-lyon.html).
 
-    #### 🛒 <span style="color:pink;">Where to buy it?</span>
+    ### 🛒 Where to buy it?
 
     - At the **Tourist Office** on Place Bellecour
     - On the **official website** [link here](https://boutique.visiterlyon.com/lyon-city-card)
@@ -192,15 +190,16 @@
 
     You'll get a **physical card** or a **QR code** to use from your phone.
 
-    #### 🧭 <span style="color:gray;">My tip:</span>
+    ### 🧭 My tip
 
     Take a moment to list what you want to visit in Lyon.  
-    - If you're going to **2 museums, a cruise, and want to use the metro**, go for it.  
-    - If you prefer **just walking and taking one or two metro rides**, maybe skip it.
+
+    - -If you're going to **2 museums, a cruise, and want to use the metro**, go for it.  
+    - -If you prefer **just walking and taking one or two metro rides**, maybe skip it.
 
     Either way, the card is **well made**, easy to use, and really helps you save time — no lines at museums, no need to buy separate tickets. Just tap and go.
 
-    <span style="color:red;">**Anyway, city card or not, joining my tour is free!**</span>
+    **👉 Anyway, city card or not, joining my tour is free!**
 
 
 - title: "What to Do in Croix-Rousse?"
@@ -215,17 +214,17 @@
   content: |
     Croix-Rousse is one of Lyon's most unique neighborhoods. Here's what to check out when you visit:
 
-    1. **Le Mur des Canuts**: The biggest painted wall in Europe, celebrating the rich history of the Croix-Rousse hill and its people. 
+    1. **<span style="color:var(--orange);">Le Mur des Canuts</span>**: The biggest painted wall in Europe, celebrating the rich history of the Croix-Rousse hill and its people. 
 
-    2. **Maison des Canuts**: A small museum dedicated to the silk industry, showcasing the heritage of the local artisans. Don't miss the 19th-century automatic loom! 
+    2. **<span style="color:var(--orange);">Maison des Canuts</span>**: A small museum dedicated to the silk industry, showcasing the heritage of the local artisans. Don't miss the 19th-century automatic loom! 
 
-    3. **The Village Vibe**: As you explore the area, take in the small streets and typical houses that give Croix-Rousse its distinct village charm.
+    3. **<span style="color:var(--orange);">The Village Vibe</span>**: As you explore the area, take in the small streets and typical houses that give Croix-Rousse its distinct village charm.
 
-    4. **La Cour des Voraces**: Find this hidden traboule (passageway) going the way down the hill! It's a must-see for anyone interested in Lyon's secret corridors.
+    4. **<span style="color:var(--orange);">La Cour des Voraces</span>**: Find this hidden traboule (passageway) going the way down the hill! It's a must-see for anyone interested in Lyon's secret corridors.
 
-    5. **Montée de la Grande Côte**: A picturesque street with cafés and modern restaurants. **You can also head back in the evening**, where you'll find plenty of terraces to enjoy a drink with the locals.
+    5. **<span style="color:var(--orange);">Montée de la Grande Côte</span>**: A picturesque street with cafés and modern restaurants. **You can also head back in the evening**, where you'll find plenty of terraces to enjoy a drink with the locals.
 
-    6. **End the Visit at Place des Terreaux**: After exploring Croix-Rousse, head down to the Fine Arts Museum and the City Hall for a cultural experience.
+    6. **<span style="color:var(--orange);">End the Visit at Place des Terreaux</span>**: After exploring Croix-Rousse, head down to the Fine Arts Museum and the City Hall for a cultural experience.
 
 - title: "Where to Party in Lyon?"
   image: "assets/images/nuit-bellecour.jpg"
@@ -239,36 +238,36 @@
   content: |
     If you're ready to party in Lyon, here are some places to check out!
 
-    #### <span style="color:red;">🍻 St. Catherine Street – The Heart of the Party for students</span>
+    #### <span style="color:var(--rouge-clair;)">🍻 St. Catherine Street – The Heart of the Party for students</span>
     
     St. Catherine Street is famous for its nightlife. Every weekend, it's packed with students going from bar to bar. If you are between 18 and 25 years old, this is the place to be.
 
-    #### <span style="color:orange;">🍷 Croix-Rousse - The trendy part of town</span>
+    #### <span style="color:var(--orange;)">🍷 Croix-Rousse - The trendy part of town</span>
 
     Croix-Rousse is a neighborhood full of locals, artists, and students. It has a more relaxed and authentic atmosphere compared to the busy city center. If you want to start your night with a great view, **walk down Montée de la Grande Côte**, a scenic street lined with bars and cafés.
 
-    #### <span style="color:green;">🍀 Old Town & Its Pubs – Classic and Lively</span>
+    #### <span style="color:var(--green;)">🍀 Old Town & Its Pubs – Classic and Lively</span>
 
     Lyon's Old Town (Vieux Lyon) is full of cozy pubs, perfect for a casual night out. The area has a medieval feel, with narrow streets and stone buildings. A few options:
     
     - **The Smoking Dog** – A British-style pub with a great selection of beers.
     - **L'Antiquaire** – A classy bar for delicious cocktails.
 
-    #### <span style="color:blue;">🚢 Boat Bars on the Rhône (Mostly Commercial Pop)</span>
+    #### <span style="color:var(--bleu-clair;)">🚢 Boat Bars on the Rhône (Mostly Commercial Pop)</span>
 
     These floating bars have a great party atmosphere with music and dancing. Try:
 
     - **Café Oz**: [Find on Google Maps](https://maps.app.goo.gl/2mg8cSkegCkRwEvv6)
     - **Sirius**: [Find on Google Maps](https://maps.app.goo.gl/F1mSrSeDQjfJ2m2z7)
 
-    #### <span style="color:purple;">👽 For Techno Lovers</span>
+    #### <span style="color:var(--pink);">👽 For Techno Lovers</span>
 
     If you're into electronic music and want to dance all night, these clubs are for you:
 
     - **Le Sucre**: [Find on Google Maps](https://maps.app.goo.gl/9MmZt1n4bxoRFRrv6)
     - **Le Petit Salon**: [Find on Google Maps](https://maps.app.goo.gl/GW9t8w64AhmrmHNc8)
 
-    #### <span style="color:#FFC300;">💃 For Latin Clubs</span>
+    #### <span style="color:var(--rouge-fonce;)">💃 For Latin Clubs</span>
 
     Love salsa, reggaeton, and Latin beats? Lyon has some great Latin clubs where you can dance the night away:
 
@@ -276,7 +275,7 @@
     - **Barrio Club**: [Find on Google Maps](https://maps.app.goo.gl/WN8uEGTFhbLFMX3w5)
 
 
-    #### <span style="color:grey;">💡 Extra Tips for a Great Night Out</span>
+    #### <span style="color:var(--rouge-clair);">💡 Extra Tips for a Great Night Out</span>
 
     - **Public Transport**: The metro stops running around midnight, but night buses (Noctibus) are available.
     - **Dress Code**: Some clubs have a dress code, so avoid sportswear and sneakers.
@@ -303,20 +302,20 @@
     Just a short trip from Lyon, Pérouges is one of France's most beautiful medieval villages. 
     It's incredibly well-preserved, giving visitors an idea of what life was like in the Middle Ages. 
 
-    - **How to Get There**: You can reach Pérouges by bus in just about 45 minutes from Lyon.
-    - **My Recommandations**: Wander through its streets, admire the charming stone houses, and take in the views of the surrounding countryside. Don't forget to try the "Galette de Pérouges," a local pastry.
+    - **🚇 How to Get There**: You can reach Pérouges by bus in just about 45 minutes from Lyon.
+    - **💡 My Recommandations**: Wander through its streets, admire the charming stone houses, and take in the views of the surrounding countryside. Don't forget to try the "Galette de Pérouges," a local pastry.
 
     #### 2. **Annecy** – A Picturesque City by the Lake
 
     Annecy, often referred to as the "Venice of the Alps," is a beautiful city located around 1.5 hours from Lyon. With its stunning lake, crystal-clear waters, and charming canals. **If you were thinking about visiting Geneva,** Annecy offers a more tranquil and scenic experience.
 
-    - **How to Get There**: Take a train or bus from Lyon to Annecy, which takes about 1.5 to 2 hours.
-    - **My Recommendations**: Walk along the lake, explore the Old Town with its colorful buildings and winding canals, and hike up to the Château d'Annecy for panoramic views.
+    - **🚇 How to Get There**: Take a train or bus from Lyon to Annecy, which takes about 1.5 to 2 hours.
+    - **💡 My Recommendations**: Walk along the lake, explore the Old Town with its colorful buildings and winding canals, and hike up to the Château d'Annecy for panoramic views.
 
     #### 3. **Vienne & Condrieu** – Wine Valley Escape
 
     If you're a wine lover, a trip to Vienne and Condrieu, located south of Lyon, is a must. These charming towns are set along the Rhône River and are home to some of the best wineries in the region. 
 
-    - **How to Get There**: Vienne is about 30 minutes by train from Lyon. Condrieu is a little further, but you can also reach it by bus or car.
-    - **My Recommendations**: Visit the Roman ruins in Vienne, including the Temple of Augustus and Livia, and explore the local wineries in Condrieu.
+    - **🚇 How to Get There**: Vienne is about 30 minutes by train from Lyon. Condrieu is a little further, but you can also reach it by bus or car.
+    - **💡 My Recommendations**: Visit the Roman ruins in Vienne, including the Temple of Augustus and Livia, and explore the local wineries in Condrieu.
 
