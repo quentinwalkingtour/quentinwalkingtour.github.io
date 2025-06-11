@@ -80,14 +80,14 @@
 
     #### Some Notable Traboules of Lyon
 
-    - **La Longue Traboule**: This is the most famous traboule in Vieux Lyon. It connects Rue Saint-Jean to Rue du Bœuf through 3 courtyards and 4 buildings.  
-    - *Entrance: 54 Rue Saint-Jean.*
+    - **<span style="color:blue;">La Longue Traboule</span>**: This is the most famous traboule in Vieux Lyon. It connects Rue Saint-Jean to Rue du Bœuf through 3 courtyards and 4 buildings.  
+    - *<span style="color:green;">Entrance: 54 Rue Saint-Jean.</span>*
 
-    - **La Tour Rose**: A former traboules (you can't got all the way through anymore) where you can still admire a surprisingly pink tower :)*
-    - *Entrance: 22 Rue du Bœuf.*
+    - **<span style="color:blue;">La Tour Rose</span>**: A former traboules (you can't got all the way through anymore) where you can still admire a surprisingly pink tower :)*
+    - *<span style="color:green;">Entrance: 22 Rue du Bœuf.</span>*
 
-    - **La cour des Voraces**: In the downhill of Croix-Rousse, between Place Colbert and Rue Imbert-Colomès. It's a must-see for its history and impressive architecture, with 6 floors and many steps.
-    - *Entrance: 9 Place Colbert.*
+    - **<span style="color:blue;">La cour des Voraces</span>**: In the downhill of Croix-Rousse, between Place Colbert and Rue Imbert-Colomès. It's a must-see for its history and impressive architecture, with 6 floors and many steps.
+    - *<span style="color:green;">Entrance: 9 Place Colbert.</span>*
 
     **You can discover even more traboules in my guided tours of Lyon and its passageways :)**
 
@@ -127,36 +127,36 @@
   content: |
     If you’re ready to party in Lyon, here are some places to check out!
 
-    #### St. Catherine Street – The Heart of the Party for students
+    #### <span style="color:red;">🍻 St. Catherine Street – The Heart of the Party for students</span>
     
     St. Catherine Street is famous for its nightlife. Every weekend, it’s packed with students going from bar to bar. If you are between 18 and 25 years old, this is the place to be.
 
-    #### Croix-Rousse - The trendy part of town
+    #### <span style="color:orange;">🍷 Croix-Rousse - The trendy part of town</span>
 
     Croix-Rousse is a neighborhood full of locals, artists, and students. It has a more relaxed and authentic atmosphere compared to the busy city center. If you want to start your night with a great view, **walk down Montée de la Grande Côte**, a scenic street lined with bars and cafés.
 
-    #### Old Town & Its Pubs – Classic and Lively
+    #### <span style="color:green;">🍀 Old Town & Its Pubs – Classic and Lively</span>
 
     Lyon’s Old Town (Vieux Lyon) is full of cozy pubs, perfect for a casual night out. The area has a medieval feel, with narrow streets and stone buildings. A few options:
     
     - **The Smoking Dog** – A British-style pub with a great selection of beers.
     - **L’Antiquaire** – A classy bar for delicious cocktails.
 
-    #### Boat Bars on the Rhône (Mostly Commercial Pop)
+    #### <span style="color:blue;">🚢 Boat Bars on the Rhône (Mostly Commercial Pop)</span>
 
     These floating bars have a great party atmosphere with music and dancing. Try:
 
     - **Café Oz**: [Find on Google Maps](https://maps.app.goo.gl/2mg8cSkegCkRwEvv6)
     - **Sirius**: [Find on Google Maps](https://maps.app.goo.gl/F1mSrSeDQjfJ2m2z7)
 
-    #### For Techno Lovers
+    #### <span style="color:purple;">👽 For Techno Lovers</span>
 
     If you’re into electronic music and want to dance all night, these clubs are for you:
 
     - **Le Sucre**: [Find on Google Maps](https://maps.app.goo.gl/9MmZt1n4bxoRFRrv6)
     - **Le Petit Salon**: [Find on Google Maps](https://maps.app.goo.gl/GW9t8w64AhmrmHNc8)
 
-    #### For Latin Clubs
+    #### <span style="color:yellow;">💃 For Latin Clubs</span>
 
     Love salsa, reggaeton, and Latin beats? Lyon has some great Latin clubs where you can dance the night away:
 
@@ -164,7 +164,7 @@
     - **Barrio Club**: [Find on Google Maps](https://maps.app.goo.gl/WN8uEGTFhbLFMX3w5)
 
 
-    #### Extra Tips for a Great Night Out
+    #### <span style="color:grey;">💡 Extra Tips for a Great Night Out</span>
 
     - **Public Transport**: The metro stops running around midnight, but night buses (Noctibus) are available.
     - **Dress Code**: Some clubs have a dress code, so avoid sportswear and sneakers.
@@ -220,7 +220,7 @@
   content: |
     Moving around Lyon is easy and cheap. Note that it's a super walkdable city but here are the three main options you can use to explore the city without your feet.
 
-    #### 1. 🚇 <span class="text-blue-600 font-semibold">Public Transport (TCL)</span>
+    ### 1. 🚇 <span style="color:blue;">Public Transport (TCL)</span>
 
     In Lyon, we’re quite proud of our public transport. It’s **clean, efficient**, and way better than in many cities (<span class="italic">hi Parisians 👋</span>).
 
@@ -231,7 +231,7 @@
 
     Buses are also **very reliable**. If your map suggests one, take it... it’s usually a good idea.
 
-    #### 2. 🎫 <span class="text-yellow-600 font-semibold">Lyon City Card (for activities)</span>
+    ### 2. 🎫 <span style="color:red;">Lyon City Card (for activities)</span>
 
     As we said in the other article, the **metro is already cheap and easy**, so you don’t need a special card just to ride.
 
@@ -239,17 +239,82 @@
 
     For me, if you want to do **more than 3 activities** during your stay, it’s worth it.
 
-    You can buy it at the **Tourist Office**, or on their **official website**.  
-    <span class="italic">https://boutique.visiterlyon.com/lyon-city-card</span>
+    You can buy it at the **Tourist Office**, or on their [official website](https://boutique.visiterlyon.com/lyon-city-card). 
 
-    #### 3. 🚲 <span class="text-green-600 font-semibold">Rent a Bike (Vélov’)</span>
+    ### 3. 🚲 <span style="color:green;">Rent a Bike (Vélov’)</span>
 
     **Vélov’** is the city bike system in Lyon. You’ll see the **red bikes** (regular) and the **green ones** (electric) all over the place.
 
-    It’s really cheap — about **2 to 3€ for 30 minutes**. You can rent one using the **Vélov’ app** or directly through their **website**.
+    It’s really cheap — about **2€ for 30 minutes**. You can rent one using the **Vélov’ app** or directly through their **website**.
 
     <span class="italic">To be honest, the app can be buggy. I usually go with the web version as it works better.</span>
 
-    Just make sure there’s a **bike station where you’re going**, so you can return the bike easily. Don’t worry, there are stations pretty much everywhere in the city.
+    ⚠️ Just make sure there’s a **bike station where you’re going**, so you can return the bike easily. Don’t worry, there are stations pretty much everywhere in the city.
 
     For me, renting a bike is the best option **if you dare to face the terrible app 😂.**
+
+
+- title: "Is the Lyon City Card Worth It?"
+  image: "assets/images/lyon-city-card.jpg"
+  slug: "is-the-lyon-city-card-worth-it"
+  description: "Thinking about getting the Lyon City Card? Here's a simple guide to know if it’s a good deal for your stay, based on what you plan to visit and do in the city."
+  keywords: "Lyon City Card, Lyon City Pass, museums in Lyon, Lyon activities, Lyon tourist pass, Lyon river cruise, Lyon museum pass"
+  author: "Quentin"
+  date: "2025-06-11"
+  modified_date: "2025-06-11"
+  category: "Practical Info"
+  content: |
+    The **Lyon City Card** is a tourist pass that gives you **free access to museums**, **public transport**, **river cruises**, and **guided visits**. But is it really worth it? Here’s a simple breakdown to help you decide.
+
+    #### 🎟️ <span style="color:yellow;">What’s included?</span>
+
+    With the card, you get:
+    - Free access to **25+ museums**, including the **Musée des Confluences**, **Fine Arts Museum**, and **Lumière Museum**
+    - Unlimited use of **metro, buses, trams, funiculars** (TCL)
+    - One **cruise on the Saône river** (in season)
+    - Several **guided tours** (Old Lyon, Fourvière, etc.)
+    - Discounts on shows and activities
+
+    You can choose between **1, 2, 3 or 4-day cards**.
+
+    #### 💰 <span style="color:green;">How much does it cost?</span>
+
+    - **1 day**: about 30€
+    - **2 days**: about 40€
+    - **3 days**: about 50€
+    - **4 days**: about 60€
+
+    (There are discounts for kids and students.)
+
+    #### 🤔 <span  style="color:blue;">So… is it worth it?</span>
+
+    It really depends on your plans.
+
+    For me, it’s **worth it if you plan to do at least 3 activities** in one or two days. Here’s a simple example:
+
+    - Musée des Confluences: 12€
+    - River Cruise: 15€
+    - Guided Tour: 14€
+    - Metro Tickets for 1 day: 7€
+
+    ➜ Total: **48€**, and that’s just for 1 day. So yes, in this case, the 1-day card for 30€ is a good deal.
+
+    If you only plan to walk around and visit places from outside, then maybe not. The metro is cheap (2€ per ride), easy to use and many beautiful places are free to explore. Here is my article on [how to move around Lyon](https://quentinwalkingtour.com/blog/how-to-go-around-lyon.html).
+
+    #### 🛒 <span style="color:pink;">Where to buy it?</span>
+
+    - At the **Tourist Office** on Place Bellecour
+    - On the **official website** [link here](https://boutique.visiterlyon.com/lyon-city-card)
+    - In some hotels and partner places
+
+    You’ll get a **physical card** or a **QR code** to use from your phone.
+
+    #### 🧭 <span class="text-gray-700 font-semibold">My tip:</span>
+
+    Take a moment to list what you want to visit in Lyon.  
+    If you’re going to **2 museums, a cruise, and want to use the metro**, go for it.  
+    If you prefer **just walking and taking one or two metro rides**, maybe skip it.
+
+    Either way, the card is **well made**, easy to use, and really helps you save time — no lines at museums, no need to buy separate tickets. Just tap and go.
+
+    <span style="color:red;">**Anyway, city card or not, joining my tour is free!**</span>
