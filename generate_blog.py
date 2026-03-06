@@ -18,6 +18,10 @@ def generate_blog_posts(config_file='blog-posts.yaml', template_file='template-b
     with open(config_file, 'r', encoding='utf-8') as f:
         posts = yaml.safe_load(f)
 
+    if not posts:
+        print('No blog posts found in config file. Skipping generation.')
+        return
+
     post_list = []
 
     for post in posts:
