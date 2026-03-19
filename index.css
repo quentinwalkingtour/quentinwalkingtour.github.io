@@ -2,6 +2,8 @@
   --rouge-fonce: #780000;
   --rouge-clair: #c1121f;
   --blanc: #fdf0d5;
+  --blanc-fonce: #fceac8;
+  --blanc-clair: #fff7e7;
   --bleu-fonce: #003049;
   --bleu-fonce-rgb: 0, 48, 73;
   --bleu-clair: #669bbc;
@@ -1542,51 +1544,80 @@ li > a .canal-info {
 }
 
 .review-card {
-  min-width: 280px;
-  height: 320px;
+  min-width: 290px;
+  max-width: 320px;
   background: white;
-  padding: 20px;
+  padding: 1.2rem 1.3rem 1rem;
   border-radius: 10px;
-  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 0.55rem;
   scroll-snap-align: start;
   white-space: normal;
 }
 
-.review-section-container .platform-info {
-  margin-top: 10px;
+.review-section-container .review-card-header {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0.75rem;
+}
+
+.review-section-container .review-flag {
+  width: 2.2rem;
+  height: 1.65rem;
+  border-radius: 4px;
+  flex-shrink: 0;
+  object-fit: cover;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+.review-section-container .review-flag--fallback {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.review-section-container .reviewer {
+  font-weight: 700;
   font-size: 1rem;
-  color: rgb(82, 82, 82);
+  color: black;
+  line-height: 1.2;
+}
+
+.review-section-container .reviewer-country {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 1px;
+}
+
+.review-section-container .stars {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.review-section-container .content {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: #333;
+  flex-grow: 1;
+  font-style: italic;
+}
+
+.review-section-container .platform-info {
+  margin-top: auto;
+  padding-top: 0.6rem;
+  border-top: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: #888;
   font-weight: 500;
 }
 
 .review-section-container .platform-logo {
-  width: 25px;
-  height: 25px;
-  border-radius: 60px;
-}
-
-.review-section-container .reviewer {
-  font-weight: 600;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-.review-section-container .content {
-  margin-top: 10px;
-  font-size: 1rem;
-  flex-grow: 1;
-}
-
-.review-section-container .date {
-  font-size: 1rem;
-  color: gray;
-  margin-top: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  object-fit: contain;
 }
 
 /* Platforms rate */
