@@ -187,7 +187,6 @@
       color: white;
       padding: 0.04em 0.32em;
       border-radius: 4px;
-      text-decoration: underline;
       text-underline-offset: 2px;
       font-weight: 700;
     }
@@ -234,10 +233,21 @@
     .review-btn--google {
       background: #4285F4;
       color: white;
-      font-size: 1.02rem;
       padding: 1rem 1.2rem;
       box-shadow: 0 3px 10px rgba(66,133,244,0.35);
     }
+
+    .review-btn--guruwalk {
+      background: rgba(255,255,255);
+      color: #FF5A5F;
+      border: 3px solid #FF5A5F;
+      padding: 0.8rem 1.2rem;
+    }
+
+    .review-btn--guruwalk .review-btn-label {
+      color: #FF5A5F;
+    }
+
 
     .review-btn--secondary {
       background: rgba(255,255,255,0.12);
@@ -245,8 +255,31 @@
       border: 1.5px solid rgba(255,255,255,0.28);
     }
 
+    .review-btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .btn-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.05rem;
+    }
+
+    .review-btn-label {
+      font-size: 0.67rem;
+      font-weight: 400;
+      font-style: italic;
+      color: rgba(255,255,255,0.6);
+      line-height: 1;
+    }
+
+
     .review-btn--google:hover,
-    .review-btn--secondary:hover { opacity: 0.87; color: white; }
+    .review-btn--secondary:hover,
+    .review-btn--ghost:hover { opacity: 0.87; color: white; }
 
     .review-or {
       font-size: 0.9rem;
@@ -484,6 +517,7 @@
       align-items: center;
       gap: 0.35rem;
       font-size: 1rem;
+      padding-top: 1rem;
       font-weight: 600;
       color: black;
     }
@@ -513,8 +547,8 @@
         class="rec-avatar"
         src="./assets/images/photo-close.png"
         alt="Quentin, Paris walking tour guide">
-      <h1><span style="color:var(--rouge-clair)">Thank you so much</span> for joining my tour! 💖</h1>
-      <p>Here are my personal tips to make the most of Paris. <br>Need more? Text me at <a class="contact-chip" onclick="copyChip(this, '+33 7 58 80 02 95')">+33 7 58 80 02 95</a> or email me at <a class="contact-chip" onclick="copyChip(this, 'quentinwalkingtour@gmail.com')">quentinwalkingtour@gmail.com</a></p>
+      <h1><span style="color:var(--rouge-clair)">Thank you so much</span> for joining my tour! ❤️</h1>
+      <p>Here are my personal tips to make the most of Paris.<br>Need more? Text me at <a class="contact-chip" onclick="copyChip(this, '+33 7 58 80 02 95')">+33 7 58 80 02 95</a> or email me at <a class="contact-chip" onclick="copyChip(this, 'quentinwalkingtour@gmail.com')">quentinwalkingtour@gmail.com</a></p>
     </header>
 
     <!-- ══════════════════════════════════════
@@ -522,25 +556,28 @@
     ══════════════════════════════════════ -->
     <div class="review-card">
       <ul class="review-options">
-        <li class="review-intro">If you liked the tour, there are two ways to support me:</li>
-        <li>Name me in your Will<span style="color:white">💰</span></li>
-        <li class="review-main"><span class="review-highlight">Leave a review 🌟</span></li>
+        <li class="review-intro">If you liked the tour, there are two ways to support me 😁</li>
+        <li>Name me in your Will</li>
+        <li class="review-main"><span class="review-highlight"><span style="text-decoration: underline;">Leave a review</span> 🌟</span></li>
       </ul>
-      <p class="review-subtext">Big companies play dirty an a review makes a real difference for an independent guide <span style="color:white">🙌</span></p>
+      <p class="review-subtext">Big companies play dirty and a review makes a real difference for an independent guide <span style="color:white">💖</span></p>
       <div class="review-buttons">
+
+        <a class="review-btn review-btn--guruwalk"
+          href="https://www.guruwalk.com/walks/59922-paris-time-machine-a-local-s-perspective"
+          target="_blank" rel="noopener" data-platform="guruwalk">
+          <img src="./assets/images/icons/guruwalk.png" class="btn-logo" alt="">
+          <span class="btn-text">
+            <span>Review on GuruWalk</span>
+            <span class="review-btn-label">if you booked through it!</span>
+          </span>
+        </a>
 
         <a class="review-btn review-btn--google"
           href="https://g.page/r/CbXKLOzFaHEXEAE/review"
           target="_blank" rel="noopener" data-platform="google">
           <img src="./assets/images/icons/google.png" class="btn-logo" alt="">
-          <span>Google</span>
-        </a>
-
-        <a class="review-btn review-btn--secondary"
-          href="https://www.guruwalk.com/walks/59922-paris-time-machine-a-local-s-perspective"
-          target="_blank" rel="noopener" data-platform="guruwalk">
-          <img src="./assets/images/icons/guruwalk.png" class="btn-logo" alt="">
-          <span>GuruWalk</span>
+          <span>Leave a Google Review</span>
         </a>
 
         <a class="review-btn review-btn--secondary"
@@ -551,14 +588,14 @@
         </a>
 
       </div>
-      <p class="review-or">Or any other platform you prefer!</p>
+      <p class="review-or">Or <span style="text-decoration: underline;">any other platform</span> you prefer!</p>
     </div>
 
     <!-- ══════════════════════════════════════
          3. SPONSORED ACTIVITIES
     ══════════════════════════════════════ -->
     <div class="card card--cta">
-      <p class="card-title">Want to go <span style="color:var(--bleu-fonce)">further?</span> 🎉</p>
+      <p class="card-title">Want to go <span style="color:#ffe240">further?</span> 🎉</p>
       <p class="card-subtitle">A few experiences I personally recommend</p>
       <div class="activities-list" id="activities-list">
       </div>
@@ -615,8 +652,8 @@
     const ACTIVITIES = [
       {
         emoji: '⚰️',
-        name:  'Visit Pere Lachaise Cemetery',
-        desc:  'A tour of the most famous graves',
+        name:  'Pere Lachaise Tour',
+        desc:  'Famous graves and stories from the cemetery',
         url:   'https://www.guruwalk.com/walks/68783-scandals-intrigues-history-tales-at-pere-lachaise-cemetery-tour-paris'
       }
     ];
@@ -642,7 +679,7 @@
         mapUrl:   'https://www.google.com/maps/d/embed?mid=1gMVM0NB1ji58Z9bBWBGm_ev2mWEf1UM&ehbc=2E312F',
         items: [
           'Eiffel Tower / Notre-Dame / Louvre (try to go early in the morning!)',
-          'Montmartre ⭐ : Ask me for a list of spots to visit (in the right order 🙂).',
+          'Montmartre ⭐ : Check the map for a list of spots to visit (start by Moulin Rouge, metro Blanche, to see it in the right order 🙂).',
           'Quartier Latin: Panthéon, Luxembourg Garden, small streets, student area.',
         ]
       },
