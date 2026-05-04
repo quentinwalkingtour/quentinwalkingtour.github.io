@@ -279,8 +279,6 @@
     }
     .review-btn--primary-gyg .review-btn-label { color: #FF5A5F; }
 
-    .review-btn--primary-gyg:hover { opacity: 0.87; }
-
     .review-btn--primary-gyg-dark {
       background: #FF5532;
       color: white;
@@ -288,7 +286,6 @@
       font-size: 1rem;
       box-shadow: 0 3px 10px rgba(255,85,50,0.4);
     }
-    .review-btn--primary-gyg-dark:hover { opacity: 0.87; color: white; }
 
     /* Google blue */
     .review-btn--google {
@@ -297,7 +294,6 @@
       padding: 1rem 1.2rem;
       box-shadow: 0 3px 10px rgba(66,133,244,0.35);
     }
-    .review-btn--google:hover { opacity: 0.87; color: white; }
 
     /* Tripadvisor green */
     .review-btn--viator {
@@ -306,7 +302,6 @@
       padding: 0.85rem 1.2rem;
       box-shadow: 0 3px 10px rgba(0,135,103,0.4);
     }
-    .review-btn--viator:hover { opacity: 0.87; color: white; }
 
     /* FreeTour orange */
     .review-btn--secondary {
@@ -315,7 +310,6 @@
       border: 3px solid #ff9b28;
       /* box-shadow: 0 3px 10px rgba(250,167,75,0.4); */
     }
-    .review-btn--secondary:hover { opacity: 0.87; color: white; }
 
     /* Small text link for tertiary platform */
     .review-or {
@@ -497,7 +491,6 @@
       border: none;
       text-align: left;
       gap: 0.5rem;
-      transition: background 0.14s;
       -webkit-tap-highlight-color: transparent;
     }
 
@@ -560,7 +553,6 @@
       font-weight: 700;
       color: #aaa;
       cursor: pointer;
-      transition: background 0.14s, color 0.14s, border-color 0.14s;
       -webkit-tap-highlight-color: transparent;
     }
 
@@ -637,10 +629,7 @@
       min-height: 1.9rem;
       display: inline-flex;
       align-items: center;
-      transition: background 0.14s, color 0.14s;
     }
-
-    .rec-maps-link:hover { background: var(--bleu-fonce); color: white; border-color: var(--bleu-fonce); }
 
     .rec-item-desc {
       font-size: 0.82rem;
@@ -676,7 +665,7 @@
       cursor: pointer;
       border: 1px solid transparent;
       min-height: 1.55rem;
-      transition: opacity 0.15s, transform 0.12s, background 0.15s, color 0.15s, border-color 0.15s;
+      transition: transform 0.12s, opacity 0.15s;
       -webkit-tap-highlight-color: transparent;
     }
 
@@ -689,19 +678,11 @@
       box-shadow: 0 1px 4px rgba(255,117,25,0.12);
     }
 
-    .rec-btn--book:hover {
-      background: var(--orange);
-      border-color: var(--orange);
-      color: white;
-    }
-
     .rec-btn--guide {
       background: transparent;
       color: var(--bleu-fonce);
       border: 1.5px solid var(--bleu-fonce);
     }
-
-    .rec-btn--guide:hover { background: var(--bleu-fonce); color: white; }
 
     /* Divider between mixed content blocks */
     .block-divider {
@@ -730,8 +711,6 @@
       font-weight: 600;
     }
 
-    .footer-nudge a:hover { text-decoration: underline; }
-
     /* ── Top nav ── */
     .rec-nav {
       display: flex;
@@ -753,8 +732,6 @@
       gap: 0.3rem;
       transition: opacity 0.15s;
     }
-    .rec-nav-link:hover { opacity: 1; }
-
     .back-link {
       display: inline-flex;
       align-items: center;
@@ -766,7 +743,22 @@
     }
 
     .back-link svg { transform: scaleX(-1); }
-    .back-link:hover { color: var(--bleu-fonce); }
+
+    /* ── Hover styles — only on real pointer (mouse) devices, never sticky on touch ── */
+    @media (hover: hover) {
+      .review-btn--primary-gyg:hover         { opacity: 0.87; }
+      .review-btn--primary-gyg-dark:hover    { opacity: 0.87; }
+      .review-btn--google:hover              { opacity: 0.87; }
+      .review-btn--viator:hover              { opacity: 0.87; }
+      .review-btn--secondary:hover           { opacity: 0.87; }
+      .rec-maps-link:hover                   { background: var(--bleu-fonce); color: white; border-color: var(--bleu-fonce); }
+      .rec-btn--book:hover                   { background: var(--orange); border-color: var(--orange); color: white; }
+      .rec-btn--guide:hover                  { background: var(--bleu-fonce); color: white; }
+      .rec-nav-link:hover                    { opacity: 1; }
+      .back-link:hover                       { color: var(--bleu-fonce); }
+      .footer-nudge a:hover                  { text-decoration: underline; }
+      .acc-trigger:hover                     { background: var(--blanc-fonce); filter: brightness(0.96); }
+    }
 
   </style>
 
@@ -923,22 +915,6 @@
         id: 'cafes', emoji: '☕', title: 'Cafés & Chocolate',
         content: [
           { type: 'places', key: 'cafes' },
-        ]
-      },
-      {
-        id: 'food', emoji: '🥐', title: 'Food Experience',
-        content: [
-          { type: 'static', items: [
-            '<b>Bouillons ⭐</b> Parisian restaurants, simple French food, very affordable. Often crowded on weekends.',
-            '<b>French crêpes</b> on Rue du Montparnasse.',
-            '<b>Baguette sandwich</b> from any good bakery (good Google ratings are enough!).',
-            '<b>Vietnamese food</b> in Belleville (metro). I love Dong Huong, but many great places.',
-            '<b>Falafel</b> in Le Marais (many on Rue des Rosiers).',
-            '<b>Coffee and Arab pastries</b> in a beautiful setting at the Grand Mosque of Paris ⭐',
-            'Many markets in Paris (mostly mornings, schedules vary).',
-            '<b>Marché des Enfants Rouges ⭐</b> (more like a food court with amazing options!).',
-            'Marché d\'Aligre / Marché Saint-Quentin / Marché Saint-Germain / Marché Mouffetard',
-          ]},
         ]
       },
       {

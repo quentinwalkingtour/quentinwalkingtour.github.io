@@ -12,7 +12,7 @@
     "title":       "Palace of Versailles — Skip-the-Line Guided Visit",
     "platform":    "getyourguide",
     "description": "Skip-the-line guided tour of the Château de Versailles with full site access",
-    "url":         "https://www.getyourguide.fr/paris-l16/versailles-entree-coupe-file-visite-guidee-du-chateau-et-acces-a-l-ensemble-du-site-t432058/?partner_id=QBAL53E&currency=EUR&travel_agent=1&cmp=share_to_earn",
+    "url":         "https://www.getyourguide.fr/paris-l16/versailles-entree-coupe-file-visite-guidee-du-chateau-et-acces-a-l-ensemble-du-site-t432058/?partner_id=QBAL53E",
     "active":      true
   },
   {
@@ -20,7 +20,7 @@
     "title":       "Louvre Museum — Skip-the-Line Guided Visit",
     "platform":    "getyourguide",
     "description": "Guided visit to the Louvre with reserved access — skip the queue",
-    "url":         "https://www.getyourguide.fr/paris-l16/visite-guidee-coupe-file-du-musee-du-louvre-en-petit-groupe-t499585/?partner_id=QBAL53E&utm_medium=local_partners",
+    "url":         "https://www.getyourguide.fr/paris-l16/visite-guidee-coupe-file-du-musee-du-louvre-en-petit-groupe-t499585/?partner_id=QBAL53E",
     "active":      true
   },
   {
@@ -36,7 +36,7 @@
     "title":       "Musée d'Orsay — Guided Impressionism Visit (ticket included)",
     "platform":    "getyourguide",
     "description": "Guided Impressionism tour of the Orsay with entry ticket included",
-    "url":         "https://www.getyourguide.fr/paris-l16/musee-d-orsay-visite-guidee-de-l-impressionnisme-avec-billet-inclus-t973379/?partner_id=QBAL53E&currency=EUR&travel_agent=1&cmp=share_to_earn",
+    "url":         "https://www.getyourguide.fr/paris-l16/musee-d-orsay-visite-guidee-de-l-impressionnisme-avec-billet-inclus-t973379/?partner_id=QBAL53E",
     "active":      true
   },
   {
@@ -44,7 +44,7 @@
     "title":       "Musée d'Orsay — Entry Tickets via GetYourGuide",
     "platform":    "getyourguide",
     "description": "Orsay entry tickets via GYG — useful fallback if the official site is sold out",
-    "url":         "https://www.getyourguide.fr/paris-l16/billets-d-entree-pour-le-musee-d-orsay-et-van-gogh-a-auvers-sur-oise-t65756/?partner_id=QBAL53E&currency=EUR&travel_agent=1&cmp=share_to_earn",
+    "url":         "https://www.getyourguide.fr/paris-l16/billets-d-entree-pour-le-musee-d-orsay-et-van-gogh-a-auvers-sur-oise-t65756/?partner_id=QBAL53E",
     "active":      true
   },
   {
@@ -76,7 +76,7 @@
     "title":       "Seine River Cruise",
     "platform":    "getyourguide",
     "description": "The iconic Bateaux Mouches of Paris",
-    "url":         "https://www.getyourguide.fr/paris-l16/paris-croisiere-touristique-sur-la-seine-avec-les-bateaux-mouches-t735394/?partner_id=QBAL53E&currency=EUR&travel_agent=1&cmp=share_to_earn",
+    "url":         "https://www.getyourguide.fr/paris-l16/paris-croisiere-touristique-sur-la-seine-avec-les-bateaux-mouches-t735394/?partner_id=QBAL53E",
     "active":      true
   },
   {
@@ -84,7 +84,7 @@
     "title":       "Paris Amphibious Bus — City + River",
     "platform":    "getyourguide",
     "description": "A bus that transforms into a boat halfway through the tour",
-    "url":         "https://www.getyourguide.fr/paris-l16/paris-visite-de-la-ville-et-de-la-seine-en-bus-amphibie-t422389/?partner_id=QBAL53E&currency=EUR&travel_agent=1&cmp=share_to_earn",
+    "url":         "https://www.getyourguide.fr/paris-l16/paris-visite-de-la-ville-et-de-la-seine-en-bus-amphibie-t422389/?partner_id=QBAL53E",
     "active":      true
   },
   {
@@ -92,7 +92,7 @@
     "title":       "Hop-on Hop-off Bus Paris",
     "platform":    "getyourguide",
     "description": "Hop-on hop-off bus covering all major Paris sights, with optional Seine cruise",
-    "url":         "https://www.getyourguide.fr/paris-l16/paris-bus-a-arrets-multiples-a-arrets-multiples-avec-croisiere-optionnelle-t4059/?partner_id=QBAL53E&currency=EUR&travel_agent=1&cmp=share_to_earn",
+    "url":         "https://www.getyourguide.fr/paris-l16/paris-bus-a-arrets-multiples-a-arrets-multiples-avec-croisiere-optionnelle-t4059/?partner_id=QBAL53E",
     "active":      true
   }
 ]
