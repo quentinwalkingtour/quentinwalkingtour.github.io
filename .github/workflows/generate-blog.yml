@@ -4,40 +4,43 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'blog-posts.yaml'
+      - 'blog/posts/**'
       - 'template-blog.html'
+      - 'go/redirects.json'
       - 'assets/images/**'
-  workflow_dispatch:  # Allows manual triggering from GitHub UI
+  workflow_dispatch:
 
-# Add permissions to allow GitHub Actions to push to the repository
 permissions:
   contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
-    
+      uses: actions/checkout@v4
+
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
-        python-version: '3.10'
-    
+        python-version: '3.11'
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install markdown pyyaml
-    
-    - name: Generate static blog posts
-      run: python generate_blog.py --config_file blog-posts.yaml --template_file template-blog.html --output_dir blog
-    
-    - name: Commit and push changes
+        pip install markdown python-frontmatter pyyaml
+
+    - name: Generate blog articles and index
+      run: python generate_blog.py
+
+    - name: Generate /go/ redirects
+      run: python generate_redirects.py
+
+    - name: Commit and push generated files
       run: |
         git config --global user.name 'GitHub Actions'
         git config --global user.email 'actions@github.com'
-        git add blog/ index.html
-        git commit -m "Generated static blog files" || echo "No changes to commit"
+        git add blog/ go/
+        git commit -m "chore: regenerate blog and redirects [skip ci]" || echo "No changes to commit"
         git push

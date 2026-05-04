@@ -1,101 +1,365 @@
-import argparse
-import json
+"""
+Blog generator — reads blog/posts/*.md (Markdown + YAML frontmatter)
+and produces:
+  - blog/{slug}.html  per article
+  - blog/index.html   listing all published articles
+
+Usage:
+    python generate_blog.py
+
+To mark an article as draft (skip generation), add  draft: true  in frontmatter.
+"""
+
 import re
 import shutil
 from datetime import datetime
 from pathlib import Path
 
+import frontmatter
 import markdown
-import yaml
 
 
-def generate_blog_posts(config_file='blog-posts.yaml', template_file='template-blog.html', output_dir='blog', index_file='index.html'):
-    Path(output_dir).mkdir(exist_ok=True)
+POSTS_DIR    = Path('blog/posts')
+OUTPUT_DIR   = Path('blog')
+TEMPLATE     = Path('template-blog.html')
+INDEX_OUTPUT = Path('blog/index.html')
 
-    with open(template_file, 'r', encoding='utf-8') as f:
-        template = f.read()
+SITE_URL     = 'https://quentinwalkingtour.com'
+SITE_NAME    = 'Paris Time Machine'
 
-    with open(config_file, 'r', encoding='utf-8') as f:
-        posts = yaml.safe_load(f)
 
-    if not posts:
-        print('No blog posts found in config file. Skipping generation.')
-        return
+# ── Helpers ────────────────────────────────────────────────────────────────────
 
-    post_list = []
+def slug_from_title(title: str) -> str:
+    s = title.lower()
+    s = re.sub(r"['\"]", '', s)
+    s = re.sub(r'[^a-z0-9]+', '-', s)
+    return s.strip('-')
 
-    for post in posts:
-        content_html = markdown.markdown(post['content'], extensions=['extra'])
-        post_date = post.get('date', datetime.now().strftime('%Y-%m-%d'))
-        modified_date = post.get('modified_date', post_date)
-        slug = post.get('slug', post['title'].lower().replace(' ', '-').replace("'", '').replace('"', ''))
 
-        post_html = template.replace('{{title}}', post['title'])
-        post_html = post_html.replace('{{image}}', post['image'])
-        post_html = post_html.replace('{{content}}', content_html)
-        post_html = post_html.replace('{{slug}}', slug)
-        post_html = post_html.replace('{{description}}', post.get('description', f"Useful Paris tips about {post['title']} from Quentin"))
-        post_html = post_html.replace('{{keywords}}', post.get('keywords', f"Paris, Paris walking tour, {post['title']}, local Paris guide"))
-        post_html = post_html.replace('{{author}}', post.get('author', 'Quentin'))
-        post_html = post_html.replace('{{date}}', post_date)
-        post_html = post_html.replace('{{modified_date}}', modified_date)
-        post_html = post_html.replace('{{category}}', post.get('category', 'Paris Guides'))
+def load_posts() -> list[dict]:
+    """
+    Parse every .md file in POSTS_DIR.
+    Returns a list of post dicts sorted by date descending.
+    Skips files with  draft: true  in frontmatter.
+    """
+    posts = []
+    for md_file in sorted(POSTS_DIR.glob('*.md')):
+        post = frontmatter.load(md_file)
+        if post.get('draft', False):
+            print(f'  [skip] {md_file.name} (draft)')
+            continue
 
-        filename = f"{slug}.html"
-        output_path = Path(output_dir) / filename
-        with open(output_path, 'w', encoding='utf-8') as f:
-            f.write(post_html)
+        title = post.get('title', md_file.stem)
+        slug  = post.get('slug') or slug_from_title(title)
+        date  = str(post.get('date', datetime.now().strftime('%Y-%m-%d')))
 
-        image_path = Path(post['image'])
-        if image_path.exists():
-            destination = Path(output_dir) / image_path.name
-            if image_path.resolve() != destination.resolve():
-                shutil.copy2(image_path, destination)
-
-        post_list.append({
-            'title': post['title'],
-            'url': f"{output_dir}/{filename}",
-            'description': post.get('description', ''),
-            'date': post_date,
-            'category': post.get('category', 'Paris Guides')
+        posts.append({
+            'title':         title,
+            'slug':          slug,
+            'date':          date,
+            'modified_date': str(post.get('modified_date', date)),
+            'description':   post.get('description', f'Paris tips about {title} from Quentin.'),
+            'keywords':      post.get('keywords', f'Paris, {title}, Paris walking tour'),
+            'author':        post.get('author', 'Quentin'),
+            'category':      post.get('category', 'Paris Guides'),
+            'image':         post.get('image', 'assets/images/cover 1.png'),
+            'content_md':    post.content,
+            'source_file':   md_file,
         })
 
-    if Path(index_file).exists():
-        update_index_with_posts(index_file, post_list)
+    posts.sort(key=lambda p: p['date'], reverse=True)
+    return posts
 
 
-def update_index_with_posts(index_file, post_list):
-    with open(index_file, 'r', encoding='utf-8') as f:
-        content = f.read()
+# ── Article generation ─────────────────────────────────────────────────────────
 
-    blog_posts_js = json.dumps(post_list, indent=2)
+def generate_articles(posts: list[dict], template: str) -> None:
+    OUTPUT_DIR.mkdir(exist_ok=True)
 
-    if 'const blogPosts = [' in content:
-        pattern = r'const blogPosts = \[.*?\];'
-        replacement = f'const blogPosts = {blog_posts_js};'
-        updated_content = re.sub(pattern, replacement, content, flags=re.DOTALL)
-    else:
-        print('Blog posts section not found in index.html')
-        return
+    for post in posts:
+        content_html = markdown.markdown(
+            post['content_md'],
+            extensions=['extra', 'nl2br']
+        )
 
-    with open(index_file, 'w', encoding='utf-8') as f:
-        f.write(updated_content)
+        html = template
+        html = html.replace('{{title}}',         post['title'])
+        html = html.replace('{{slug}}',           post['slug'])
+        html = html.replace('{{description}}',    post['description'])
+        html = html.replace('{{keywords}}',       post['keywords'])
+        html = html.replace('{{author}}',         post['author'])
+        html = html.replace('{{date}}',           post['date'])
+        html = html.replace('{{modified_date}}',  post['modified_date'])
+        html = html.replace('{{category}}',       post['category'])
+        html = html.replace('{{image}}',          post['image'])
+        html = html.replace('{{content}}',        content_html)
+        html = html.replace('{{site_url}}',       SITE_URL)
 
+        out_path = OUTPUT_DIR / f"{post['slug']}.html"
+        out_path.write_text(html, encoding='utf-8')
+        print(f'  [ok] {out_path}')
+
+        # Copy cover image into blog/ if it lives elsewhere
+        img_path = Path(post['image'])
+        if img_path.exists():
+            dest = OUTPUT_DIR / img_path.name
+            if img_path.resolve() != dest.resolve():
+                shutil.copy2(img_path, dest)
+
+
+# ── Index generation ───────────────────────────────────────────────────────────
+
+def generate_index(posts: list[dict]) -> None:
+    cards_html = ''
+    for post in posts:
+        img_src = f"/{post['image']}" if not post['image'].startswith('http') else post['image']
+        cards_html += f'''
+    <a class="article-card" href="/blog/{post['slug']}.html">
+      <div class="article-card-img" style="background-image:url('{img_src}')"></div>
+      <div class="article-card-body">
+        <span class="article-tag">{post['category']}</span>
+        <h2 class="article-card-title">{post['title']}</h2>
+        <p class="article-card-desc">{post['description']}</p>
+        <span class="article-card-date">{post['date']}</span>
+      </div>
+    </a>'''
+
+    if not cards_html:
+        cards_html = '''
+    <p class="blog-empty">First articles coming soon — check back shortly!</p>'''
+
+    index_html = f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){{w[l]=w[l]||[];w[l].push({{'gtm.start':
+    new Date().getTime(),event:'gtm.js'}});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    }})(window,document,'script','dataLayer','GTM-5B56HBZC');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Paris Travel Guide & Tips | {SITE_NAME}</title>
+  <meta name="description" content="Quentin's insider Paris travel guide — museum tips, day trips, restaurants, and practical advice from a local walking tour guide.">
+  <meta name="author" content="Quentin">
+  <link rel="canonical" href="{SITE_URL}/blog/">
+
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="{SITE_URL}/blog/">
+  <meta property="og:title"       content="Paris Travel Guide & Tips | {SITE_NAME}">
+  <meta property="og:description" content="Quentin's insider Paris travel guide — museum tips, day trips, restaurants, and practical advice from a local walking tour guide.">
+  <meta property="og:image"       content="{SITE_URL}/assets/images/cover 1.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../assets/favicon/site.webmanifest">
+  <meta name="theme-color" content="#fdf0d5">
+
+  <style>
+    *, *::before, *::after {{ box-sizing: border-box; margin: 0; padding: 0; }}
+    a {{ color: inherit; text-decoration: none; }}
+    img {{ display: block; max-width: 100%; }}
+
+    :root {{
+      --blanc:      #fdf0d5;
+      --blanc-f:    #fceac8;
+      --bleu:       #003049;
+      --bleu-clair: #669bbc;
+      --rouge:      #c1121f;
+      --orange:     #FF7519;
+    }}
+
+    body {{
+      font-family: "Archivo", sans-serif;
+      background: var(--blanc);
+      color: var(--bleu);
+      line-height: 1.5;
+    }}
+
+    /* ── Nav ── */
+    .blog-nav {{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0.85rem 1rem 0;
+    }}
+    .blog-nav-link {{
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--bleu);
+      opacity: 0.5;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: opacity 0.15s;
+    }}
+    .blog-nav-link:hover {{ opacity: 1; }}
+
+    /* ── Article grid ── */
+    .blog-grid {{
+      max-width: 860px;
+      margin: 1.5rem auto;
+      padding: 0 1rem 4rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }}
+
+    .article-card {{
+      background: white;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 2px 14px rgba(0,0,0,0.07);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }}
+    .article-card:hover {{
+      transform: translateY(-3px);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.11);
+    }}
+
+    .article-card-img {{
+      height: 160px;
+      background-size: cover;
+      background-position: center;
+      background-color: var(--blanc-f);
+    }}
+
+    .article-card-body {{
+      padding: 1rem 1.1rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      flex: 1;
+    }}
+
+    .article-tag {{
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--orange);
+    }}
+
+    .article-card-title {{
+      font-size: 1rem;
+      font-weight: 800;
+      line-height: 1.3;
+      color: var(--bleu);
+    }}
+
+    .article-card-desc {{
+      font-size: 0.83rem;
+      color: #666;
+      line-height: 1.5;
+      flex: 1;
+    }}
+
+    .article-card-date {{
+      font-size: 0.75rem;
+      color: #bbb;
+      margin-top: 0.3rem;
+    }}
+
+    /* ── Empty state ── */
+    .blog-empty {{
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 3rem 1rem;
+      color: #aaa;
+      font-size: 1rem;
+    }}
+
+    /* ── Tour CTA banner ── */
+    .tour-cta {{
+      background: var(--bleu);
+      color: white;
+      text-align: center;
+      padding: 2rem 1.5rem;
+    }}
+    .tour-cta h2 {{
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }}
+    .tour-cta p {{
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.72);
+      margin-bottom: 1.2rem;
+    }}
+    .tour-cta-btn {{
+      display: inline-block;
+      background: var(--orange);
+      color: white;
+      font-family: "Archivo", sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.85rem 1.8rem;
+      border-radius: 0.75rem;
+      text-decoration: none;
+    }}
+  </style>
+</head>
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5B56HBZC"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <nav class="blog-nav">
+    <a class="blog-nav-link" href="/">← Back to website</a>
+    <a class="blog-nav-link" href="https://www.guruwalk.com/walks/59922-paris-time-machine-a-local-s-perspective" target="_blank" rel="noopener">Book a free tour →</a>
+  </nav>
+
+  <main class="blog-grid">
+    {cards_html}
+  </main>
+
+  <section class="tour-cta">
+    <h2>Want to discover Paris with us?</h2>
+    <p>We're Quentin, Thomas and Christina — passionate Parisians. Come join us for a walking tour of Paris.</p>
+    <a class="tour-cta-btn" href="https://www.guruwalk.com/walks/59922-paris-time-machine-a-local-s-perspective" target="_blank" rel="noopener">
+      🎟️ Reserve your free spot
+    </a>
+  </section>
+
+</body>
+</html>
+'''
+
+    INDEX_OUTPUT.write_text(index_html, encoding='utf-8')
+    print(f'  [ok] {INDEX_OUTPUT}')
+
+
+# ── Entry point ────────────────────────────────────────────────────────────────
 
 def main():
-    parser = argparse.ArgumentParser(description='Generate static blog posts')
-    parser.add_argument('--config_file', default='blog-posts.yaml', help='YAML file containing blog post data')
-    parser.add_argument('--template_file', default='template-blog.html', help='HTML template file')
-    parser.add_argument('--output_dir', default='blog', help='Output directory for generated files')
-    parser.add_argument('--index_file', default='index.html', help='Index file to update with blog posts')
-    args = parser.parse_args()
+    print('Reading posts from', POSTS_DIR)
+    template = TEMPLATE.read_text(encoding='utf-8')
+    posts = load_posts()
+    print(f'  {len(posts)} published post(s) found')
 
-    generate_blog_posts(
-        config_file=args.config_file,
-        template_file=args.template_file,
-        output_dir=args.output_dir,
-        index_file=args.index_file
-    )
+    print('Generating articles...')
+    generate_articles(posts, template)
+
+    print('Generating blog index...')
+    generate_index(posts)
+
+    print('Done.')
 
 
 if __name__ == '__main__':

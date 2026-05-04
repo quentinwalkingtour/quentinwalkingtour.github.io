@@ -1,0 +1,224 @@
+[
+
+  {
+    "category":    "museums",
+    "icon":        "🏛️",
+    "title":       "The Louvre",
+    "description": "<b>The official website is the best option (about 20€).</b> If it's fully booked, some operators sell guided visits with reserved access.",
+    "ctaLabel":    "Official tickets",
+    "ctaUrl":      "/go/louvre-official",
+    "ctaSecondary": {
+      "label": "Guided visit",
+      "url":   "/go/louvre"
+    },
+    "blogUrl":     "/blog/paris-museums-sold-out.html",
+    "active":      true
+  },
+  {
+    "category":    "museums",
+    "icon":        "🎨",
+    "title":       "Musée d'Orsay ⭐",
+    "description": "Book official timed-entry tickets first. If sold out, the guided Impressionism tour (ticket included) is a great alternative.",
+    "ctaLabel":    "Official tickets",
+    "ctaUrl":      "/go/orsay-official",
+    "ctaSecondary": {
+      "label": "Guided tour",
+      "url":   "/go/orsay"
+    },
+    "blogUrl":     "/blog/paris-museums-sold-out.html",
+    "active":      true
+  },
+  {
+    "category":    "museums",
+    "icon":        "🆓",
+    "title":       "14 Paris city museums are free ⭐",
+    "description": "The City of Paris runs 14 museums with permanent collection free of charge! Including Petit Palais, Musée Carnavalet, <b>House of Victor Hugo!</b>. No booking needed.",
+    "ctaLabel":    "See the full list",
+    "ctaUrl":      "https://www.paris.fr/pages/les-musees-de-la-ville-de-paris-4919",
+    "ctaSecondary": null,
+    "blogUrl":     null,
+    "active":      true
+  },
+
+  {
+    "category":    "museums",
+    "icon":        "🏰",
+    "title":       "Palace of Versailles",
+    "description": "40 minutes from Paris by RER C. A full day out. You can go on your own with official tickets, or book a guided visit to really make sense of it all.",
+    "ctaLabel":    "Official tickets",
+    "ctaUrl":      "/go/versailles",
+    "ctaSecondary": {
+      "label": "Guided visit",
+      "url":   "/go/versailles-guided"
+    },
+    "blogUrl":     "/blog/versailles-day-trip-from-paris.html",
+    "active":      true
+  },
+  {
+    "category":    "museums",
+    "icon":        "🗼",
+    "title":       "Eiffel Tower",
+    "description": "Book directly on the official website. Also, some tours are offered, sometimes not the best ones :(",
+    "ctaLabel":    "Official tickets",
+    "ctaUrl":      "/go/eiffel",
+    "ctaSecondary": null,
+    "blogUrl":     null,
+    "active":      true
+  },
+  {
+    "category":    "museums",
+    "icon":        "🎨",
+    "title":       "Other art museums",
+    "description": "Petit Palais (free!) / Musée de l'Orangerie / Musée de Cluny (free under 26)",
+    "ctaLabel":    null,
+    "ctaUrl":      null,
+    "ctaSecondary": null,
+    "blogUrl":     null,
+    "active":      true
+  },
+  {
+    "category":    "museums",
+    "icon":        "🗿",
+    "title":       "Musée Rodin",
+    "description": "Intimate museum with a lovely garden, just opposite the Invalides. Much calmer than the Louvre.",
+    "ctaLabel":    null,
+    "ctaUrl":      null,
+    "ctaSecondary": null,
+    "blogUrl":     null,
+    "active":      false
+  },
+  {
+    "category":    "museums",
+    "icon":        "🖼️",
+    "title":       "Modern art",
+    "description": "Centre Pompidou / Fondation Louis Vuitton",
+    "ctaLabel":    null,
+    "ctaUrl":      null,
+    "ctaSecondary": null,
+    "blogUrl":     null,
+    "active":      true
+  },
+  {
+    "category":    "museums",
+    "icon":        "😋",
+    "title":       "Unusual museums",
+    "description": "Musée de la Préfecture de Police (Police Museum) / Musée des Égouts (Sewer Museum) / Musée du Fromage (Cheese Museum)",
+    "ctaLabel":    null,
+    "ctaUrl":      null,
+    "ctaSecondary": null,
+    "blogUrl":     null,
+    "active":      false
+  },
+  {
+    "category":    "tours",
+    "icon":        "⚰️",
+    "title":       "Père Lachaise Cemetery Tour",
+    "description": "A tour through the graves of Édith Piaf, Jim Morrison, and Oscar Wilde. More stories than you can imagine!",
+    "ctaLabel":    "Book free tour",
+    "ctaUrl":      "https://www.guruwalk.com/walks/68783-scandals-gossips-history-tales-at-pere-lachaise-cemetery-tour-paris?ref=ehqvdsdauxwqgpt77wo0&ref_campaign=after_tour_recommendation_pere_lachaise",
+    "ctaSecondary": null,
+    "blogUrl":     null,
+    "active":      true
+  },
+  {
+    "category":    "tours",
+    "icon":        "⛰️",
+    "title":       "Montmartre Hill Tour",
+    "description": "The bohemian village above Paris.. Renoir, Picasso, the Moulin Rouge, and the best view of the city.",
+    "ctaLabel":    "Book tour",
+    "ctaUrl":      "/go/montmartre",
+    "ctaSecondary": null,
+    "blogUrl":     null,
+    "active":      true
+  },
+  {
+    "category":    "tours",
+    "icon":        "⛵",
+    "title":       "Seine River Cruise — Bateaux Mouches",
+    "description": "The classic Paris experience. 1h10 along the river, past Notre-Dame, the Eiffel Tower, and the Louvre.",
+    "ctaLabel":    "Book cruise",
+    "ctaUrl":      "/go/seine",
+    "ctaSecondary": null,
+    "blogUrl":     "/blog/paris-seine-river-cruise.html",
+    "active":      true
+  },
+  {
+    "category":    "tours",
+    "icon":        "🚌",
+    "title":       "Amphibious Bus — road + river in one",
+    "description": "A bus that becomes a boat halfway through. Unusual, fun for kids and adults alike. Covers the main sights then hits the Seine.",
+    "ctaLabel":    "Book amphibious tour",
+    "ctaUrl":      "/go/seine-amphibie",
+    "ctaSecondary": null,
+    "blogUrl":     "/blog/paris-seine-river-cruise.html",
+    "active":      true
+  },
+  {
+    "category":    "day-trips",
+    "icon":        "🥐",
+    "title":       "Mont Saint-Michel",
+    "description": "The most visited site in France outside Paris. Train + shuttle from Paris takes ~4h.",
+    "ctaLabel":    "Coming soon",
+    "ctaUrl":      "#",
+    "ctaSecondary": null,
+    "blogUrl":     null,
+    "active":      true
+  },
+  {
+    "category":    "day-trips",
+    "icon":        "🍷",
+    "title":       "Champagne region — Reims or Épernay",
+    "description": "45 minutes by TGV to Reims or Épernay. Cellar tours, tasting rooms, and the magnificent Reims Cathedral. A brilliant day out.",
+    "ctaLabel":    "Coming soon",
+    "ctaUrl":      "#",
+    "ctaSecondary": null,
+    "blogUrl":     null,
+    "active":      true
+  },
+
+  {
+    "category":    "transfers",
+    "icon":        "🚇",
+    "title":       "How to use the Paris Métro",
+    "description": "Get a Navigo Easy card (€2). Use a day pass if you travel a lot. Otherwise, note that metro/RER and bus/tram tickets are separate, so one ticket won’t work for both.",
+    "ctaLabel":    "Official RATP info",
+    "ctaUrl":      "https://www.ratp.fr/en/visiting-paris/prepare-stay-paris-travel-passes",
+    "ctaSecondary": null,
+    "blogUrl":     null,
+    "active":      true
+  },
+  {
+    "category":    "transfers",
+    "icon":        "✈️",
+    "title":       "CDG Airport to Paris centre",
+    "description": "RER B is the main option (€14, ~35–45 min to Châtelet). Uber/Bolt can be cheaper if you are 3+ people. Cheapest option: bus + metro (~€2.50 but much longer).",
+    "ctaLabel":    "RER B info",
+    "ctaUrl":      "https://www.ratp.fr/en/plans-lignes/rer/b",
+    "ctaSecondary": null,
+    "blogUrl":     null,
+    "active":      true
+  },
+  {
+    "category":    "transfers",
+    "icon":        "✈️",
+    "title":       "Orly Airport to Paris centre",
+    "description": "Metro line 14 is the easiest (€14, ~25 min). Uber/Bolt can be cheaper if you are 3+ people. Note: regular metro tickets don’t work for the airport.",
+    "ctaLabel":    "Metro 14 info",
+    "ctaUrl":      "https://www.ratp.fr/en/plans-lignes/metro/14",
+    "ctaSecondary": null,
+    "blogUrl":     null,
+    "active":      true
+  },
+  {
+    "category":    "tours",
+    "icon":        "🚌",
+    "title":       "Hop-on Hop-off Bus",
+    "description": "A relaxed way to cover the major sights in one day.",
+    "ctaLabel":    "Book hop-on hop-off",
+    "ctaUrl":      "/go/bus",
+    "ctaSecondary": null,
+    "blogUrl":     null,
+    "active":      true
+  }
+
+]

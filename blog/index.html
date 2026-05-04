@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5B56HBZC');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Paris Travel Guide & Tips | Paris Time Machine</title>
+  <meta name="description" content="Quentin's insider Paris travel guide — museum tips, day trips, restaurants, and practical advice from a local walking tour guide.">
+  <meta name="author" content="Quentin">
+  <link rel="canonical" href="https://quentinwalkingtour.com/blog/">
+
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://quentinwalkingtour.com/blog/">
+  <meta property="og:title"       content="Paris Travel Guide & Tips | Paris Time Machine">
+  <meta property="og:description" content="Quentin's insider Paris travel guide — museum tips, day trips, restaurants, and practical advice from a local walking tour guide.">
+  <meta property="og:image"       content="https://quentinwalkingtour.com/assets/images/cover 1.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../assets/favicon/site.webmanifest">
+  <meta name="theme-color" content="#fdf0d5">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    :root {
+      --blanc:      #fdf0d5;
+      --blanc-f:    #fceac8;
+      --bleu:       #003049;
+      --bleu-clair: #669bbc;
+      --rouge:      #c1121f;
+      --orange:     #FF7519;
+    }
+
+    body {
+      font-family: "Archivo", sans-serif;
+      background: var(--blanc);
+      color: var(--bleu);
+      line-height: 1.5;
+    }
+
+    /* ── Nav ── */
+    .blog-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0.85rem 1rem 0;
+    }
+    .blog-nav-link {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--bleu);
+      opacity: 0.5;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: opacity 0.15s;
+    }
+    .blog-nav-link:hover { opacity: 1; }
+
+    /* ── Article grid ── */
+    .blog-grid {
+      max-width: 860px;
+      margin: 1.5rem auto;
+      padding: 0 1rem 4rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .article-card {
+      background: white;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 2px 14px rgba(0,0,0,0.07);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .article-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.11);
+    }
+
+    .article-card-img {
+      height: 160px;
+      background-size: cover;
+      background-position: center;
+      background-color: var(--blanc-f);
+    }
+
+    .article-card-body {
+      padding: 1rem 1.1rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      flex: 1;
+    }
+
+    .article-tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--orange);
+    }
+
+    .article-card-title {
+      font-size: 1rem;
+      font-weight: 800;
+      line-height: 1.3;
+      color: var(--bleu);
+    }
+
+    .article-card-desc {
+      font-size: 0.83rem;
+      color: #666;
+      line-height: 1.5;
+      flex: 1;
+    }
+
+    .article-card-date {
+      font-size: 0.75rem;
+      color: #bbb;
+      margin-top: 0.3rem;
+    }
+
+    /* ── Empty state ── */
+    .blog-empty {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 3rem 1rem;
+      color: #aaa;
+      font-size: 1rem;
+    }
+
+    /* ── Tour CTA banner ── */
+    .tour-cta {
+      background: var(--bleu);
+      color: white;
+      text-align: center;
+      padding: 2rem 1.5rem;
+    }
+    .tour-cta h2 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+    .tour-cta p {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.72);
+      margin-bottom: 1.2rem;
+    }
+    .tour-cta-btn {
+      display: inline-block;
+      background: var(--orange);
+      color: white;
+      font-family: "Archivo", sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.85rem 1.8rem;
+      border-radius: 0.75rem;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5B56HBZC"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <nav class="blog-nav">
+    <a class="blog-nav-link" href="/">← Back to website</a>
+    <a class="blog-nav-link" href="https://www.guruwalk.com/walks/59922-paris-time-machine-a-local-s-perspective" target="_blank" rel="noopener">Book a free tour →</a>
+  </nav>
+
+  <main class="blog-grid">
+    
+    <a class="article-card" href="/blog/paris-museums-sold-out.html">
+      <div class="article-card-img" style="background-image:url('/blog/paris-museums-sold-out.jpg')"></div>
+      <div class="article-card-body">
+        <span class="article-tag">Museum Tips</span>
+        <h2 class="article-card-title">Paris Museums Fully Booked? Here's What to Do</h2>
+        <p class="article-card-desc">Louvre, Orsay, Eiffel Tower — tickets always seem to sell out. A local guide explains why it happens and what your real options are.</p>
+        <span class="article-card-date">2026-05-02</span>
+      </div>
+    </a>
+    <a class="article-card" href="/blog/paris-seine-river-cruise.html">
+      <div class="article-card-img" style="background-image:url('/blog/paris-seine-river-cruise.jpg')"></div>
+      <div class="article-card-body">
+        <span class="article-tag">Paris Tips</span>
+        <h2 class="article-card-title">Seine River Cruise in Paris: Is It Worth It?</h2>
+        <p class="article-card-desc">An honest review of Paris Seine river cruises — what you actually see, which option to book, and the best time to go.</p>
+        <span class="article-card-date">2026-05-02</span>
+      </div>
+    </a>
+    <a class="article-card" href="/blog/versailles-day-trip-from-paris.html">
+      <div class="article-card-img" style="background-image:url('/blog/versailles-day-trip-from-paris.jpg')"></div>
+      <div class="article-card-body">
+        <span class="article-tag">Day Trips</span>
+        <h2 class="article-card-title">Versailles Day Trip from Paris: Everything You Need to Know</h2>
+        <p class="article-card-desc">How to get to Versailles, how long to spend there, what to see first, and whether to book a guided visit — from a Paris local guide.</p>
+        <span class="article-card-date">2026-05-02</span>
+      </div>
+    </a>
+  </main>
+
+  <section class="tour-cta">
+    <h2>Want to discover Paris with us?</h2>
+    <p>We're Quentin, Thomas and Christina — passionate Parisians. Come join us for a walking tour of Paris.</p>
+    <a class="tour-cta-btn" href="https://www.guruwalk.com/walks/59922-paris-time-machine-a-local-s-perspective" target="_blank" rel="noopener">
+      🎟️ Reserve your free spot
+    </a>
+  </section>
+
+</body>
+</html>

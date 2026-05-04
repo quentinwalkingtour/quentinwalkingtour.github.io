@@ -5,7 +5,7 @@
 
 ## Got Extra Time? Check Out a Museum
 - The 14 “Museums of the City of Paris” are free – check the list online!
-- Art – Petit Palais (free!) / Orsay Museum (Little Louvre) / Musée de l'Orangerie
+- Art – Petit Palais (free!) / Orsay Museum (the Impressionist museum, great Louvre alternative) / Musée de l'Orangerie
 - Centre Pompidou / Fondation Louis Vuitton – great modern art museums.
 - Musée de la Préfecture de Police (Police Museum) / Musée des Égouts (Sewer Museum) / Musée du Fromage (Cheese Museum 😋)
 
@@ -15,8 +15,7 @@
 - Baguette sandwich from any good bakery (no need to search Instagram – good Google ratings are enough!).
 - Vietnamese food in Belleville (metro). I love Dong Huong, but many great places.
 - Falafel in Le Marais (many on Rue des Rosiers).
-- The Paris Mosque serves couscous and amazing pastries.
-- Coffee and bakery Arab pastries at the Paris Mosque / Café terrace anywhere in Paris
+- Coffee and amazing pastries at the Paris Mosque / Café terrace anywhere in Paris
 
 ## Food Market: 
 Walk in a food market and make your own picnic: bread, cheese, fruit, wine. Many markets in Paris (mostly mornings, schedules vary). Marché d'Aligre, Marché Saint-Quentin, Marché Saint-Germain, Marché des Enfants Rouges (more like a food court with amazing options!).

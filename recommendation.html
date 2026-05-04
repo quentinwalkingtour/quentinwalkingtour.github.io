@@ -23,7 +23,7 @@
   <base href="./">
 
   <title>My Paris Recommendations | Paris Time Machine</title>
-  <meta name="description" content="Quentin's personal recommendations for Paris – must-see areas, museums, food, markets, nightlife, and places to relax.">
+  <meta name="description" content="Your guide's personal recommendations for Paris – must-see areas, museums, food, markets, nightlife, and places to relax.">
   <meta name="author" content="Quentin">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -70,10 +70,8 @@
     }
 
     /* ── Page wrapper ───────────────────────── */
-    /* 92% on mobile → ~360px on a 390px phone  */
-    /* capped at 520px and centered on desktop   */
     .page {
-      width: min(92%, 520px);
+      width: min(94%, 800px);
       margin: 0 auto;
       padding: 2rem 0 3.5rem;
       display: flex;
@@ -87,12 +85,35 @@
       border-radius: 1.25rem;
       padding: 1.5rem;
       box-shadow: 0 2px 14px rgba(0,0,0,0.07);
+      max-width: 540px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+    }
+
+    /* ── Recommendation section (full-width, no card) ── */
+    .rec-section {
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    .rec-section-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--bleu-fonce);
+      margin-bottom: 0.15rem;
+    }
+
+    .rec-section-subtitle {
+      font-size: 0.87rem;
+      color: #888;
+      margin-bottom: 0.85rem;
     }
 
     .card-title {
       font-size: 1.1rem;
       font-weight: 800;
-      margin-bottom: 0.2rem;
+      margin-bottom: 1rem;
     }
 
     .card-subtitle {
@@ -101,10 +122,25 @@
       margin-bottom: 1rem;
     }
 
+    /* ── Loading skeleton ───────────────────── */
+    .skeleton {
+      background: linear-gradient(90deg, var(--blanc-fonce) 25%, var(--blanc-clair) 50%, var(--blanc-fonce) 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.4s infinite;
+      border-radius: 0.5rem;
+      height: 3rem;
+      margin-bottom: 0.6rem;
+    }
+    @keyframes shimmer { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+
     /* ── 1. Header ──────────────────────────── */
     .rec-header {
       text-align: center;
       padding: 0.5rem 0;
+      max-width: 540px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
     }
 
     .rec-avatar {
@@ -150,11 +186,14 @@
     .review-card {
       background: linear-gradient(135deg, var(--bleu-fonce) 0%, #004a6e 100%);
       color: white;
-      border-radius: 1.25rem;
+      border-radius: 1.5rem;
       padding: 1.5rem;
       box-shadow: 0 6px 24px rgba(0,48,73,0.22);
+      max-width: 540px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
     }
-
 
     .review-headline {
       font-size: 1.18rem;
@@ -166,22 +205,16 @@
     }
 
     .review-highlight {
-      background: #EFBF04;
-      color: white;
+      /* background: #EFBF04; */
+      color: #EFBF04;
       padding: 0.06em 0.2em;
       border-radius: 5px;
+      border: 1px solid #EFBF04;
       font-weight: 700;
       white-space: nowrap;
-    }
-
-    .review-stars {
-      display: block;
-      font-size: 1.3rem;
-      letter-spacing: 0.12em;
-      margin-bottom: 0.45rem;
-      color: #FFD166;
       text-shadow: 0 1px 6px rgba(255,209,102,0.35);
     }
+
 
     .review-subtext {
       font-size: 0.88rem;
@@ -222,37 +255,6 @@
       border-radius: 3px;
     }
 
-    .review-btn--google {
-      background: #4285F4;
-      color: white;
-      padding: 1rem 1.2rem;
-      box-shadow: 0 3px 10px rgba(66,133,244,0.35);
-    }
-
-    .review-btn--guruwalk {
-      background: rgba(255,255,255);
-      color: #FF5A5F;
-      border: 3px solid #FF5A5F;
-      padding: 0.8rem 1.2rem;
-    }
-
-    .review-btn--guruwalk .review-btn-label {
-      color: #FF5A5F;
-    }
-
-
-    .review-btn--secondary {
-      background: rgba(255,255,255,0.12);
-      color: white;
-      border: 1.5px solid rgba(255,255,255,0.28);
-    }
-
-    .review-btn-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
-    }
-
     .btn-text {
       display: flex;
       flex-direction: column;
@@ -268,17 +270,65 @@
       line-height: 1;
     }
 
+    /* Primary button — full colour */
+    .review-btn--primary-gyg {
+      background: white;
+      color: #FF5A5F;
+      border: 3px solid #FF5A5F;
+      padding: 0.8rem 1.2rem;
+    }
+    .review-btn--primary-gyg .review-btn-label { color: #FF5A5F; }
 
-    .review-btn--google:hover,
-    .review-btn--secondary:hover,
-    .review-btn--ghost:hover { opacity: 0.87; color: white; }
+    .review-btn--primary-gyg:hover { opacity: 0.87; }
 
+    .review-btn--primary-gyg-dark {
+      background: #FF5532;
+      color: white;
+      padding: 1rem 1.2rem;
+      font-size: 1rem;
+      box-shadow: 0 3px 10px rgba(255,85,50,0.4);
+    }
+    .review-btn--primary-gyg-dark:hover { opacity: 0.87; color: white; }
+
+    /* Google blue */
+    .review-btn--google {
+      background: #4285F4;
+      color: white;
+      padding: 1rem 1.2rem;
+      box-shadow: 0 3px 10px rgba(66,133,244,0.35);
+    }
+    .review-btn--google:hover { opacity: 0.87; color: white; }
+
+    /* Tripadvisor green */
+    .review-btn--viator {
+      background: #008767;
+      color: white;
+      padding: 0.85rem 1.2rem;
+      box-shadow: 0 3px 10px rgba(0,135,103,0.4);
+    }
+    .review-btn--viator:hover { opacity: 0.87; color: white; }
+
+    /* FreeTour orange */
+    .review-btn--secondary {
+      background: white;
+      color: #ff9b28;
+      border: 3px solid #ff9b28;
+      /* box-shadow: 0 3px 10px rgba(250,167,75,0.4); */
+    }
+    .review-btn--secondary:hover { opacity: 0.87; color: white; }
+
+    /* Small text link for tertiary platform */
     .review-or {
       font-size: 0.9rem;
       color: rgba(255,255,255,0.65);
       line-height: 1.55;
       text-align: center;
       margin-top: 0.50rem;
+    }
+    .review-or a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: underline;
+      font-weight: 600;
     }
 
     /* ── 3. Sponsored activities ─────────────── */
@@ -290,6 +340,19 @@
 
     .card--cta .card-title  { color: white; }
     .card--cta .card-subtitle { color: rgba(255,255,255,0.72); }
+
+    .card--cta .activity-row {
+      background: rgba(255,255,255,0.18);
+      border-color: rgba(255,255,255,0.25);
+    }
+
+    .card--cta .activity-name  { color: white; }
+    .card--cta .activity-desc  { color: rgba(255,255,255,0.72); }
+
+    .card--cta .activity-cta {
+      background: white;
+      color: #d05a28;
+    }
 
     .card--cta .activity-row {
       background: rgba(255,255,255,0.18);
@@ -325,20 +388,19 @@
       cursor: pointer;
     }
 
-
-    /* tiny "partner" badge sits above the top border */
-    /* .activity-partner {
+    .activity-badge {
       position: absolute;
-      top: -0.52rem;
+      top: -0.48rem;
       left: 0.85rem;
-      font-size: 0.6rem;
+      font-size: 0.55rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.07em;
-      color: var(--bleu-clair);
-      background: var(--blanc-clair);
-      padding: 0 0.3rem;
-    } */
+      color: #cf5c22;
+      background: white;
+      padding: 0.05em 0.35em;
+      border-radius: 3px;
+    }
 
     .activity-emoji {
       font-size: 1.45rem;
@@ -364,21 +426,37 @@
       margin-top: 0.1rem;
     }
 
+    .activity-blog-link {
+      display: inline-block;
+      margin-top: 0.3rem;
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: #cf5c22;
+      background: white;
+      padding: 0.15em 0.55em;
+      border-radius: 2rem;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
     .activity-cta {
       flex-shrink: 0;
       background: var(--bleu-fonce);
       color: white;
-      font-family: "Archivo", sans-serif;
-      font-size: 0.79rem;
+      font-size: 1rem;
       font-weight: 700;
-      padding: 0.38rem 0.65rem;
-      border-radius: 0.45rem;
-      white-space: nowrap;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       border: none;
       cursor: pointer;
+      line-height: 1;
     }
 
-    /* ── 4. Recommendations ─────────────────── */
+    /* ── 4. Recommendations accordion ──────── */
     .star-legend {
       display: flex;
       align-items: center;
@@ -423,7 +501,6 @@
       -webkit-tap-highlight-color: transparent;
     }
 
-
     .acc-chevron {
       flex-shrink: 0;
       font-size: 1.3rem;
@@ -448,28 +525,6 @@
 
     .acc-body[hidden] { display: none; }
 
-    .rec-list li {
-      padding: 0.26rem 0 0.26rem 1.05rem;
-      font-size: 0.91rem;
-      line-height: 1.55;
-      color: #1c1c1c;
-      position: relative;
-    }
-
-    .rec-list li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: var(--bleu-clair);
-      font-weight: 700;
-    }
-
-    .rec-fav {
-      font-size: 0.78rem;
-      vertical-align: middle;
-      margin-left: 0.12rem;
-    }
-
     .map-wrap { margin-top: 0.85rem; }
 
     .map-wrap iframe {
@@ -487,7 +542,175 @@
       margin-top: 0.35rem;
     }
 
-    /* ── 5. Footer ──────────────────────────── */
+    /* ── 5. Map/list toggle ──────────────────── */
+    .view-toggle {
+      display: flex;
+      gap: 0.35rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .view-toggle-btn {
+      flex: 1;
+      padding: 0.42rem 0.6rem;
+      border-radius: 0.5rem;
+      border: 1.5px solid var(--blanc-fonce);
+      background: white;
+      font-family: "Archivo", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #aaa;
+      cursor: pointer;
+      transition: background 0.14s, color 0.14s, border-color 0.14s;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .view-toggle-btn.active {
+      background: var(--bleu-fonce);
+      color: white;
+      border-color: var(--bleu-fonce);
+    }
+
+    /* ── 6. Unified recommendation items ────── */
+    .rec-item-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .rec-item {
+      padding: 0.65rem 0;
+      border-bottom: 1px solid var(--blanc-fonce);
+    }
+
+    .rec-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .rec-item-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.18rem;
+    }
+
+    .rec-item-name-col {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .rec-item-name {
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--bleu-fonce);
+      line-height: 1.3;
+    }
+
+    .rec-item-nbhd {
+      font-size: 0.58rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--bleu-clair);
+      background: var(--blanc);
+      border: 1px solid var(--blanc-fonce);
+      padding: 0.08em 0.45em;
+      border-radius: 3px;
+      white-space: nowrap;
+      align-self: flex-start;
+    }
+
+    .rec-maps-link {
+      flex-shrink: 0;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--bleu-clair);
+      background: white;
+      border: 1.5px solid var(--blanc-fonce);
+      padding: 0.25rem 0.6rem;
+      border-radius: 0.4rem;
+      text-decoration: none;
+      white-space: nowrap;
+      min-height: 1.9rem;
+      display: inline-flex;
+      align-items: center;
+      transition: background 0.14s, color 0.14s;
+    }
+
+    .rec-maps-link:hover { background: var(--bleu-fonce); color: white; border-color: var(--bleu-fonce); }
+
+    .rec-item-desc {
+      font-size: 0.82rem;
+      color: var(--bleu-fonce);
+      opacity: 0.65;
+      line-height: 1.45;
+      margin-bottom: 0.5rem;
+    }
+
+    .rec-item-actions {
+      display: flex;
+      gap: 0.35rem;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding-bottom: 0.1rem;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+    }
+
+    .rec-btn {
+      display: inline-flex;
+      align-items: center;
+      flex: 0 0 auto;
+      gap: 0.25rem;
+      font-size: 0.68rem;
+      font-weight: 700;
+      font-family: "Archivo", sans-serif;
+      padding: 0.24rem 0.62rem;
+      border-radius: 2rem;
+      text-decoration: none;
+      white-space: nowrap;
+      cursor: pointer;
+      border: 1px solid transparent;
+      min-height: 1.55rem;
+      transition: opacity 0.15s, transform 0.12s, background 0.15s, color 0.15s, border-color 0.15s;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .rec-btn:active { transform: scale(0.97); }
+
+    .rec-btn--book {
+      background: rgba(255, 117, 25, 0.1);
+      color: var(--orange);
+      border-color: rgba(255, 117, 25, 0.35);
+      box-shadow: 0 1px 4px rgba(255,117,25,0.12);
+    }
+
+    .rec-btn--book:hover {
+      background: var(--orange);
+      border-color: var(--orange);
+      color: white;
+    }
+
+    .rec-btn--guide {
+      background: transparent;
+      color: var(--bleu-fonce);
+      border: 1.5px solid var(--bleu-fonce);
+    }
+
+    .rec-btn--guide:hover { background: var(--bleu-fonce); color: white; }
+
+    /* Divider between mixed content blocks */
+    .block-divider {
+      border: none;
+      border-top: 1.5px solid var(--blanc-fonce);
+      margin: 0.8rem 0;
+    }
+
+    /* ── 7. Footer ──────────────────────────── */
     .rec-footer {
       text-align: center;
       display: flex;
@@ -496,8 +719,6 @@
       gap: 0.65rem;
       padding-top: 0.5rem;
     }
-
-
 
     .footer-nudge {
       font-size: 0.82rem;
@@ -510,6 +731,29 @@
     }
 
     .footer-nudge a:hover { text-decoration: underline; }
+
+    /* ── Top nav ── */
+    .rec-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0.85rem 1rem 0;
+    }
+    .rec-nav-link {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--bleu-fonce);
+      opacity: 0.5;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: opacity 0.15s;
+    }
+    .rec-nav-link:hover { opacity: 1; }
 
     .back-link {
       display: inline-flex;
@@ -524,7 +768,6 @@
     .back-link svg { transform: scaleX(-1); }
     .back-link:hover { color: var(--bleu-fonce); }
 
-
   </style>
 
 </head>
@@ -534,7 +777,11 @@
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5B56HBZC"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+
+  <nav class="rec-nav" id="rec-nav">
+    <a class="rec-nav-link" href="index.html">← Back to website</a>
+    <a class="rec-nav-link" href="/blog/">Our blog articles →</a>
+  </nav>
 
   <div class="page">
 
@@ -543,93 +790,70 @@
     ══════════════════════════════════════ -->
     <header class="rec-header">
       <img
+        id="guide-avatar"
         class="rec-avatar"
-        src="./assets/images/photo-close.png"
-        alt="Quentin, Paris walking tour guide">
-      <h1><span style="color:var(--rouge-clair)">Thank you so much</span> for joining my tour! 😃</h1>
-      <p>Here are my personal tips to make the most of Paris.<br>Need more? Text me at <a class="contact-chip" onclick="copyChip(this, '+33 7 58 80 02 95')">+33 7 58 80 02 95</a> or email me at <a class="contact-chip" onclick="copyChip(this, 'quentinwalkingtour@gmail.com')">quentinwalkingtour@gmail.com</a></p>
+        src="./assets/images/Logo_Noir_wb.png"
+        alt="Your Paris walking tour guide">
+      <h1 id="thank-you-message"><span style="color:var(--rouge-clair)">Thank you so much</span> for joining my tour! 😃</h1>
+      <p>Here are our tips to make the most of Paris.<br>Need more? Text us at <a class="contact-chip" onclick="copyChip(this, '+33 7 58 80 02 95')">+33 7 58 80 02 95</a> or email us at <a class="contact-chip" onclick="copyChip(this, 'quentinwalkingtour@gmail.com')">quentinwalkingtour@gmail.com</a></p>
     </header>
 
     <!-- ══════════════════════════════════════
          2. REVIEW — most important section
     ══════════════════════════════════════ -->
-    <div class="review-card">
-      <p class="review-headline">If you enjoyed the tour, a <span class="review-highlight">5★ review</span> helps me a lot ❤️</p>
-      <p class="review-subtext">It helps me stay visible and keep running this tour independently <span style="color:white;">🙏</span></p>
-      <div class="review-buttons">
-
-        <a class="review-btn review-btn--guruwalk"
-          href="https://www.guruwalk.com/en/walks/59922/reviews/new"
-          target="_blank" rel="noopener" data-platform="guruwalk">
-          <img src="./assets/images/icons/guruwalk.png" class="btn-logo" alt="">
-          <span class="btn-text">
-            <span>Review on GuruWalk</span>
-            <span class="review-btn-label">If you booked through it!</span>
-          </span>
-        </a>
-
-        <a class="review-btn review-btn--google"
-          href="https://g.page/r/CbXKLOzFaHEXEAE/review"
-          target="_blank" rel="noopener" data-platform="google">
-          <img src="./assets/images/icons/google.png" class="btn-logo" alt="">
-          <span>Leave a Google Review</span>
-        </a>
-
-        <a class="review-btn review-btn--secondary"
-          href="https://www.tripadvisor.com/UserReviewEdit-g187147-d28198112-Quentin_Dubourg-Paris_Ile_de_France.html"
-          target="_blank" rel="noopener" data-platform="tripadvisor">
-          <img src="./assets/images/icons/tripadvisor.png" class="btn-logo" alt="">
-          <span>TripAdvisor</span>
-        </a>
-
+    <div class="review-card" id="section-review">
+      <p class="review-headline">If you enjoyed the tour, a <span class="review-highlight">5★ review</span> helps us a lot ❤️</p>
+      <p class="review-subtext">It helps us stay visible and keep running this tour independently 🙏</p>
+      <div class="review-buttons" id="review-buttons">
+        <!-- rendered by JS based on ?type= parameter -->
       </div>
-      <p class="review-or">Or <span style="font-weight: 700;">any other platform</span> you prefer!</p>
+      <p class="review-or" id="review-or"></p>
     </div>
 
     <!-- ══════════════════════════════════════
          3. SPONSORED ACTIVITIES
     ══════════════════════════════════════ -->
-    <div class="card card--cta">
+    <div class="card card--cta" id="section-activities">
       <p class="card-title">Want to go <span style="color:#ffe240">further?</span> 🎉</p>
-      <p class="card-subtitle">A few experiences I personally recommend</p>
+      <!-- <p class="card-subtitle">A few classical activities we recommend</p> -->
       <div class="activities-list" id="activities-list">
+        <div class="skeleton"></div>
+        <div class="skeleton"></div>
       </div>
     </div>
 
     <!-- ══════════════════════════════════════
-         4. RECOMMENDATIONS
+         4. RECOMMENDATIONS (merged, full-width)
     ══════════════════════════════════════ -->
-    <div class="card">
-      <p class="card-title">My Paris Recommendations 🗺️</p>
-      <p class="card-subtitle">Where I’d take my friends visiting Paris. With maps!</p>
+    <section class="rec-section">
+      <p class="rec-section-title">Our Paris Recommendations 🗺️</p>
+      <!-- <p class="rec-section-subtitle">Some tips and places we'd take friends visiting Paris!</p> -->
 
       <div class="star-legend">
         <span>⭐</span>
-        <span>= my personal favourite!</span>
+        <span>= our personal favourite!</span>
       </div>
 
       <div class="accordion" id="accordion">
-        <!-- rendered by JS from CATEGORIES array below -->
+        <div class="skeleton"></div>
+        <div class="skeleton"></div>
+        <div class="skeleton"></div>
       </div>
-    </div>
+    </section>
 
     <!-- ══════════════════════════════════════
-         5. FOOTER
+         7. FOOTER
     ══════════════════════════════════════ -->
     <footer class="rec-footer">
-
-
       <p class="footer-nudge">
-        Enjoyed it? <a href="https://g.page/r/CbXKLOzFaHEXEAE/review" target="_blank" rel="noopener" style="text-decoration: underline;">A Google review takes 2 minutes</a> ❤️
+        Enjoyed it? <a href="https://g.page/r/CbXKLOzFaHEXEAE/review" target="_blank" rel="noopener" style="text-decoration:underline;">A Google review takes 2 minutes</a> ❤️
       </p>
-
       <a class="back-link" href="index.html" aria-label="Back to website">
         <svg style="height:1rem;width:1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
           <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/>
         </svg>
         Back to website
       </a>
-
     </footer>
 
   </div><!-- /.page -->
@@ -637,193 +861,449 @@
   <script>
 
     /* ══════════════════════════════════════════════════════════════
-       DATA — edit here to update content, no HTML to touch
+       URL PARAMETERS
     ══════════════════════════════════════════════════════════════ */
 
-    /* ── Sponsored activities ────────────────────────────────────
-       To add an activity: copy one object and fill in your values.
-       Set url to the booking link when ready.
-    ─────────────────────────────────────────────────────────────── */
-    const ACTIVITIES = [
-      {
-        emoji: '⚰️',
-        name:  'Père Lachaise',
-        desc:  'Love, scandal, and legends among the graves',
-        url:   'https://www.guruwalk.com/walks/68783-scandals-intrigues-history-tales-at-pere-lachaise-cemetery-tour-paris?ref=ehqvdsdauxwqgpt77wo0&ref_campaign=after_tour_recommendation_pere_lachaise'
-      }, 
-      {
-        emoji: '⛰️',
-        name:  'Montmartre Hill',
-        desc:  'The Soul of Bohemian Paris: Rebels & Artists',
-        url:   'https://www.guruwalk.com/walks/49932-montmartre-a-journey-through-the-art-and-history-of-bohemian-paris?ref=ehqvdsdauxwqgpt77wo0&ref_campaign=after_tour_recommendation_montmartre'
-      }
-    ];
+    const URL_PARAMS  = new URLSearchParams(window.location.search);
+    const TOUR_TYPE   = URL_PARAMS.get('type')  || 'free_tour'; // 'free_tour' | 'prepaid'
+    const GUIDE       = URL_PARAMS.get('guide') || '';          // 'quentin' | 'christina' | 'thomas'
+    const POST_TOUR   = URL_PARAMS.has('type');                 // true only when coming from a tour QR code
 
-    /* ── Recommendation categories ───────────────────────────────
-       Each item is a plain string. Rules for display:
-         - If the string contains ":", everything before the first ":"
-           is shown in bold (e.g. "Bouillons ⭐ : authentic..." →
-           <b>Bouillons ⭐</b>: authentic...)
-         - Add ⭐ directly in the text where you want it
-         - No dashes please — use parentheses or colons
+    /* Post-tour mode: show review + activities, hide site nav */
+    if (POST_TOUR) {
+      document.querySelector('.rec-nav').style.display = 'none';
+    } else {
+      document.getElementById('section-review').hidden     = true;
+      document.getElementById('thank-you-message').hidden  = true;
+      document.getElementById('section-activities').hidden = true;
+    }
 
-       To add a place: add a new string to the items array.
-       To update a map: replace the mapUrl string with your
-       Google My Maps embed URL (iframe src).
-    ─────────────────────────────────────────────────────────────── */
-    const CATEGORIES = [
-      {
-        id:       'mustsee',
-        emoji:    '🗼',
-        title:    'Must-See in Paris',
+    /* ══════════════════════════════════════════════════════════════
+       STATIC RECOMMENDATION DATA
+       (places / tips / activities come from JSON files)
+    ══════════════════════════════════════════════════════════════ */
 
-        mapUrl:   'https://www.google.com/maps/d/embed?mid=1gMVM0NB1ji58Z9bBWBGm_ev2mWEf1UM&ehbc=2E312F',
-        items: [
-          'Eiffel Tower / Notre-Dame / Louvre (try to go early in the morning!)',
-          'Montmartre ⭐ : Check the map for a list of spots to visit (start by Moulin Rouge, metro Blanche, to see it in the right order 🙂).',
-          'Quartier Latin: Panthéon, Luxembourg Garden, small streets, student area.',
+    /*
+     * UNIFIED_CATEGORIES — drives the single merged accordion.
+     * Each entry has a `content` array of blocks, rendered top-to-bottom:
+     *   { type: 'static', items: [...] }        — plain bullet-point list
+     *   { type: 'places', key: 'restaurants' }  — map + place cards from places.json
+     *   { type: 'tips',   key: 'museums' }      — condensed CTA rows from tips.json
+     *
+     * To ADD content: edit the relevant JSON file (places.json / tips.json)
+     * or add a string to a 'static' items array below.
+     */
+    const UNIFIED_CATEGORIES = [
+      {
+        id: 'restaurants', emoji: '🍽️', title: 'Restaurants',
+        content: [
+          { type: 'places', key: 'restaurants' },
         ]
       },
       {
-        id:       'museums',
-        emoji:    '🏛️',
-        title:    'Check Out a Museum',
-        subtitle: null,
-        mapUrl:   '#REPLACE_ME_MUSEUMS_MAP',
-        items: [
-          '<b>The 14 "Museums of the City of Paris" are free</b> (<a href="https://parisjetaime.com/eng/article/free-admission-and-good-deals-in-museums-and-monuments-in-paris-a961" target="_blank" rel="noopener" style="color:var(--bleu-clair);">check the list online!</a>)',
-          '<b>Art:</b> </b>Petit Palais (free!) / Orsay Museum ⭐ (Little Louvre) / Musée de l\'Orangerie / Musée de Cluny (free -26)',
-          '<b>Musée Rodin ⭐</b> (intimate museum with a lovely garden, opposite of le Louvre)',
-          '<b>Modern art museums:</b> Centre Pompidou / Fondation Louis Vuitton',
-          'Musée de la Préfecture de Police (Police Museum) / Musée des Égouts (Sewer Museum) / Musée du Fromage (Cheese Museum 😋)',
+        id: 'tours', emoji: '🎉', title: 'Tours & Activity',
+        content: [
+          { type: 'tips', key: 'tours' },
         ]
       },
       {
-        id:       'food',
-        emoji:    '🥐',
-        title:    'Food Experience',
-        subtitle: null,
-        mapUrl:   '#REPLACE_ME_FOOD_MAP',
-        items: [
-          'Bouillons ⭐ : authentic Parisian restaurants, simple food, very affordable. Often crowded on weekends. Also look for brasseries everywhere (open all day).',
-          '<b>French crêpes</b> on Rue du Montparnasse.',
-          '<b>Baguette sandwich</b> from any good bakery (good Google ratings are enough!).',
-          '<b>Vietnamese food</b> in Belleville (metro). I love Dong Huong, but many great places.',
-          '<b>Falafel</b> in Le Marais (many on Rue des Rosiers).',
-          '<b>Coffee and Arab pastries</b> in a beautiful setting at the Grand Mosque of Paris ⭐',
+        id: 'museums', emoji: '🏛️', title: 'Museums & Visits',
+        content: [
+          { type: 'tips', key: 'museums' },
         ]
       },
       {
-        id:       'markets',
-        emoji:    '🧺',
-        title:    'Food Markets',
-        subtitle: null,
-        mapUrl:   '#REPLACE_ME_MARKETS_MAP',
-        items: [
-          'Many markets in Paris (mostly mornings, schedules vary).',
-          '<b>Marché des Enfants Rouges ⭐</b> (more like a food court with amazing options!).',
-          'Marché d\'Aligre',
-          'Marché Saint-Quentin',
-          'Marché Saint-Germain',
-          'Marché Mouffetard',
-          '... and many more!',
+        id: 'bars', emoji: '🍸', title: 'Bars & Nightlife',
+        content: [
+          { type: 'places', key: 'bars' },
+          
         ]
       },
       {
-        id:       'nightlife',
-        emoji:    '🍸',
-        title:    'Nightlife',
-        subtitle: null,
-        mapUrl:   '#REPLACE_ME_NIGHTLIFE_MAP',
-        items: [
-          '<b>To have a drink:</b> Le Marais (many trendy wine bars and cocktail places) / Canal Saint-Martin (relaxed bars along the canal) / Saint-Germain-des-Prés (classic Paris cafés)',
-          '<b>Party in Oberkampf ⭐</b> (The best area in Paris to party like a local) / South Pigalle',
-          '<b>Jazz bar:</b> <b>Caveau de la Huchette ⭐</b> (go early!), Le Baiser Salé or Duc des Lombards in Le Marais, the relaxed Le Bal Blomet, or the more classic Duke\'s Bar on Thursday/Friday.',
+        id: 'cafes', emoji: '☕', title: 'Cafés & Chocolate',
+        content: [
+          { type: 'places', key: 'cafes' },
         ]
       },
       {
-        id:       'parks',
-        emoji:    '☀️',
-        title:    'Where to Enjoy the Sun?',
-        subtitle: null,
-        mapUrl:   '#REPLACE_ME_PARKS_MAP',
-        items: [
-          'Place des Vosges / Garden of the Carnavalet Museum',
-          'Jardin des Plantes / <b>Luxembourg Garden ⭐</b> / Tuileries Garden / Parc des Buttes-Chaumont',
-          'Père Lachaise Cemetery (many famous graves and stories, great place for a tour!)',
-          'Bois de Vincennes: rent a boat on <b>Lac Daumesnil ⭐</b> and you can visit the Chateau de Vincennes!',
+        id: 'food', emoji: '🥐', title: 'Food Experience',
+        content: [
+          { type: 'static', items: [
+            '<b>Bouillons ⭐</b> Parisian restaurants, simple French food, very affordable. Often crowded on weekends.',
+            '<b>French crêpes</b> on Rue du Montparnasse.',
+            '<b>Baguette sandwich</b> from any good bakery (good Google ratings are enough!).',
+            '<b>Vietnamese food</b> in Belleville (metro). I love Dong Huong, but many great places.',
+            '<b>Falafel</b> in Le Marais (many on Rue des Rosiers).',
+            '<b>Coffee and Arab pastries</b> in a beautiful setting at the Grand Mosque of Paris ⭐',
+            'Many markets in Paris (mostly mornings, schedules vary).',
+            '<b>Marché des Enfants Rouges ⭐</b> (more like a food court with amazing options!).',
+            'Marché d\'Aligre / Marché Saint-Quentin / Marché Saint-Germain / Marché Mouffetard',
+          ]},
+        ]
+      },
+      {
+        id: 'souvenirs', emoji: '🎁', title: 'Souvenirs & Gifts',
+        content: [
+          { type: 'places', key: 'souvenirs' },
+        ]
+      },
+      {
+        id: 'parks', emoji: '☀️', title: 'Where to Enjoy the Sun',
+        content: [
+          { type: 'static', items: [
+            'End of the tour : Place des Vosges / Garden of the Carnavalet Museum',
+            'Parks :Jardin des Plantes / <b>Luxembourg Garden ⭐</b> / Tuileries Garden / Parc des Buttes-Chaumont',
+            'Père Lachaise Cemetery : many famous graves and stories, great place for a tour!',
+            'Bois de Vincennes : rent a boat on <b>Lac Daumesnil ⭐</b> and visit the <b>Chateau de Vincennes!</b>',
+          ]},
+        ]
+      },
+      {
+        id: 'day-trips', emoji: '🚂', title: 'Day Trips',
+        content: [
+          { type: 'tips', key: 'day-trips' },
+        ]
+      },
+      
+      {
+        id: 'transfers', emoji: '🚇', title: 'Transfer & Métro Help',
+        content: [
+          { type: 'tips', key: 'transfers' },
         ]
       },
     ];
 
     /* ══════════════════════════════════════════════════════════════
-       RENDER
+       REVIEW LINKS — fill in your URLs here
     ══════════════════════════════════════════════════════════════ */
 
-    function renderActivities() {
+    const REVIEW_URLS = {
+      guruwalk:      'https://www.guruwalk.com/en/walks/59922/reviews/new',
+      google:        'https://g.page/r/CbXKLOzFaHEXEAE/review',
+      freetour:      'https://www.freetour.com/paris/paris-time-machine-free-tour-a-locals-perspective',
+      getyourguide:  'https://www.getyourguide.com/scan-review-qr?activity_id=875834&utm_medium=offline&utm_source=supplier_review_link&utm_campaign=supplier_review_qrcode&utm_content=875834',
+      viator:        'https://www.tripadvisor.com/UserReviewEdit-g187147-d28211242-Paris_Time_Machine_A_local_perspective_English_Walking_Tour-Paris_Ile_de_France.html',
+    };
+
+    /* ══════════════════════════════════════════════════════════════
+       GUIDE PHOTOS
+    ══════════════════════════════════════════════════════════════ */
+
+    const GUIDE_PHOTOS = {
+      quentin:   './assets/images/guides/quentin.png',
+      christina: './assets/images/guides/christina.jpg',
+      thomas:    './assets/images/guides/thomas.jpg',
+    };
+
+    const GUIDE_NAMES = {
+      quentin:   'Quentin',
+      christina: 'Christina',
+      thomas:    'Thomas',
+    };
+
+    /* ══════════════════════════════════════════════════════════════
+       INIT — guide photo + review buttons (no fetch needed)
+    ══════════════════════════════════════════════════════════════ */
+
+    (function initHeader() {
+      const avatar = document.getElementById('guide-avatar');
+      const guideName = GUIDE_NAMES[GUIDE] || null;
+      const photoSrc  = GUIDE_PHOTOS[GUIDE];
+
+      if (photoSrc) {
+        avatar.src = photoSrc;
+        avatar.alt = guideName + ', Paris walking tour guide';
+        avatar.onerror = () => {
+          avatar.src = './assets/images/Logo_Noir_wb.png';
+          avatar.alt = 'Paris Time Machine';
+        };
+      }
+    })();
+
+    (function initReviewButtons() {
+      const container = document.getElementById('review-buttons');
+      const orEl      = document.getElementById('review-or');
+
+      if (TOUR_TYPE === 'prepaid') {
+        container.innerHTML = `
+          <a class="review-btn review-btn--primary-gyg-dark"
+            href="${REVIEW_URLS.getyourguide}" target="_blank" rel="noopener" data-platform="getyourguide">
+            <img src="./assets/images/icons/getyourguide.png" class="btn-logo" alt="">
+            <span class="btn-text">
+              <span>Review on GetYourGuide</span>
+            </span>
+          </a>
+          <a class="review-btn review-btn--viator"
+            href="${REVIEW_URLS.viator}" target="_blank" rel="noopener" data-platform="viator">
+            <img src="./assets/images/icons/tripadvisor.png" class="btn-logo" alt="">
+            <span class="btn-text">
+              <span>Review on Tripadvisor</span>
+            </span>
+          </a>
+          <a class="review-btn review-btn--google"
+            href="${REVIEW_URLS.google}" target="_blank" rel="noopener" data-platform="google">
+            <img src="./assets/images/icons/google.png" class="btn-logo" alt="">
+            <span class="btn-text">
+              <span>Leave a Google Review</span>
+              <span class="review-btn-label">No matter where you booked from!</span>
+            </span>
+          </a>`;
+          orEl.innerHTML = 'Or any other platform you prefer!';
+      } else {
+        /* free_tour (default) */
+        container.innerHTML = `
+          <a class="review-btn review-btn--primary-gyg"
+            href="${REVIEW_URLS.guruwalk}" target="_blank" rel="noopener" data-platform="guruwalk">
+            <img src="./assets/images/icons/guruwalk.png" class="btn-logo" alt="">
+            <span class="btn-text">
+              <span>Review on GuruWalk</span>
+            </span>
+          </a>
+          <a class="review-btn review-btn--secondary"
+            href="${REVIEW_URLS.freetour}" target="_blank" rel="noopener" data-platform="freetour">
+            <img src="./assets/images/icons/freetours.png" class="btn-logo" alt="">
+            <span class="btn-text">
+              <span>Review on FreeTour.com</span>
+            </span>
+          </a>
+          <a class="review-btn review-btn--google"
+            href="${REVIEW_URLS.google}" target="_blank" rel="noopener" data-platform="google">
+            <img src="./assets/images/icons/google.png" class="btn-logo" alt="">
+            <span class="btn-text">
+              <span>Leave a Google Review</span>
+              <span class="review-btn-label">No matter where you booked from!</span>
+            </span>
+          </a>
+          `;
+        orEl.innerHTML = 'Or <strong>any other platform</strong> you prefer!';
+      }
+
+      /* Review click tracking */
+      container.querySelectorAll('.review-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const src = sessionStorage.getItem('tour_source');
+          console.log('Review click', btn.dataset.platform, 'from', src);
+        });
+      });
+    })();
+
+    /* ══════════════════════════════════════════════════════════════
+       DATA LOADING — fetch all JSON in parallel
+    ══════════════════════════════════════════════════════════════ */
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+      Promise.all([
+        fetch('./data/activities.json').then(r => r.json()),
+        fetch('./data/places.json').then(r => r.json()),
+        fetch('./data/tips.json').then(r => r.json()),
+      ]).then(([activities, placesData, tips]) => {
+        renderActivities(activities);
+        renderAll(placesData, tips);
+      }).catch(err => {
+        console.warn('Data fetch error:', err);
+        renderActivities([]);
+        renderAll({ maps: {}, places: [] }, []);
+      });
+    });
+
+    /* ══════════════════════════════════════════════════════════════
+       RENDER — ACTIVITIES
+    ══════════════════════════════════════════════════════════════ */
+
+    function renderActivities(activities) {
       const list = document.getElementById('activities-list');
-      ACTIVITIES.forEach(act => {
+      list.innerHTML = '';
+
+      const active = activities.filter(a => a.active !== false);
+
+      if (!active.length) {
+        document.getElementById('section-activities').hidden = true;
+        return;
+      }
+
+      active.forEach(act => {
         const a = document.createElement('a');
-        a.className  = 'activity-row';
-        a.href       = act.url;
-        a.target     = '_blank';
-        a.rel        = 'noopener';
-        a.innerHTML  = `
-          
-          <span class="activity-emoji">${act.emoji}</span>
+        a.className = 'activity-row';
+        a.href      = act.affiliateUrl || '#';
+        a.target    = '_blank';
+        a.rel       = 'noopener';
+
+        const badgeHtml = act.badge
+          ? `<span class="activity-badge">${act.badge}</span>` : '';
+        const blogHtml = act.blogUrl
+          ? `<a class="activity-blog-link" href="${act.blogUrl}">📖 Read our guide</a>` : '';
+
+        a.innerHTML = `
+          ${badgeHtml}
+          <span class="activity-emoji">${act.emoji || '✨'}</span>
           <div class="activity-info">
-            <span class="activity-name">${act.name}</span>
-            <span class="activity-desc">${act.desc}</span>
+            <span class="activity-name">${act.title}</span>
+            <span class="activity-desc">${act.description}</span>
+            ${blogHtml}
           </div>
-          <span class="activity-cta">Book →</span>`;
+          <span class="activity-cta">›</span>`;
         list.appendChild(a);
       });
     }
 
-    function renderCategories() {
+    /* ══════════════════════════════════════════════════════════════
+       RENDER — ALL (unified: places + tips + static text)
+    ══════════════════════════════════════════════════════════════ */
+
+    function renderAll(placesData, tips) {
       const accordion = document.getElementById('accordion');
-      CATEGORIES.forEach(cat => {
-        const titleHtml = cat.subtitle
-          ? `${cat.emoji} ${cat.title} <small style="font-weight:400;color:#aaa;font-size:0.77rem;">(${cat.subtitle})</small>`
-          : `${cat.emoji} ${cat.title}`;
+      accordion.innerHTML = '';
 
-        const itemsHtml = cat.items.map(text => {
-          if (!text.includes('<a')) {
-            const m = text.match(/^(.+?)\s*:/);
-            if (m) {
-              const rest = text.slice(text.indexOf(':') + 1).trimStart();
-              return `<li><b>${m[1]}</b>: ${rest}</li>`;
-            }
+      const allPlaces  = (placesData.places || []).filter(p => p.active !== false);
+      const maps       = placesData.maps || {};
+      const activeTips = tips.filter(t => t.active !== false);
+
+      UNIFIED_CATEGORIES.forEach(cat => {
+        let bodyHtml  = '';
+        let blockCount = 0;
+
+        cat.content.forEach(block => {
+
+          /* ── Static items (rendered as plain rec-items, no actions) ── */
+          if (block.type === 'static') {
+            if (!block.items || !block.items.length) return;
+            const itemsHtml = block.items.map(text => {
+              /* Split "Title: rest" or "<b>Title</b>: rest" into name + desc */
+              const colonIdx = text.indexOf(':');
+              let nameHtml = '', descHtml = text;
+              if (colonIdx > 0) {
+                const before = text.slice(0, colonIdx).trim();
+                const after  = text.slice(colonIdx + 1).trimStart();
+                /* Only split if the "before" part is short enough to be a label */
+                if (before.replace(/<[^>]+>/g, '').length <= 60 && after.length > 0) {
+                  nameHtml = `<div class="rec-item-header"><span class="rec-item-name">${before}</span></div>`;
+                  descHtml = after;
+                }
+              }
+              return `
+                <div class="rec-item">
+                  ${nameHtml}
+                  <p class="rec-item-desc" style="opacity:1;margin-bottom:0;">${descHtml}</p>
+                </div>`;
+            }).join('');
+            if (blockCount > 0) bodyHtml += '<hr class="block-divider">';
+            bodyHtml += `<div class="rec-item-list">${itemsHtml}</div>`;
+            blockCount++;
           }
-          return `<li>${text}</li>`;
-        }).join('');
 
-        const hasMap = cat.mapUrl && !cat.mapUrl.startsWith('#');
-        const mapHtml = hasMap ? `
-            <div class="map-wrap">
-              <!-- MAP: ${cat.id.toUpperCase()} — replace mapUrl in CATEGORIES to update -->
-              <iframe
-                src="${cat.mapUrl}"
-                loading="lazy"
-                allowfullscreen
-                title="${cat.title} map">
-              </iframe>
-              <p class="map-hint">Tap any pin to open in Google Maps</p>
-            </div>` : '';
+          /* ── Places: map + item list ── */
+          else if (block.type === 'places') {
+            const places = allPlaces.filter(p => p.category === block.key);
+            const mapUrl = maps[block.key] || '';
+            const hasMap = mapUrl && !mapUrl.startsWith('PLACEHOLDER');
+            if (!places.length && !hasMap) return;
+
+            const itemId   = `places-${cat.id}`;
+            const listHtml = places.map(p => {
+              const nbhd    = p.neighborhood ? `<span class="rec-item-nbhd">${p.neighborhood}</span>` : '';
+              const mapsBtn = p.googleMapsUrl
+                ? `<a class="rec-maps-link" href="${p.googleMapsUrl}" target="_blank" rel="noopener">Maps →</a>` : '';
+              const guideBtn = p.blogUrl
+                ? `<a class="rec-btn rec-btn--guide" href="${p.blogUrl}" target="_blank">📖 Full guide</a>` : '';
+              const actions = guideBtn ? `<div class="rec-item-actions">${guideBtn}</div>` : '';
+              return `
+                <div class="rec-item">
+                  <div class="rec-item-header">
+                    <div class="rec-item-name-col">
+                      <span class="rec-item-name">${p.name}</span>
+                      ${nbhd}
+                    </div>
+                    ${mapsBtn}
+                  </div>
+                  <p class="rec-item-desc">${p.description}</p>
+                  ${actions}
+                </div>`;
+            }).join('');
+
+            const mapHtml = hasMap ? `
+              <div class="map-wrap">
+                <iframe src="${mapUrl}" loading="lazy" allowfullscreen title="${cat.title} map"></iframe>
+                <p class="map-hint">Tap any pin to open in Google Maps</p>
+              </div>` : '';
+
+            const toggleHtml = (hasMap && places.length) ? `
+              <div class="view-toggle" role="group" aria-label="View mode">
+                <button class="view-toggle-btn active" onclick="switchPlaceView(this,'map','${itemId}')">🗺️ Map</button>
+                <button class="view-toggle-btn"        onclick="switchPlaceView(this,'list','${itemId}')">📋 List</button>
+              </div>` : '';
+
+            if (blockCount > 0) bodyHtml += '<hr class="block-divider">';
+            bodyHtml += `
+              ${toggleHtml}
+              <div id="${itemId}-map"  ${!hasMap ? 'hidden' : ''}>${mapHtml}</div>
+              <div id="${itemId}-list" ${hasMap  ? 'hidden' : ''}>
+                <div class="rec-item-list">${listHtml}</div>
+              </div>`;
+            blockCount++;
+          }
+
+          /* ── Tips: condensed CTA rows ── */
+          else if (block.type === 'tips') {
+            const catTips = activeTips.filter(t => t.category === block.key);
+            if (!catTips.length) return;
+
+            const tipsHtml = catTips.map(tip => {
+              const internal = tip.ctaUrl && tip.ctaUrl.startsWith('/') && !tip.ctaUrl.startsWith('//');
+              const target   = internal ? '_self' : '_blank';
+
+              const primaryBtn = tip.ctaUrl && tip.ctaUrl !== '#'
+                ? `<a class="rec-btn rec-btn--book" href="${tip.ctaUrl}" target="${target}"${internal ? '' : ' rel="noopener"'}>${tip.ctaLabel} →</a>` : '';
+
+              const secondaryBtn = tip.ctaSecondary
+                ? `<a class="rec-btn rec-btn--book" href="${tip.ctaSecondary.url}" target="_blank" rel="noopener">${tip.ctaSecondary.label} →</a>` : '';
+
+              const guideBtn = tip.blogUrl
+                ? `<a class="rec-btn rec-btn--guide" href="${tip.blogUrl}" target="_blank">📖 Full guide</a>` : '';
+
+              const actions = (primaryBtn || secondaryBtn || guideBtn)
+                ? `<div class="rec-item-actions">${primaryBtn}${secondaryBtn}${guideBtn}</div>` : '';
+
+              return `
+                <div class="rec-item">
+                  <div class="rec-item-header">
+                    <span class="rec-item-name">${tip.title}</span>
+                  </div>
+                  <p class="rec-item-desc">${tip.description}</p>
+                  ${actions}
+                </div>`;
+            }).join('');
+
+            if (blockCount > 0) bodyHtml += '<hr class="block-divider">';
+            bodyHtml += `<div class="rec-item-list">${tipsHtml}</div>`;
+            blockCount++;
+          }
+        });
+
+        if (!blockCount) return;
 
         const div = document.createElement('div');
         div.className = 'acc-item';
         div.innerHTML = `
           <button class="acc-trigger" onclick="toggleAcc(this)">
-            <span>${titleHtml}</span>
+            <span>${cat.emoji} ${cat.title}</span>
             <span class="acc-chevron">▾</span>
           </button>
           <div class="acc-body" hidden>
-            <ul class="rec-list">${itemsHtml}</ul>
-            ${mapHtml}
+            ${bodyHtml}
           </div>`;
         accordion.appendChild(div);
       });
+    }
+
+    function switchPlaceView(btn, view, itemId) {
+      const mapEl  = document.getElementById(itemId + '-map');
+      const listEl = document.getElementById(itemId + '-list');
+      const group  = btn.closest('.view-toggle');
+      group.querySelectorAll('.view-toggle-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      mapEl.hidden  = (view !== 'map');
+      listEl.hidden = (view !== 'list');
     }
 
     /* ══════════════════════════════════════════════════════════════
@@ -831,11 +1311,14 @@
     ══════════════════════════════════════════════════════════════ */
 
     function toggleAcc(btn) {
-      const body   = btn.nextElementSibling;
+      const body    = btn.nextElementSibling;
       const wasOpen = !body.hidden;
 
-      document.querySelectorAll('.acc-body').forEach(b    => { b.hidden = true; });
-      document.querySelectorAll('.acc-chevron').forEach(c => { c.style.transform = 'rotate(0deg)'; });
+      const parentAccordion = btn.closest('.accordion');
+      if (parentAccordion) {
+        parentAccordion.querySelectorAll('.acc-body').forEach(b => { b.hidden = true; });
+        parentAccordion.querySelectorAll('.acc-chevron').forEach(c => { c.style.transform = 'rotate(0deg)'; });
+      }
 
       if (!wasOpen) {
         body.hidden = false;
@@ -844,7 +1327,7 @@
     }
 
     /* ══════════════════════════════════════════════════════════════
-       INIT
+       COPY CHIP
     ══════════════════════════════════════════════════════════════ */
 
     function copyChip(el, text) {
@@ -855,20 +1338,6 @@
         setTimeout(() => { el.classList.remove('copied'); el.textContent = orig; }, 1800);
       });
     }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      renderActivities();
-      renderCategories();
-
-      /* Review button click tracking */
-      document.querySelectorAll('.review-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const src = sessionStorage.getItem('tour_source');
-          /* future: send analytics event here */
-          console.log('Review click', btn.dataset.platform, 'from', src);
-        });
-      });
-    });
 
   </script>
 

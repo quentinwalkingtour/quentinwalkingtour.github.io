@@ -1,0 +1,38 @@
+[
+  {
+    "emoji": "⚰️",
+    "title": "Père Lachaise Cemetery",
+    "description": "Iconic grave sites and stories",
+    "affiliateUrl": "https://www.guruwalk.com/walks/68783-scandals-intrigues-history-tales-at-pere-lachaise-cemetery-tour-paris?ref=ehqvdsdauxwqgpt77wo0&ref_campaign=after_tour_recommendation_pere_lachaise",
+    "badge": "Free Walking tour",
+    "blogUrl": null,
+    "active": true
+  },
+  {
+    "emoji": "⛰️",
+    "title": "Montmartre Hill Tour",
+    "description": "The Soul of Bohemian Paris",
+    "affiliateUrl": "https://www.getyourguide.fr/paris-l16/visite-guidee-de-montmartre-avec-un-guide-regional-t703733/?partner_id=QBAL53E&currency=EUR&travel_agent=1&cmp=share_to_earn",
+    "badge": "Walking tour",
+    "blogUrl": null,
+    "active": true
+  },
+  {
+    "emoji": "⛵",
+    "title": "Seine River Cruise",
+    "description": "The iconic Bateaux Mouches!",
+    "affiliateUrl": "/go/seine",
+    "badge": "Classic",
+    "blogUrl": "/blog/paris-seine-river-cruise.html",
+    "active": true
+  },
+  {
+    "emoji": "🏰",
+    "title": "Day Trip to Versailles",
+    "description": "The Iconic Palace of Louis XIV",
+    "affiliateUrl": "/go/versailles",
+    "badge": "Day trip",
+    "blogUrl": "/blog/versailles-day-trip-from-paris.html",
+    "active": false
+  }
+]

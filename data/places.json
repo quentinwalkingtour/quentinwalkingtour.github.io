@@ -1,0 +1,217 @@
+{
+  "maps": {
+    "restaurants": "https://www.google.com/maps/d/embed?mid=1bxGfucfiTm2r2QQdoPGEvSSBo6X8fAk",
+    "bars":        "PLACEHOLDER_BARS_GOOGLE_MY_MAPS_URL",
+    "cafes":       "PLACEHOLDER_CAFES_GOOGLE_MY_MAPS_URL",
+    "souvenirs":   "PLACEHOLDER_SOUVENIRS_GOOGLE_MY_MAPS_URL"
+  },
+  "places": [
+
+    {
+      "category":      "restaurants",
+      "name":          "Bouillon Chartier",
+      "neighborhood":  "Grands Boulevards (9th)",
+      "description":   "Iconic 19th century  workers' canteen! French classics at unbeatable prices. Always packed, come early!<br><b>Bouillon République</b> is maybe a bit less crowded :)",
+      "googleMapsUrl": "https://maps.google.com/?q=Bouillon+Chartier+Paris",
+      "blogUrl":       null,
+      "active":        true
+    },
+    {
+      "category":      "restaurants",
+      "name":          "🌱 L'As du Fallafel",
+      "neighborhood":  "Le Marais (4th)",
+      "description":   "The most famous falafel in Paris, on Rue des Rosiers. Eat standing outside or in the small parc behind.",
+      "googleMapsUrl": "https://maps.google.com/?q=L+As+du+Fallafel+Paris",
+      "blogUrl":       null,
+      "active":        true
+    },
+    {
+      "category":      "restaurants",
+      "name":          "Marché des Enfants Rouges",
+      "neighborhood":  "Le Marais (3rd)",
+      "description":   "Paris's oldest covered market, now a food court. Japanese, Moroccan, French... all excellent.",
+      "googleMapsUrl": "https://maps.google.com/?q=March%C3%A9+des+Enfants+Rouges+Paris",
+      "blogUrl":       null,
+      "active":        true
+    },
+    {
+      "category":      "restaurants",
+      "name":          "🌱 Le Potager de Charlotte",
+      "neighborhood":  null,
+      "description":   "Vegetarian gastronomy. Elaborate and affordable food, great for lunch.",
+      "googleMapsUrl": "https://www.google.com/maps?cid=4464339965641157690",
+      "blogUrl":       null,
+      "active":        true
+    },
+    {
+      "category":      "restaurants",
+      "name":          "Dong Huong",
+      "neighborhood":  "Belleville (20th)",
+      "description":   "Favourite Vietnamese restaurant in Paris. Many other around the area, not fancy but great food.",
+      "googleMapsUrl": "https://maps.google.com/?q=Dong+Huong+Paris+Belleville",
+      "blogUrl":       null,
+      "active":        true
+    },
+    {
+      "category":      "restaurants",
+      "name":          "Rue d'Aligre",
+      "neighborhood":  "Aligre (12th)",
+      "description":   "Lively local street market with many great food spots, including Le Charolais, Do et Riz, and La Ruche à Miel.",
+      "googleMapsUrl": "https://maps.app.goo.gl/ezRD2AHnJG5epAGT8",
+      "blogUrl":       null,
+      "active":        true
+    },
+    {
+      "category":      "restaurants",
+      "name":          "🌱 Pistil",
+      "neighborhood":  null,
+      "description":   "Entrée, plat, dessert menu at €19. Classic vegan and vegetarian food.",
+      "googleMapsUrl": "https://www.google.com/maps?cid=14277541821054975174",
+      "blogUrl":       null,
+      "active":        true
+    },
+    
+    {
+      "category":      "restaurants",
+      "name":          "Restaurant Virtus",
+      "neighborhood":  "12th",
+      "description":   "Creative gastronomic restaurant with tasting menus and a very good wine selection. Trendy and refined, but a bit more expensive.",
+      "googleMapsUrl": "https://maps.app.goo.gl/wK1K5eu2WHBW9ttL7",
+      "blogUrl":       null,
+      "active":        true
+    },
+    {
+      "category":      "restaurants",
+      "name":          "Soé",
+      "neighborhood":  "Le Marais (4th)",
+      "description":   "French and Japanese fusion restaurant around €50. Creative, balanced, and very pleasant.",
+      "googleMapsUrl": "https://maps.app.goo.gl/B8pvb2rz5zZfqxCs9",
+      "blogUrl":       null,
+      "active":        true
+    },
+    {
+      "category":      "restaurants",
+      "name":          "Le Procope",
+      "neighborhood":  "Saint Germain (6th)",
+      "description":   "The oldest café in Paris. Classic French food in a beautiful historic setting.",
+      "googleMapsUrl": "https://maps.app.goo.gl/jLPcrkFE46YUqPUe6",
+      "blogUrl":       null,
+      "active":        true
+    },
+
+    {
+      "category":      "bars",
+      "name":          "Oberkampf area",
+      "neighborhood":  "Oberkampf (11th)",
+      "description":   "The best neighbourhood to party like a Parisian. Dozens of bars within 5 minutes walk of each other.",
+      "googleMapsUrl": "https://maps.google.com/?q=Rue+Oberkampf+Paris",
+      "blogUrl":       null,
+      "active":        true
+    },
+
+    {
+      "category":      "bars",
+      "name":          "Canal Saint-Martin",
+      "neighborhood":  "Canal Saint-Martin (10th)",
+      "description":   "Not one bar but an entire area. Grab a drink from any off-licence and sit by the canal in summer time.",
+      "googleMapsUrl": "https://maps.google.com/?q=Canal+Saint-Martin+Paris",
+      "blogUrl":       null,
+      "active":        true
+    },
+    {
+      "category":      "bars",
+      "name":          "Caveau de la Huchette",
+      "neighborhood":  "Quartier Latin (5th)",
+      "description":   "The most famous and touristic jazz bar in Paris, in a 13th-century cave. <b>Go early early early to get a spot.</b> Lively place if you succeed to get in!",
+      "googleMapsUrl": "https://maps.google.com/?q=Caveau+de+la+Huchette+Paris",
+      "blogUrl":       null,
+      "active":        true
+    },
+    {
+      "category":      "bars",
+      "name":          "Le Baiser Salé / Sunset-sunside / Duc des lombards",
+      "neighborhood":  "Châtelet (1st)",
+      "description":   "Jazz clubs in Châtelet with live music almost every night. Less crowded than Caveau de la Huchette.",
+      "googleMapsUrl": "https://maps.google.com/?q=Le+Baiser+Sal%C3%A9+Paris",
+      "blogUrl":       null,
+      "active":        true
+    },
+    {
+      "category":      "bars",
+      "name":          "Le Repaire Charonne RPR",
+      "neighborhood":  "Charonne (11th)",
+      "description":   "Small bar with many foreigners. Karaoke on Sunday and Wednesday. Ask for <i>Prince</i> :)",
+      "googleMapsUrl": "https://maps.app.goo.gl/aXvce8E3CXRUTdbq7",
+      "blogUrl":       null,
+      "active":        true
+    },
+    
+
+    {
+      "category":      "cafes",
+      "name":          "Grand Mosque of Paris",
+      "neighborhood":  "Quartier Latin (5th)",
+      "description":   "Mint tea, pastries, and tiled courtyards in a 1920s mosque. One of the most surprising spots in Paris.",
+      "googleMapsUrl": "https://maps.google.com/?q=Grande+Mosqu%C3%A9e+de+Paris+caf%C3%A9",
+      "blogUrl":       null,
+      "active":        true
+    },
+    {
+      "category":      "cafes",
+      "name":          "Café de Flore",
+      "neighborhood":  "Saint-Germain-des-Prés (6th)",
+      "description":   "Sartre, Beauvoir, and half of 20th-century French philosophy were regulars here. Overpriced but a genuine institution.",
+      "googleMapsUrl": "https://maps.google.com/?q=Caf%C3%A9+de+Flore+Paris",
+      "blogUrl":       null,
+      "active":        true
+    },
+    {
+      "category":      "cafes",
+      "name":          "Café de la Paix",
+      "neighborhood":  "Opéra (9th)",
+      "description":   "Grand Haussmann-era café on the Opera square.",
+      "googleMapsUrl": "https://maps.google.com/?q=Caf%C3%A9+de+la+Paix+Paris",
+      "blogUrl":       null,
+      "active":        true
+    },
+    {
+      "category":      "restaurants",
+      "name":          "🌱 Muniyandi Vilas",
+      "neighborhood":  null,
+      "description":   "Indian street food. Cheap and fully vegetarian.",
+      "googleMapsUrl": "https://www.google.com/maps?cid=13672752190835036604",
+      "blogUrl":       null,
+      "active":        true
+    },
+    {
+      "category":      "restaurants",
+      "name":          "🌱 Les Délices de Tunisie",
+      "neighborhood":  null,
+      "description":   "Tunisian food with great vegetarian options.",
+      "googleMapsUrl": "https://www.google.com/maps?cid=18296406216469243485",
+      "blogUrl":       null,
+      "active":        true
+    },
+    
+
+    {
+      "category":      "souvenirs",
+      "name":          "Rendez Vous Chocolat",
+      "neighborhood":  "Nation (11th)",
+      "description":   "Very good chocolate shop. Everything is made on the spot :)",
+      "googleMapsUrl": "https://maps.app.goo.gl/Msg4QWJq3gGWN4FW6",
+      "blogUrl":       null,
+      "active":        true
+    },
+    {
+      "category":      "souvenirs",
+      "name":          "Pharmacie Monge Notre Dame",
+      "neighborhood":  "Notre Dame (5th)",
+      "description":   "Famous pharmacy with many products and good prices. French pharamacy are great, any would do the job!",
+      "googleMapsUrl": "https://maps.app.goo.gl/pQEvKHcuycWFvjwL7",
+      "blogUrl":       null,
+      "active":        true
+    }
+
+  ]
+}
