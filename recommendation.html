@@ -857,7 +857,7 @@
     ══════════════════════════════════════════════════════════════ */
 
     const URL_PARAMS  = new URLSearchParams(window.location.search);
-    const TOUR_TYPE   = URL_PARAMS.get('type') || ''; // 'free_tour' | 'prepaid' | 'hybrid'
+    const TOUR_TYPE   = URL_PARAMS.get('type') || ''; // 'freetour' | 'prepaid' | 'hybrid'
     const GUIDE       = URL_PARAMS.get('guide') || '';          // 'quentin' | 'christina' | 'thomas'
     const POST_TOUR   = URL_PARAMS.has('type');                 // true only when coming from a tour QR code
 
@@ -968,7 +968,7 @@
     const GUIDE_PHOTOS = {
       quentin:   './assets/images/guides/quentin.png',
       christina: './assets/images/guides/christina.jpg',
-      thomas:    './assets/images/guides/thomas.jpg',
+      thomas:    './assets/images/guides/thomas.png',
     };
 
     const GUIDE_NAMES = {
@@ -1025,20 +1025,22 @@
             </span>
           </a>`;
           orEl.innerHTML = 'Or any other platform you prefer!';
-      } else if (TOUR_TYPE === 'free_tour') {
+      } else if (TOUR_TYPE === 'freetour') {
         container.innerHTML = `
           <a class="review-btn review-btn--primary-gyg"
             href="${REVIEW_URLS.guruwalk}" target="_blank" rel="noopener" data-platform="guruwalk">
             <img src="./assets/images/icons/guruwalk.png" class="btn-logo" alt="">
             <span class="btn-text">
               <span>Review on GuruWalk</span>
+              <span class="review-btn-label">If you booked through it!</span>
             </span>
           </a>
-          <a class="review-btn review-btn--secondary"
-            href="${REVIEW_URLS.freetour}" target="_blank" rel="noopener" data-platform="freetour">
-            <img src="./assets/images/icons/freetours.png" class="btn-logo" alt="">
+          <a class="review-btn review-btn--viator"
+            href="${REVIEW_URLS.viator}" target="_blank" rel="noopener" data-platform="viator">
+            <img src="./assets/images/icons/tripadvisor.png" class="btn-logo" alt="">
             <span class="btn-text">
-              <span>Review on FreeTour.com</span>
+              <span>Review on Tripadvisor</span>
+              <span class="review-btn-label">No matter where you booked from!</span>
             </span>
           </a>
           <a class="review-btn review-btn--google"
