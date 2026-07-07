@@ -149,6 +149,25 @@
         modal.style.display = modal.style.display === "none" ? "flex" : "none";
       }
     </script>
+
+    <!-- CTA click tracking — pushes a generic 'cta_click' event to GTM's
+         dataLayer. Same event shape is reused on every page; see
+         analytics_plan.md for the full taxonomy. -->
+    <script>
+      function trackCta({ category, platform, label }) {
+        const params = new URLSearchParams(window.location.search);
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event:        'cta_click',
+          cta_category: category,
+          cta_platform: platform,
+          cta_label:    label,
+          guide:        params.get('guide') || 'unknown',
+          tour_type:    params.get('type') || 'n/a',
+          source:       sessionStorage.getItem('tour_source') || 'direct',
+        });
+      }
+    </script>
   </head>
 
   <body class="is-loading">
@@ -223,7 +242,7 @@
                   <!-- <h4 style="color: var(--rouge-clair)">🗓️ You can join me everyday at <span style="white-space: nowrap;">10:30 AM.</span></h4> -->
                   <button
           class="cta-button"
-          onclick="toggleModal()"
+          onclick="toggleModal(); trackCta({category:'booking', platform:'modal_open', label:'Reserve Your Spot!'})"
         >
           <div style="display: flex; align-items: center; justify-content: center; gap: 0.6rem;">
             <span>🎟️</span>
@@ -308,12 +327,13 @@
               href='https://www.guruwalk.com/walks/59922-paris-time-machine-a-local-s-perspective'
               target="_blank"
               aria-label="WhatsApp"
+              onclick="trackCta({category:'booking', platform:'guruwalk', label:'Book via GuruWalk (modal)'})"
             >
               <div>
                 <div style="width: 20px; text-align: center">🏛️</div>
                 <div class="canal">
                   <span>Paris Time Machine</span>
-                  <div class="canal-info">10AM and 5PM</div>
+                  <div class="canal-info">10:30AM and 5PM</div>
                 </div>
               </div>
 
@@ -727,21 +747,7 @@
       </div>
     </section>
 
-    <!-- <div style="z-index: 1; position: fixed; bottom: 0; left: 0; width: 100%">
-      <div style="margin: auto; max-width: 450px; padding: 1rem">
-        <button
-          class="cta-button cta-button--fixed"
-          onclick="toggleModal()"
-        >
-          <div style="display: flex; align-items: center; justify-content: center; gap: 0.6rem;">
-            <span>🎟️</span>
-            <span>Reserve Your Free Spot!</span>
-
-          </div>
-        </button>
-      </div>
-    </div> -->
-
+    
     <script>
       // Get the current day as a string (e.g., 'Wed', 'Thu')
       const currentDay = new Date().toLocaleString("en-US", {

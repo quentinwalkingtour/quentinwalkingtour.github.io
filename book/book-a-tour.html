@@ -73,6 +73,7 @@
             class="contact-item"
             href="https://www.guruwalk.com/walks/59922-paris-time-machine-a-local-s-perspective"
             aria-label="Paris Time Machine"
+            onclick="trackCta({category:'booking', platform:'guruwalk', label:'Book via GuruWalk'})"
           >
             <div>
               <div style="width: 20px; text-align: center">🏛️</div>
@@ -106,6 +107,25 @@
     </div>
 
   </section>
+
+  <!-- CTA click tracking — pushes a generic 'cta_click' event to GTM's
+       dataLayer. Same event shape is reused on every page; see
+       analytics_plan.md for the full taxonomy. -->
+  <script>
+    function trackCta({ category, platform, label }) {
+      const params = new URLSearchParams(window.location.search);
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event:        'cta_click',
+        cta_category: category,
+        cta_platform: platform,
+        cta_label:    label,
+        guide:        params.get('guide') || 'unknown',
+        tour_type:    params.get('type') || 'n/a',
+        source:       sessionStorage.getItem('tour_source') || 'direct',
+      });
+    }
+  </script>
 
 </body>
 

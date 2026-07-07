@@ -838,7 +838,7 @@
     ══════════════════════════════════════ -->
     <footer class="rec-footer">
       <p class="footer-nudge">
-        Enjoyed it? <a href="https://g.page/r/CbXKLOzFaHEXEAE/review" target="_blank" rel="noopener" style="text-decoration:underline;">A Google review takes 2 minutes</a> ❤️
+        Enjoyed it? <a href="https://g.page/r/CbXKLOzFaHEXEAE/review" target="_blank" rel="noopener" style="text-decoration:underline;" onclick="trackCta({category:'review', platform:'google', label:'Footer Google review link'})">A Google review takes 2 minutes</a> ❤️
       </p>
       <a class="back-link" href="index.html" aria-label="Back to website">
         <svg style="height:1rem;width:1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -860,6 +860,24 @@
     const TOUR_TYPE   = URL_PARAMS.get('type') || ''; // 'freetour' | 'prepaid' | 'hybrid'
     const GUIDE       = URL_PARAMS.get('guide') || '';          // 'quentin' | 'christina' | 'thomas'
     const POST_TOUR   = URL_PARAMS.has('type');                 // true only when coming from a tour QR code
+
+    /* ══════════════════════════════════════════════════════════════
+       CTA CLICK TRACKING — pushes a generic 'cta_click' event to
+       GTM's dataLayer. Same event shape is reused on every page;
+       see analytics_plan.md for the full taxonomy.
+    ══════════════════════════════════════════════════════════════ */
+    function trackCta({ category, platform, label }) {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event:        'cta_click',
+        cta_category: category,
+        cta_platform: platform,
+        cta_label:    label,
+        guide:        GUIDE || 'unknown',
+        tour_type:    TOUR_TYPE || 'n/a',
+        source:       sessionStorage.getItem('tour_source') || 'direct',
+      });
+    }
 
     /* Post-tour mode: show review + activities, hide site nav */
     if (POST_TOUR) {
@@ -1010,7 +1028,7 @@
             </span>
           </a>
           <a class="review-btn review-btn--viator"
-            href="${REVIEW_URLS.viator}" target="_blank" rel="noopener" data-platform="viator">
+            href="${REVIEW_URLS.viator}" target="_blank" rel="noopener" data-platform="tripadvisor">
             <img src="./assets/images/icons/tripadvisor.png" class="btn-logo" alt="">
             <span class="btn-text">
               <span>Review on Tripadvisor</span>
@@ -1036,7 +1054,7 @@
             </span>
           </a>
           <a class="review-btn review-btn--viator"
-            href="${REVIEW_URLS.viator}" target="_blank" rel="noopener" data-platform="viator">
+            href="${REVIEW_URLS.viator}" target="_blank" rel="noopener" data-platform="tripadvisor">
             <img src="./assets/images/icons/tripadvisor.png" class="btn-logo" alt="">
             <span class="btn-text">
               <span>Review on Tripadvisor</span>
@@ -1062,7 +1080,7 @@
             </span>
           </a>
           <a class="review-btn review-btn--viator"
-            href="${REVIEW_URLS.viator}" target="_blank" rel="noopener" data-platform="viator">
+            href="${REVIEW_URLS.viator}" target="_blank" rel="noopener" data-platform="tripadvisor">
             <img src="./assets/images/icons/tripadvisor.png" class="btn-logo" alt="">
             <span class="btn-text">
               <span>Review on Tripadvisor</span>
@@ -1080,10 +1098,16 @@
       }
 
       /* Review click tracking */
+      const PLATFORM_LABELS = {
+        guruwalk:     'Review on GuruWalk',
+        tripadvisor:  'Review on Tripadvisor',
+        google:       'Leave a Google Review',
+        getyourguide: 'Review on GetYourGuide',
+      };
       container.querySelectorAll('.review-btn').forEach(btn => {
         btn.addEventListener('click', () => {
-          const src = sessionStorage.getItem('tour_source');
-          console.log('Review click', btn.dataset.platform, 'from', src);
+          const platform = btn.dataset.platform;
+          trackCta({ category: 'review', platform, label: PLATFORM_LABELS[platform] || platform });
         });
       });
     })();
