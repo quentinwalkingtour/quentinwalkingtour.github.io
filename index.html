@@ -107,6 +107,8 @@
         color: white;
         font-weight: 700;
         font-size: 1.25rem;
+        text-align: center;
+        text-decoration: none;
         border: 0;
         letter-spacing: 0.5px;
         animation: cta-pulse 2.4s ease-in-out infinite;
@@ -117,6 +119,37 @@
       .cta-button:hover {
         transform: translateY(-2px) scale(1.02);
         filter: brightness(1.08) drop-shadow(0 2px 6px rgba(48, 176, 255, 0.3));
+      }
+
+      /* Sticky booking button, always visible, direct to booking */
+      .sticky-cta {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 50;
+        padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom));
+        pointer-events: none; /* let clicks pass through the empty area, only the button is active */
+      }
+      .sticky-cta .cta-button {
+        max-width: 450px;
+        pointer-events: auto;
+      }
+      /* On phone, the hero button "becomes" the sticky button:
+         hidden until the hero button is scrolled out of view. */
+      @media (max-width: 736px) {
+        .sticky-cta {
+          opacity: 0;
+          transform: translateY(120%);
+          transition: opacity 0.25s ease, transform 0.25s ease;
+        }
+        .sticky-cta.is-visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .sticky-cta:not(.is-visible) .cta-button {
+          pointer-events: none;
+        }
       }
       
       .lyon-paris-banner {
@@ -221,35 +254,37 @@
               <div class="full">
                 <div class="text">
                   <h2>
-                    🚀Join Our
-                      <span style="white-space: nowrap;color: var(--rouge-clair)"
-                        >Walking Tours</span
-                      >
-                      and Explore
-                      <span style="white-space: nowrap;color: var(--bleu-clair)"
-                        >Paris Top Sights!</span
+                    🚀 Paris Has
+                      <span style="color: var(--rouge-clair)"
+                        >2,000 Years of History</span>, and It's <span style="color: var(--bleu-clair)"
+                      >Hidden in the
+                      Streets</span
                       >
                   </h2>
                   <p>
                     👋 Bonjour! <br />
-                    We’re <b>Quentin</b>, <b>Thomas</b> and <b>Christina</b>, a small team of passionate Parisian who came together to show you Paris 🇫🇷.
+                    We’re a small team of Parisians who created this <b>Paris Time Machine</b> to take you one street away from the crowds, into the <strong>real heart of Paris</strong> ❤️
                   </p>
 
                   <p>
-                    In our tours, we take you one street away from the crowds, <b>in the hidden heart of the city </b>❤️
-</p>
+                    Whether it's your first or fifth time in Paris, this tour is the <b>perfect introduction to the city</b>.<br><br> <strong>This is a walking tour, not a standing lecture!</strong> We keep moving so the experience stays dynamic and engaging.
+                  </p>
 
                   <!-- <h4 style="color: var(--rouge-clair)">🗓️ You can join me everyday at <span style="white-space: nowrap;">10:30 AM.</span></h4> -->
-                  <button
+                  <a
+          id="hero-cta"
           class="cta-button"
-          onclick="toggleModal(); trackCta({category:'booking', platform:'modal_open', label:'Reserve Your Spot!'})"
+          href="https://app.justguide.app/book/quentin-walking-tour/paris-time-machine-the-hidden-gems-of-the-city"
+          target="_blank"
+          rel="noopener"
+          onclick="trackCta({category:'booking', platform:'justguide', label:'Book your spot (hero)'})"
         >
           <div style="display: flex; align-items: center; justify-content: center; gap: 0.6rem;">
             <span>🎟️</span>
-            <span>Reserve Your Spot!</span>
+            <span>Book your free spot</span>
 
           </div>
-        </button>
+        </a>
                 </div>
               </div>
             </div>
@@ -639,12 +674,13 @@
                   <h2>🌟 Paris is an open book! </h2>
 
                   <p>
-                    
-                    ⚔️ <strong>Cannonball and bullet marks</strong> are still visible on some walls, silent witnesses to <strong>revolutions and wars</strong> that shaped Paris and world history.<br /><br />
-👑 Meet the people who made Paris what it is today: <strong>women in the Resistance</strong>, <strong>Victor Hugo</strong>, republican revolutionaries, kings, emperors… and <strong>Emmanuel Macron</strong>!<br /><br />
-🌆 From the <strong>fire of Notre-Dame</strong> to protests in the streets, we explore how <strong>recent events influenced everyday life</strong> in Paris. This is history still alive today.<br /><br />
-🏰 Turning a corner, you might suddenly find yourself facing <strong>medieval houses</strong> (somehow still standing 😂), or the remains of <strong>fortification walls</strong> hidden within the modern city.<br /><br />
-🥐 <strong>Le Marais</strong> is the beating heart of Paris, where <strong>fashion, small cafés, restaurants, and local life</strong> all mix together in one vibrant district.
+                    We'll take you where others don't go, combining Paris's <strong>iconic sights</strong> with places most visitors never discover.<br /><br />
+⚔️ <strong>Cannonball and bullet marks</strong> still visible on the walls<br />
+👑 <strong>Kings, emperors, revolutionaries</strong>, and WWII resistance fighters who shaped Paris<br />
+⛪ Beautiful <strong>churches, hidden gardens</strong>, and medieval houses<br />
+🎨 <strong>Le Marais</strong> is filled with incredible street art!<br /><br />
+<i>Why does Paris look the way it does today? Why do Parisians protest so often? What happened to Notre-Dame? <strong>We'll answer these questions and many more.</strong><br /></i><br />
+We don't want you to simply visit Paris. <strong>We want you to understand it.</strong>
                   </p>
                 </div>
               </div>
@@ -747,7 +783,22 @@
       </div>
     </section>
 
-    
+    <!-- Sticky booking bar, always visible, links directly to booking -->
+    <div class="sticky-cta">
+      <a
+        class="cta-button"
+        href="https://app.justguide.app/book/quentin-walking-tour/paris-time-machine-the-hidden-gems-of-the-city"
+        target="_blank"
+        rel="noopener"
+        onclick="trackCta({category:'booking', platform:'justguide', label:'Book your spot (sticky)'})"
+      >
+        <div style="display: flex; align-items: center; justify-content: center; gap: 0.6rem;">
+          <span>🎟️</span>
+          <span>Book your free spot</span>
+        </div>
+      </a>
+    </div>
+
     <script>
       // Get the current day as a string (e.g., 'Wed', 'Thu')
       const currentDay = new Date().toLocaleString("en-US", {
@@ -772,6 +823,18 @@
             console.error("Could not copy text: ", err);
           });
       }
+
+      // On phone, reveal the sticky button only once the hero button
+      // has scrolled out of view, so it reads as the same button going sticky.
+      (function () {
+        const heroCta = document.getElementById('hero-cta');
+        const stickyCta = document.querySelector('.sticky-cta');
+        if (!heroCta || !stickyCta || !('IntersectionObserver' in window)) return;
+        const io = new IntersectionObserver(function (entries) {
+          stickyCta.classList.toggle('is-visible', !entries[0].isIntersecting);
+        }, { threshold: 0 });
+        io.observe(heroCta);
+      })();
 
       document.addEventListener('DOMContentLoaded', function() {
 
