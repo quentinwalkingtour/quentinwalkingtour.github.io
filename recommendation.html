@@ -858,7 +858,7 @@
 
     const URL_PARAMS  = new URLSearchParams(window.location.search);
     const TOUR_TYPE   = URL_PARAMS.get('type') || ''; // 'freetour' | 'prepaid' | 'hybrid'
-    const GUIDE       = URL_PARAMS.get('guide') || '';          // 'quentin' | 'christina' | 'thomas'
+    const GUIDE       = URL_PARAMS.get('guide') || '';          // 'quentin' | 'christina' | 'thomas' | 'scotty'
     const POST_TOUR   = URL_PARAMS.has('type');                 // true only when coming from a tour QR code
 
     /* ══════════════════════════════════════════════════════════════
@@ -987,12 +987,14 @@
       quentin:   './assets/images/guides/quentin.png',
       christina: './assets/images/guides/christina.jpg',
       thomas:    './assets/images/guides/thomas.png',
+      scotty:    './assets/images/guides/Scotty.png',
     };
 
     const GUIDE_NAMES = {
       quentin:   'Quentin',
       christina: 'Christina',
       thomas:    'Thomas',
+      scotty:    'Scotty',
     };
 
     /* ══════════════════════════════════════════════════════════════
