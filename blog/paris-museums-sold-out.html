@@ -264,6 +264,8 @@
       box-shadow: 0 3px 12px rgba(255,117,25,0.35);
     }
     .tour-cta-btn:hover { opacity: 0.9; color: white; }
+    .tour-cta-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.7rem; }
+    .tour-cta-btn--food { background: #c1121f; box-shadow: 0 3px 12px rgba(193,18,31,0.35); }
 
     /* ── Article footer nav ── */
     .article-footer {
@@ -356,11 +358,18 @@
   <section class="tour-cta">
     <h2>Want to discover Paris?</h2>
     <p>In our tours, we take you one street away from the crowds, in the hidden heart of the city ❤️</p>
-    <a class="tour-cta-btn"
-      href="https://www.guruwalk.com/walks/59922-paris-time-machine-a-local-s-perspective"
-      target="_blank" rel="noopener">
-      🎟️ Reserve your spot
-    </a>
+    <div class="tour-cta-buttons">
+      <a class="tour-cta-btn"
+        href="https://app.justguide.app/book/quentin-walking-tour/paris-time-machine-the-hidden-gems-of-the-city"
+        target="_blank" rel="noopener">
+        🎟️ Free walking tour
+      </a>
+      <a class="tour-cta-btn tour-cta-btn--food"
+        href="https://app.justguide.app/book/quentin-walking-tour/iconic-food-tour-by-the-eiffel-tower-full-meal-wine-pastries"
+        target="_blank" rel="noopener">
+        🥐 Food tour by the Eiffel Tower
+      </a>
+    </div>
   </section>
 
   <div class="article-footer">

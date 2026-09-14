@@ -1,12 +1,24 @@
 [
   {
+    "emoji": "🥐",
+    "title": "Our Food Tour by the Eiffel Tower",
+    "description": "A full French meal, wine & pastries, right behind the Tower. 3h, small group.",
+    "affiliateUrl": "https://app.justguide.app/book/quentin-walking-tour/iconic-food-tour-by-the-eiffel-tower-full-meal-wine-pastries",
+    "platform": "justguide",
+    "badge": "Our new tour",
+    "featured": true,
+    "blogUrl": null,
+    "active": true
+  },
+  {
     "emoji": "⚰️",
     "title": "Père Lachaise Cemetery",
     "description": "Iconic grave sites and stories",
     "affiliateUrl": "https://www.guruwalk.com/walks/68783-scandals-intrigues-history-tales-at-pere-lachaise-cemetery-tour-paris?ref=ehqvdsdauxwqgpt77wo0&ref_campaign=after_tour_recommendation_pere_lachaise",
     "badge": "Free Walking tour",
     "blogUrl": null,
-    "active": true
+    "active": true,
+    "platform": "guruwalk"
   },
   {
     "emoji": "🌳",
@@ -15,7 +27,8 @@
     "affiliateUrl": "https://www.guruwalk.com/walks/69168-paris-parks-walking-tour",
     "badge": "Free Walking tour",
     "blogUrl": null,
-    "active": true
+    "active": false,
+    "platform": "guruwalk"
   },
   {
     "emoji": "🏰",

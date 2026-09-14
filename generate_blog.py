@@ -63,7 +63,7 @@ def load_posts() -> list[dict]:
             'keywords':      post.get('keywords', f'Paris, {title}, Paris walking tour'),
             'author':        post.get('author', 'Quentin'),
             'category':      post.get('category', 'Paris Guides'),
-            'image':         post.get('image', 'assets/images/cover 1.png'),
+            'image':         post.get('image', 'assets/images/cover-1.jpg'),
             'content_md':    post.content,
             'source_file':   md_file,
         })
@@ -152,7 +152,7 @@ def generate_index(posts: list[dict]) -> None:
   <meta property="og:url"         content="{SITE_URL}/blog/">
   <meta property="og:title"       content="Paris Travel Guide & Tips | {SITE_NAME}">
   <meta property="og:description" content="Quentin's insider Paris travel guide — museum tips, day trips, restaurants, and practical advice from a local walking tour guide.">
-  <meta property="og:image"       content="{SITE_URL}/assets/images/cover 1.png">
+  <meta property="og:image"       content="{SITE_URL}/assets/images/og-cover.jpg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -312,6 +312,8 @@ def generate_index(posts: list[dict]) -> None:
       border-radius: 0.75rem;
       text-decoration: none;
     }}
+    .tour-cta-buttons {{ display: flex; flex-wrap: wrap; justify-content: center; gap: 0.7rem; }}
+    .tour-cta-btn--food {{ background: #c1121f; }}
   </style>
 </head>
 <body>
@@ -322,7 +324,7 @@ def generate_index(posts: list[dict]) -> None:
 
   <nav class="blog-nav">
     <a class="blog-nav-link" href="/">← Back to website</a>
-    <a class="blog-nav-link" href="https://www.guruwalk.com/walks/59922-paris-time-machine-a-local-s-perspective" target="_blank" rel="noopener">Book a tour →</a>
+    <a class="blog-nav-link" href="/book/book-a-tour.html">Book a tour →</a>
   </nav>
 
   <main class="blog-grid">
@@ -331,10 +333,15 @@ def generate_index(posts: list[dict]) -> None:
 
   <section class="tour-cta">
     <h2>Want to discover Paris with us?</h2>
-    <p>We're Quentin, Thomas and Christina — passionate Parisians. Come join us for a walking tour of Paris.</p>
-    <a class="tour-cta-btn" href="https://www.guruwalk.com/walks/59922-paris-time-machine-a-local-s-perspective" target="_blank" rel="noopener">
-      🎟️ Reserve your spot
-    </a>
+    <p>We're a small team of passionate Parisians. Join our free walking tour, or come hungry to our food tour by the Eiffel Tower.</p>
+    <div class="tour-cta-buttons">
+      <a class="tour-cta-btn" href="https://app.justguide.app/book/quentin-walking-tour/paris-time-machine-the-hidden-gems-of-the-city" target="_blank" rel="noopener">
+        🎟️ Free walking tour
+      </a>
+      <a class="tour-cta-btn tour-cta-btn--food" href="https://app.justguide.app/book/quentin-walking-tour/iconic-food-tour-by-the-eiffel-tower-full-meal-wine-pastries" target="_blank" rel="noopener">
+        🥐 Food tour by the Eiffel Tower
+      </a>
+    </div>
   </section>
 
 </body>

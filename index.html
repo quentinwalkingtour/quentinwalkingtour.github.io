@@ -11,63 +11,109 @@
     <title>Paris Walking Tour | Paris Time Machine - Local Perspective</title>
     <meta
       name="description"
-      content="Join Paris Time Machine - Local Perspective, a daily Paris walking tour at 10:30 AM with Quentin. Discover hidden medieval streets, local stories, and practical tips. Book for free."
+      content="Daily free walking tour through the hidden streets of Paris, plus our new food tour by the Eiffel Tower: a full French meal, wine &amp; pastries. Book online."
     />
     <meta name="author" content="Quentin" />
     <meta
       name="keywords"
-      content="Paris walking tour, free walking tour Paris, free tour Paris, local Paris guide, things to do in Paris, Notre-Dame walking tour, Paris guided tour, best walking tour Paris, Paris historic center tour, Marais walking tour, Paris tour local guide"
+      content="Paris walking tour, free walking tour Paris, free tour Paris, local Paris guide, things to do in Paris, Notre-Dame walking tour, Paris guided tour, best walking tour Paris, Paris historic center tour, Marais walking tour, Paris tour local guide, Paris food tour, food tour Eiffel Tower, Rue Cler food tour"
     />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Paris Time Machine – A Local's Walking Tour" />
-    <meta name="twitter:description" content="Join Quentin daily for a free walking tour through the heart of Paris. Hidden streets, real history, local tips — one street away from the crowds." />
-    <meta name="twitter:image" content="https://quentinwalkingtour.com/assets/images/1%20cover.png" />
+    <meta name="twitter:description" content="A free walking tour through the heart of Paris, and a new food tour by the Eiffel Tower. Hidden streets, real history, local tips." />
+    <meta name="twitter:image" content="https://quentinwalkingtour.com/assets/images/og-cover.jpg" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://quentinwalkingtour.com/" />
     <meta property="og:title" content="Paris Time Machine - Local Perspective" />
     <meta
       property="og:description"
-      content="One daily Paris walking tour with a local perspective. Meet at Notre-Dame, explore the historic heart of Paris, and book for free."
+      content="A daily free walking tour through the historic heart of Paris, and a new food tour by the Eiffel Tower. Book online."
     />
     <meta
       property="og:image"
-      content="https://quentinwalkingtour.com/assets/images/1%20cover.png"
+      content="https://quentinwalkingtour.com/assets/images/og-cover.jpg"
     />
-    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="Paris Time Machine" />
     <link rel="canonical" href="https://quentinwalkingtour.com/" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "TouristTrip",
-        "name": "Paris Time Machine - Local Perspective",
-        "description": "A daily Paris walking tour with Quentin covering the historic center, hidden streets, local stories, and practical tips.",
-        "touristType": "Visitors looking for a local Paris walking tour",
-        "offers": {
-          "@type": "Offer",
-          "url": "https://www.guruwalk.com/walks/59922-paris-time-machine-a-local-s-perspective",
-          "price": "0",
-          "priceCurrency": "EUR",
-          "availability": "https://schema.org/InStock"
-        },
-        "itinerary": {
-          "@type": "Place",
-          "name": "Historic center of Paris"
-        },
-        "departureTime": "10:00",
-        "provider": {
-          "@type": "Person",
-          "name": "Quentin"
-        },
-        "startLocation": {
-          "@type": "Place",
-          "name": "Hotel de Ville",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Paris",
-            "addressCountry": "FR"
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://quentinwalkingtour.com/#organization",
+            "name": "Paris Time Machine",
+            "url": "https://quentinwalkingtour.com/",
+            "email": "quentinwalkingtour@gmail.com",
+            "sameAs": ["https://www.instagram.com/quentinwalkingtour/"]
+          },
+          {
+            "@type": "TouristTrip",
+            "@id": "https://quentinwalkingtour.com/#free-walking-tour",
+            "name": "Paris Time Machine: The Hidden Gems of the City",
+            "description": "A daily free walking tour through the historic heart of Paris: hidden medieval streets, local stories and practical tips.",
+            "url": "https://quentinwalkingtour.com/",
+            "image": "https://quentinwalkingtour.com/assets/images/cover-1.jpg",
+            "inLanguage": "en",
+            "touristType": "Visitors looking for a local Paris walking tour",
+            "offers": {
+              "@type": "Offer",
+              "url": "https://app.justguide.app/book/quentin-walking-tour/paris-time-machine-the-hidden-gems-of-the-city",
+              "price": "0",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock"
+            },
+            "itinerary": {
+              "@type": "Place",
+              "name": "Historic center of Paris: Hôtel de Ville, Le Marais, Place des Vosges"
+            },
+            "provider": { "@id": "https://quentinwalkingtour.com/#organization" },
+            "startLocation": {
+              "@type": "Place",
+              "name": "Hôtel de Ville",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Paris",
+                "addressCountry": "FR"
+              }
+            }
+          },
+          {
+            "@type": "TouristTrip",
+            "@id": "https://quentinwalkingtour.com/#food-tour",
+            "name": "Iconic Food Tour by the Eiffel Tower: Full Meal, Wine & Pastries",
+            "description": "A 3-hour food tour by the Eiffel Tower through Rue Cler: a complete French meal with artisan cheeses, charcuterie, fresh bread, pastries, chocolate and wine.",
+            "url": "https://quentinwalkingtour.com/#food-tour",
+            "image": "https://quentinwalkingtour.com/assets/images/food-tour/eiffel.jpg",
+            "inLanguage": "en",
+            "touristType": "Food lovers visiting Paris",
+            "offers": {
+              "@type": "Offer",
+              "url": "https://app.justguide.app/book/quentin-walking-tour/iconic-food-tour-by-the-eiffel-tower-full-meal-wine-pastries",
+              "price": "78",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock"
+            },
+            "itinerary": {
+              "@type": "Place",
+              "name": "Rue Cler and the Eiffel Tower district (7th arrondissement)"
+            },
+            "provider": { "@id": "https://quentinwalkingtour.com/#organization" },
+            "startLocation": {
+              "@type": "Place",
+              "name": "École Militaire",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Paris",
+                "postalCode": "75007",
+                "addressCountry": "FR"
+              }
+            }
           }
-        }
+        ]
       }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -120,6 +166,25 @@
         transform: translateY(-2px) scale(1.02);
         filter: brightness(1.08) drop-shadow(0 2px 6px rgba(48, 176, 255, 0.3));
       }
+      .cta-button:focus-visible {
+        outline: 3px solid var(--bleu-fonce);
+        outline-offset: 3px;
+      }
+      /* Food tour variant: warm gradient, same shape and pulse */
+      @keyframes cta-pulse-food {
+        0%, 100% { filter: drop-shadow(0 1px 4px rgba(255, 117, 25, 0.25)); }
+        50%       { filter: drop-shadow(0 2px 8px rgba(255, 209, 102, 0.45)); }
+      }
+      .cta-button--food {
+        background-image: linear-gradient(45deg, var(--orange), var(--rouge-clair));
+        animation-name: cta-pulse-food;
+      }
+      .cta-button--food:hover {
+        filter: brightness(1.08) drop-shadow(0 2px 8px rgba(255, 209, 102, 0.45));
+      }
+      .cta-button--food:focus-visible {
+        outline-color: var(--or);
+      }
 
       /* Sticky booking button, always visible, direct to booking */
       .sticky-cta {
@@ -132,6 +197,7 @@
         pointer-events: none; /* let clicks pass through the empty area, only the button is active */
       }
       .sticky-cta .cta-button {
+        width: 100%;
         max-width: 450px;
         pointer-events: auto;
       }
@@ -174,13 +240,16 @@
       }
     </style>
 
-     <!-- Modal Toggle Function -->
+     <!-- Tour chooser toggle (sticky "Book a tour" button) -->
      <script>
       function toggleModal() {
-        const modals = document.querySelectorAll(".booking-section");
-        const modal = modals.item(0);
-        modal.style.display = modal.style.display === "none" ? "flex" : "none";
+        const modal = document.getElementById("booking-section");
+        modal.hidden = !modal.hidden;
       }
+      document.addEventListener("keydown", function (e) {
+        const modal = document.getElementById("booking-section");
+        if (e.key === "Escape" && modal && !modal.hidden) toggleModal();
+      });
     </script>
 
     <!-- CTA click tracking — pushes a generic 'cta_click' event to GTM's
@@ -236,8 +305,8 @@
       </symbol>
     </svg>
 
-    <!-- Intro section -->
-    <section class="main">
+    <!-- Intro section: free walking tour -->
+    <section class="main theme-blanc">
       <div class="inner">
         <div id="container01" class="container columns">
           <div class="wrapper">
@@ -246,21 +315,15 @@
                 <div id="image01" class="image full" data-position="top">
                   <span class="frame"
                     ><img
-                      src="assets/images/cover 1.png"
+                      src="assets/images/cover-1.jpg"
                       alt="Paris Time Machine walking tour"
                   /></span>
                 </div>
               </div>
               <div class="full">
                 <div class="text">
-                  <h2>
-                    🚀 Paris Has
-                      <span style="color: var(--rouge-clair)"
-                        >2,000 Years of History</span>, and It's <span style="color: var(--bleu-clair)"
-                      >Hidden in the
-                      Streets</span
-                      >
-                  </h2>
+                  <h2><span class="title-part">Free Walking Tour</span> <span class="title-part" style="color: var(--rouge-clair)">Paris Time Machine</span></h2>
+                  <p class="tour-subtitle">🚀 Paris has 2,000 years of history, and it's hidden in the streets.</p>
                   <p>
                     👋 Bonjour! <br />
                     We’re a small team of Parisians who created this <b>Paris Time Machine</b> to take you one street away from the crowds, into the <strong>real heart of Paris</strong> ❤️
@@ -277,7 +340,7 @@
           href="https://app.justguide.app/book/quentin-walking-tour/paris-time-machine-the-hidden-gems-of-the-city"
           target="_blank"
           rel="noopener"
-          onclick="trackCta({category:'booking', platform:'justguide', label:'Book your spot (hero)'})"
+          onclick="trackCta({category:'booking', platform:'justguide', label:'Book free tour (hero)'})"
         >
           <div style="display: flex; align-items: center; justify-content: center; gap: 0.6rem;">
             <span>🎟️</span>
@@ -293,12 +356,73 @@
       </div>
     </section>
 
-    <!-- Booking Section -->
+    <!-- Food tour section -->
+    <section class="main food-tour" id="food-tour">
+      <div class="inner">
+
+        <div class="food-mosaic" aria-label="Photos from the food tour">
+          <span class="food-badge">New ✨</span>
+          <figure class="big">
+            <img src="assets/images/food-tour/eiffel.jpg" alt="Our food tour group in a street of the 7th arrondissement, with the Eiffel Tower behind" loading="lazy" />
+          </figure>
+          <figure class="small">
+            <img src="assets/images/food-tour/cheese.jpg" alt="A board of French cheeses and charcuterie with a glass of wine" loading="lazy" />
+          </figure>
+          <figure class="small">
+            <img src="assets/images/food-tour/pastries.jpg" alt="Pastries in the window of a Parisian pâtisserie" loading="lazy" />
+          </figure>
+        </div>
+
+        <div class="food-text">
+          <h2><span class="title-part">Iconic Food Tour</span> <span class="title-part gold">by the Eiffel Tower</span></h2>
+          <p class="tour-subtitle">Full Meal, Wine &amp; Pastries</p>
+
+          <p>We've created <strong>one of the first food tours right by the Eiffel Tower</strong>. It's more than a tasting, it's a complete French meal.</p>
+          <p>Just behind the Tower, we walk you through <strong>Rue Cler</strong>, a traditional neighborhood still full of local food artisans that millions of visitors pass by without ever discovering.</p>
+          <p class="food-hungry">Come hungry! 🍽️</p>
+
+          <ul class="food-facts">
+            <li><span>⏱️</span><span><b>3 hours</b></span></li>
+            <li><span>👥</span><span><b>Small group</b></span></li>
+          </ul>
+
+          <!-- Price is also written in the chooser below and in the JSON-LD in <head>: update all three together. -->
+          <div class="food-ticket">
+            <div class="food-price">
+              <div class="food-price-row">
+                <span class="food-price-now">€78</span>
+                <span class="food-price-unit">per person</span>
+                <span class="food-price-was">€130</span>
+                <span class="food-offer">Launch offer −40%</span>
+              </div>
+            </div>
+            <a
+              class="cta-button cta-button--food"
+              href="https://app.justguide.app/book/quentin-walking-tour/iconic-food-tour-by-the-eiffel-tower-full-meal-wine-pastries"
+              target="_blank"
+              rel="noopener"
+              onclick="trackCta({category:'booking', platform:'justguide', label:'Book food tour (section)'})"
+            >
+              <div style="display: flex; align-items: center; justify-content: center; gap: 0.6rem;">
+                <span>🍷</span>
+                <span>Book the food tour</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Tour chooser: opened by the sticky "Book a tour" button -->
     <section
       class="booking-section"
       id="booking-section"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="chooser-title"
+      hidden
       style="
-        display: none;
         max-height: 100%;
         overflow: auto;
         overscroll-behavior: contain;
@@ -314,6 +438,8 @@
         <div style="position: absolute; z-index: 2; top: 1rem; right: 1rem">
           <div
             onclick="toggleModal()"
+            role="button"
+            aria-label="Close"
             style="
               padding: 0.25rem;
               border-radius: 20rem;
@@ -348,73 +474,84 @@
               object-fit: cover;
             "
             src="./assets/images/floating-photo.png"
-            alt="Quentin, Paris walking tour guide"
+            alt=""
           />
         </div>
 
-        <h2>Ready to <span style="color: var(--bleu-clair)">Explore</span> Paris?</h2>
+        <h2 id="chooser-title">Ready to <span style="color: var(--bleu-clair)">Explore</span> Paris?</h2>
+        <p class="booking-sub">Pick your tour, booking takes a minute.</p>
 
-        <ul>
-          <!-- Notre-Dame Cathedral -->
+        <ul class="tour-list">
+          <!-- Free walking tour -->
           <li>
             <a
-              class="contact-item"
-              href='https://www.guruwalk.com/walks/59922-paris-time-machine-a-local-s-perspective'
+              class="tour-option"
+              href="https://app.justguide.app/book/quentin-walking-tour/paris-time-machine-the-hidden-gems-of-the-city"
               target="_blank"
-              aria-label="WhatsApp"
-              onclick="trackCta({category:'booking', platform:'guruwalk', label:'Book via GuruWalk (modal)'})"
+              rel="noopener"
+              onclick="trackCta({category:'booking', platform:'justguide', label:'Book free tour (chooser)'})"
             >
               <div>
-                <div style="width: 20px; text-align: center">🏛️</div>
+                <div class="emoji">🏛️</div>
                 <div class="canal">
                   <span>Paris Time Machine</span>
-                  <div class="canal-info">10:30AM and 5PM</div>
+                  <div class="canal-info">Free walking tour · pay what you want · 1h45</div>
                 </div>
               </div>
-
-              <div
-                style="position: absolute; right: 0.5rem; top: 0; height: 100%"
-              >
-                <div style="padding: 0.5rem; background: white">
-                  <svg
-                    style="height: 1.6rem; width: 1.6rem"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="ionicon"
-                    viewBox="0 0 512 512"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="48"
-                      d="M184 112l144 144-144 144"
-                    />
-                  </svg>
+              <div class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144" />
+                </svg>
+              </div>
+            </a>
+          </li>
+          <!-- Food tour -->
+          <li>
+            <a
+              class="tour-option"
+              href="https://app.justguide.app/book/quentin-walking-tour/iconic-food-tour-by-the-eiffel-tower-full-meal-wine-pastries"
+              target="_blank"
+              rel="noopener"
+              onclick="trackCta({category:'booking', platform:'justguide', label:'Book food tour (chooser)'})"
+            >
+              <div>
+                <div class="emoji">🥐</div>
+                <div class="canal">
+                  <span>Iconic Food Tour by the Eiffel Tower</span>
+                  <div class="canal-info">Full meal, wine &amp; pastries · 3h · €78 per person</div>
                 </div>
+              </div>
+              <div class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144" />
+                </svg>
               </div>
             </a>
           </li>
         </ul>
-        <h4>If you have any questions, feel free to contact us!</h4>
 
-        <ul>
-          <!-- Whatsapp -->
+        <h4>Any question? Just ask!</h4>
+
+        <ul class="tour-list">
+          <!-- Instagram -->
           <li>
             <a
               class="contact-item"
-              onclick="copyToClipboard('+33758800295')"
-              aria-label="WhatsApp"
+              href="https://www.instagram.com/quentinwalkingtour/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram"
+              onclick="trackCta({category:'contact', platform:'instagram', label:'Instagram (chooser)'})"
             >
               <div>
                 <div>
                   <svg>
-                    <use xlink:href="#icon-whatsapp"></use>
+                    <use xlink:href="#icon-instagram"></use>
                   </svg>
                 </div>
                 <div class="canal">
-                  <span>+33 7 58 80 02 95</span>
-                  <div class="canal-info">Whatsapp</div>
+                  <span>@quentinwalkingtour</span>
+                  <div class="canal-info">Instagram · send us a message</div>
                 </div>
               </div>
 
@@ -459,7 +596,7 @@
                 </div>
                 <div class="canal">
                   <span>quentinwalkingtour@gmail.com</span>
-                  <div class="canal-info">E-mail</div>
+                  <div class="canal-info">E-mail · tap to copy</div>
                 </div>
               </div>
 
@@ -626,7 +763,7 @@
                 <div id="image01" class="image full" data-position="top">
                   <span class="frame"
                     ><img
-                      src="assets/images/cover 2.png"
+                      src="assets/images/cover-2.jpg"
                       alt="Exploring Paris streets on the walking tour"
                   /></span>
                 </div>
@@ -655,7 +792,7 @@
 
 
     <!-- Historical Informations section -->
-    <section class="main">
+    <section class="main theme-bleu">
       <div class="inner">
         <div id="container01" class="container columns">
           <div class="wrapper">
@@ -664,7 +801,7 @@
                 <div id="image01" class="image full" data-position="top">
                   <span class="frame"
                     ><img
-                      src="assets/images/cover 3.png"
+                      src="assets/images/cover-3.jpg"
                       alt="Historic Paris highlights on the walking tour"
                   /></span>
                 </div>
@@ -692,7 +829,7 @@ We don't want you to simply visit Paris. <strong>We want you to understand it.</
 
 
     <!-- Contact section -->
-    <section class="main">
+    <section class="main theme-blanc-rouge">
       <div class="inner">
         <div id="container01" class="container columns">
           <div class="wrapper">
@@ -701,7 +838,7 @@ We don't want you to simply visit Paris. <strong>We want you to understand it.</
                 <div id="image01" class="image full" data-position="top">
                   <span class="frame"
                     ><img
-                      src="assets/images/cover 4.png"
+                      src="assets/images/cover-4.jpg"
                       alt="Meeting point and practical info for the Paris walking tour"
                   /></span>
                 </div>
@@ -725,11 +862,15 @@ We don't want you to simply visit Paris. <strong>We want you to understand it.</
 
                   <div class="booking-section-container">
                     <ul>
-                      <!-- Whatsapp -->
+                      <!-- Instagram -->
                       <li>
                         <a
-                          onclick="copyToClipboard('+33758800295')"
-                          aria-label="WhatsApp"
+                          class="contact-item"
+                          href="https://www.instagram.com/quentinwalkingtour/"
+                          target="_blank"
+                          rel="noopener"
+                          aria-label="Instagram"
+                          onclick="trackCta({category:'contact', platform:'instagram', label:'Instagram (contact section)'})"
                           style="
                             color: var(--blanc);
                             background-color: var(--rouge-fonce);
@@ -738,11 +879,11 @@ We don't want you to simply visit Paris. <strong>We want you to understand it.</
                           <div>
                             <div>
                               <svg style="fill: var(--blanc)">
-                                <use xlink:href="#icon-whatsapp"></use>
+                                <use xlink:href="#icon-instagram"></use>
                               </svg>
                             </div>
                             <div class="canal">
-                              <span>+33 7 58 80 02 95</span>
+                              <span>@quentinwalkingtour</span>
                             </div>
                           </div>
                         </a>
@@ -783,20 +924,20 @@ We don't want you to simply visit Paris. <strong>We want you to understand it.</
       </div>
     </section>
 
-    <!-- Sticky booking bar, always visible, links directly to booking -->
+    <!-- Sticky booking bar, always visible, opens the tour chooser -->
     <div class="sticky-cta">
-      <a
+      <button
         class="cta-button"
-        href="https://app.justguide.app/book/quentin-walking-tour/paris-time-machine-the-hidden-gems-of-the-city"
-        target="_blank"
-        rel="noopener"
-        onclick="trackCta({category:'booking', platform:'justguide', label:'Book your spot (sticky)'})"
+        type="button"
+        aria-haspopup="dialog"
+        aria-controls="booking-section"
+        onclick="toggleModal(); trackCta({category:'booking', platform:'modal_open', label:'Book a tour (sticky)'})"
       >
         <div style="display: flex; align-items: center; justify-content: center; gap: 0.6rem;">
           <span>🎟️</span>
-          <span>Book your free spot</span>
+          <span>Book a tour</span>
         </div>
-      </a>
+      </button>
     </div>
 
     <script>
