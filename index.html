@@ -305,59 +305,52 @@
       </symbol>
     </svg>
 
-    <!-- Intro section: free walking tour -->
-    <section class="main theme-blanc">
+    <!-- Intro: who we are -->
+    <section class="main intro-section">
       <div class="inner">
-        <div id="container01" class="container columns">
-          <div class="wrapper">
-            <div class="inner">
-              <div class="full">
-                <div id="image01" class="image full" data-position="top">
-                  <span class="frame"
-                    ><img
-                      src="assets/images/cover-1.jpg"
-                      alt="Paris Time Machine walking tour"
-                  /></span>
-                </div>
-              </div>
-              <div class="full">
-                <div class="text">
-                  <h2><span class="title-part">Free Walking Tour</span> <span class="title-part" style="color: var(--rouge-clair)">Paris Time Machine</span></h2>
-                  <p class="tour-subtitle">🚀 Paris has 2,000 years of history, and it's hidden in the streets.</p>
-                  <p>
-                    👋 Bonjour! <br />
-                    We’re a small team of Parisians who created this <b>Paris Time Machine</b> to take you one street away from the crowds, into the <strong>real heart of Paris</strong> ❤️
-                  </p>
+        <img
+          class="intro-photo"
+          src="assets/images/quentin.jpg"
+          alt="Quentin, Paris tour guide"
+          width="600"
+          height="600"
+        />
+        <p class="intro-text">
+          👋 <b>Bonjour!</b> We are a small team of Parisians who created these tours to take you <b>one street away from the crowd</b> and to introduce you to the <strong>real heart of Paris</strong> ❤️
+        </p>
+      </div>
+    </section>
 
-                  <p>
-                    Whether it's your first or fifth time in Paris, this tour is the <b>perfect introduction to the city</b>.<br><br> <strong>This is a walking tour, not a standing lecture!</strong> We keep moving so the experience stays dynamic and engaging.
-                  </p>
-
-                  <!-- <h4 style="color: var(--rouge-clair)">🗓️ You can join me everyday at <span style="white-space: nowrap;">10:30 AM.</span></h4> -->
-                  <a
-          id="hero-cta"
-          class="cta-button"
-          href="https://app.justguide.app/book/quentin-walking-tour/paris-time-machine-the-hidden-gems-of-the-city"
-          target="_blank"
-          rel="noopener"
-          onclick="trackCta({category:'booking', platform:'justguide', label:'Book free tour (hero)'})"
-        >
-          <div style="display: flex; align-items: center; justify-content: center; gap: 0.6rem;">
-            <span>🎟️</span>
-            <span>Book your free spot</span>
-
-          </div>
-        </a>
-                </div>
-              </div>
+    <!-- Free walking tour -->
+    <section class="main theme-blanc tour-section">
+      <div class="inner">
+        <figure class="tour-photo">
+          <img src="assets/images/cover-1.jpg" alt="Paris Time Machine walking tour" />
+        </figure>
+        <div class="tour-text">
+          <h2><span class="title-part">Free Walking Tour</span> <span class="title-part" style="color: var(--rouge-clair)">Paris Time Machine</span></h2>
+          <p class="tour-subtitle">🚀 Paris has 2,000 years of history, and it's hidden in the streets.</p>
+          <p>Whether it's your first or fifth time in Paris, <b>Paris Time Machine</b> is the <strong>perfect introduction to the city</strong>.</p>
+          <p><strong>This is a walking tour, not a standing lecture!</strong> We keep moving so the experience stays dynamic and engaging.</p>
+          <a
+            id="hero-cta"
+            class="cta-button"
+            href="https://app.justguide.app/book/quentin-walking-tour/paris-time-machine-the-hidden-gems-of-the-city"
+            target="_blank"
+            rel="noopener"
+            onclick="trackCta({category:'booking', platform:'justguide', label:'Book free tour (hero)'})"
+          >
+            <div style="display: flex; align-items: center; justify-content: center; gap: 0.6rem;">
+              <span>🎟️</span>
+              <span>Book your free spot</span>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </section>
 
     <!-- Food tour section -->
-    <section class="main food-tour" id="food-tour">
+    <section class="main food-tour tour-section" id="food-tour">
       <div class="inner">
 
         <div class="food-mosaic" aria-label="Photos from the food tour">
@@ -373,13 +366,13 @@
           </figure>
         </div>
 
-        <div class="food-text">
+        <div class="tour-text">
           <h2><span class="title-part">Iconic Food Tour</span> <span class="title-part gold">by the Eiffel Tower</span></h2>
           <p class="tour-subtitle">Full Meal, Wine &amp; Pastries</p>
 
           <p>We've created <strong>one of the first food tours right by the Eiffel Tower</strong>. It's more than a tasting, it's a complete French meal.</p>
           <p>Just behind the Tower, we walk you through <strong>Rue Cler</strong>, a traditional neighborhood still full of local food artisans that millions of visitors pass by without ever discovering.</p>
-          <p class="food-hungry">Come hungry! 🍽️</p>
+          <p >Come hungry! 🍽️</p>
 
           <ul class="food-facts">
             <li><span>⏱️</span><span><b>3 hours</b></span></li>
@@ -792,134 +785,67 @@
 
 
     <!-- Historical Informations section -->
-    <section class="main theme-bleu">
+    <section class="main theme-bleu tour-section">
       <div class="inner">
-        <div id="container01" class="container columns">
-          <div class="wrapper">
-            <div class="inner">
-              <div class="full">
-                <div id="image01" class="image full" data-position="top">
-                  <span class="frame"
-                    ><img
-                      src="assets/images/cover-3.jpg"
-                      alt="Historic Paris highlights on the walking tour"
-                  /></span>
-                </div>
-              </div>
-              <div class="full">
-                <div class="text">
-                  <h2>🌟 Paris is an open book! </h2>
-
-                  <p>
-                    We'll take you where others don't go, combining Paris's <strong>iconic sights</strong> with places most visitors never discover.<br /><br />
-⚔️ <strong>Cannonball and bullet marks</strong> still visible on the walls<br />
-👑 <strong>Kings, emperors, revolutionaries</strong>, and WWII resistance fighters who shaped Paris<br />
-⛪ Beautiful <strong>churches, hidden gardens</strong>, and medieval houses<br />
-🎨 <strong>Le Marais</strong> is filled with incredible street art!<br /><br />
-<i>Why does Paris look the way it does today? Why do Parisians protest so often? What happened to Notre-Dame? <strong>We'll answer these questions and many more.</strong><br /></i><br />
-We don't want you to simply visit Paris. <strong>We want you to understand it.</strong>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+        <figure class="tour-photo">
+          <img src="assets/images/cover-3.jpg" alt="Historic Paris highlights on the walking tour" loading="lazy" />
+        </figure>
+        <div class="tour-text">
+          <h2>🌟 Paris is an open book!</h2>
+          <p>We'll take you where others don't go, combining Paris's <strong>iconic sights</strong> with places most visitors never discover.</p>
+          <p>
+            ⚔️ <strong>Cannonball and bullet marks</strong> still visible on the walls<br />
+            👑 <strong>Kings, emperors, revolutionaries</strong>, and WWII resistance fighters who shaped Paris<br />
+            ⛪ Beautiful <strong>churches, hidden gardens</strong>, and medieval houses<br />
+            🎨 <strong>Le Marais</strong> is filled with incredible street art!
+          </p>
+          <p><i>Why does Paris look the way it does today? Why do Parisians protest so often? What happened to Notre-Dame? <strong>We'll answer these questions and many more.</strong></i></p>
+          <p>We don't want you to simply visit Paris. <strong>We want you to understand it.</strong></p>
         </div>
       </div>
     </section>
 
 
     <!-- Contact section -->
-    <section class="main theme-blanc-rouge">
+    <section class="main theme-blanc-rouge tour-section">
       <div class="inner">
-        <div id="container01" class="container columns">
-          <div class="wrapper">
-            <div class="inner">
-              <div class="full">
-                <div id="image01" class="image full" data-position="top">
-                  <span class="frame"
-                    ><img
-                      src="assets/images/cover-4.jpg"
-                      alt="Meeting point and practical info for the Paris walking tour"
-                  /></span>
-                </div>
-              </div>
-              <div class="full">
-                <div class="text">
-                  <h2>Additional Information</h2>
+        <figure class="tour-photo">
+          <img src="assets/images/cover-4.jpg" alt="Meeting point and practical info for the Paris walking tour" loading="lazy" />
+        </figure>
+        <div class="tour-text">
+          <h2>Additional Information</h2>
+          <p>🥗 We will end the tour in a quiet unique place to find meals of any type from (very) fancy places to local street food.</p>
+          <p>🕐 The tour lasts approximately <b>1h45.</b></p>
+          <p><i>Join us and you’ll be able to tell your friends that you indeed visited Paris!</i></p>
 
-                  <p>
-                    🥗 We will end the tour in a quiet unique place to find meals of any type from (very) fancy places to local street food.
-                  </p>
-
-                  <p>🕐 The tour lasts approximately <b>1h45.</b></p>
-
-                  <i
-                    >Join us and you’ll be able to tell your friends that you
-                    indeed visited Paris!</i
-                  >
-
-                  <h3>Get in touch with us</h3>
-
-                  <div class="booking-section-container">
-                    <ul>
-                      <!-- Instagram -->
-                      <li>
-                        <a
-                          class="contact-item"
-                          href="https://www.instagram.com/quentinwalkingtour/"
-                          target="_blank"
-                          rel="noopener"
-                          aria-label="Instagram"
-                          onclick="trackCta({category:'contact', platform:'instagram', label:'Instagram (contact section)'})"
-                          style="
-                            color: var(--blanc);
-                            background-color: var(--rouge-fonce);
-                          "
-                        >
-                          <div>
-                            <div>
-                              <svg style="fill: var(--blanc)">
-                                <use xlink:href="#icon-instagram"></use>
-                              </svg>
-                            </div>
-                            <div class="canal">
-                              <span>@quentinwalkingtour</span>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-
-                      <!-- Mail -->
-                      <li>
-                        <a
-                          class="contact-item"
-                          onclick="copyToClipboard('quentinwalkingtour@gmail.com')"
-                          aria-label="Email"
-                          style="
-                            color: var(--blanc);
-                            background-color: var(--rouge-fonce);
-                          "
-                        >
-                          <div>
-                            <div>
-                              <svg style="fill: var(--blanc)">
-                                <use
-                                  xlink:href="#icon-c3c8e1063e3b7f84f6b54712741de139"
-                                ></use>
-                              </svg>
-                            </div>
-                            <div class="canal">
-                              <span>quentinwalkingtour@gmail.com</span>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <h3>Get in touch with us</h3>
+          <ul class="contact-list">
+            <!-- Instagram -->
+            <li>
+              <a
+                class="contact-item"
+                href="https://www.instagram.com/quentinwalkingtour/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram"
+                onclick="trackCta({category:'contact', platform:'instagram', label:'Instagram (contact section)'})"
+              >
+                <svg><use xlink:href="#icon-instagram"></use></svg>
+                <span>@quentinwalkingtour</span>
+              </a>
+            </li>
+            <!-- Mail -->
+            <li>
+              <a
+                class="contact-item"
+                onclick="copyToClipboard('quentinwalkingtour@gmail.com')"
+                aria-label="Email"
+              >
+                <svg><use xlink:href="#icon-c3c8e1063e3b7f84f6b54712741de139"></use></svg>
+                <span>quentinwalkingtour@gmail.com</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </section>

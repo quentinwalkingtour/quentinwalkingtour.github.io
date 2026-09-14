@@ -1747,7 +1747,12 @@ justify-content: baseline;
   scroll-margin-top: 1rem;
 }
 
-.main.food-tour > .inner {
+/* ═══════════════════════════════════════════════════════════════
+   TOUR SECTIONS — one layout for every photo + text section
+   (free walking tour, food tour, "open book", additional information)
+   ═══════════════════════════════════════════════════════════════ */
+
+.main.tour-section > .inner {
   display: grid;
   grid-template-columns: minmax(0, 11fr) minmax(0, 13fr);
   gap: 3rem;
@@ -1755,10 +1760,97 @@ justify-content: baseline;
   padding-block: 3.5rem;
 }
 
-.main.food-tour > .inner > * {
+.main.tour-section > .inner > * {
   margin: 0 !important;
   min-width: 0;
 }
+
+.tour-photo {
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+.tour-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: top;
+}
+
+.tour-text h2 {
+  line-height: 1.15;
+  margin: 0 0 0.4rem;
+  text-wrap: balance;
+}
+
+.tour-text h3 {
+  margin: 1.75rem 0 0.75rem;
+}
+
+.tour-text p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0 0 1.1rem;
+  max-width: 58ch;
+}
+
+.tour-text > :last-child {
+  margin-bottom: 0;
+}
+
+.tour-text > .cta-button {
+  margin-top: 1.6rem;
+}
+
+/* contact rows in the "Additional information" section */
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-list .contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.85rem 1rem;
+  border-radius: 0.6rem;
+  background: var(--rouge-fonce);
+  color: var(--blanc);
+  font-weight: 600;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.contact-list .contact-item svg {
+  flex-shrink: 0;
+  width: 1.4rem;
+  height: 1.4rem;
+  fill: var(--blanc);
+}
+
+@media (max-width: 980px) {
+  .main.tour-section > .inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .tour-photo img { aspect-ratio: 4 / 3; }
+
+  .tour-text p { max-width: none; }
+}
+
+@media (max-width: 736px) {
+  .main.tour-section > .inner { padding-block: 2.5rem; }
+}
+
+/* ── Food tour specifics ── */
 
 /* photo mosaic */
 .food-mosaic {
@@ -1806,30 +1898,12 @@ justify-content: baseline;
 }
 
 /* text column */
-.food-tour h2 {
-  line-height: 1.15;
-  margin: 0 0 0.4rem;
-  text-wrap: balance;
-}
-
 .food-tour h2 .gold { color: var(--or); }
 
 .food-tour .tour-subtitle { color: rgba(253, 240, 213, 0.85); }
 
-.food-tour p {
-  font-size: 1.05rem;
-  line-height: 1.6;
-  margin: 0 0 1.1rem;
-  max-width: 58ch;
-}
-
 .food-tour p strong { color: white; }
 
-.food-hungry {
-  font-style: italic;
-  font-weight: 600;
-  color: var(--or);
-}
 
 .food-facts {
   display: flex;
@@ -1912,11 +1986,6 @@ justify-content: baseline;
 }
 
 @media (max-width: 980px) {
-  .main.food-tour > .inner {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 2.5rem;
-  }
-
   .food-mosaic {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     grid-template-rows: auto auto;
@@ -1929,13 +1998,9 @@ justify-content: baseline;
   }
 
   .food-mosaic .small { aspect-ratio: 4 / 3; }
-
-  .food-tour p { max-width: none; }
 }
 
 @media (max-width: 736px) {
-  .main.food-tour > .inner { padding-block: 2.5rem; }
-
   .food-ticket .cta-button {
     width: 100%;
     min-width: 0;
@@ -2035,4 +2100,60 @@ justify-content: baseline;
   white-space: normal;
   min-width: 0;
   overflow-wrap: anywhere;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   INTRO — who we are (very first section)
+   ═══════════════════════════════════════════════════════════════ */
+
+.main.intro-section {
+  background: var(--bleu-fonce);
+  color: var(--blanc) !important;
+}
+
+.intro-text strong,
+.intro-text b { color: white; }
+
+.main.intro-section > .inner {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-block: 1.5rem;
+}
+
+.main.intro-section > .inner > * {
+  margin: 0 !important;
+}
+
+.intro-photo {
+  flex-shrink: 0;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  border: 4px solid var(--blanc);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+}
+
+.intro-text {
+  font-size: 1.05rem;
+  line-height: 1.55;
+  max-width: 52ch;
+}
+
+@media (max-width: 736px) {
+  .main.intro-section > .inner {
+    gap: 1rem;
+    padding-block: 1.25rem;
+  }
+
+  .intro-photo {
+    width: 5.25rem;
+    height: 5.25rem;
+    border-width: 3px;
+  }
+
+  .intro-text { font-size: 0.97rem; }
 }

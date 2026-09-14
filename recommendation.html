@@ -367,17 +367,20 @@
       gap: 0.6rem;
     }
 
-    /* Our own tour: white card on the orange background so it reads first */
+    /* Our own tour: navy-to-blue gradient with gold accents (same palette as
+       the food tour section on the homepage) so it reads first on the orange card */
     .card--cta .activity-row--featured {
-      background: white;
-      border-color: white;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+      background:
+        radial-gradient(90% 120% at 100% 0%, rgba(255,209,102,0.22), transparent 60%),
+        linear-gradient(135deg, #003049 0%, #0b4f6c 100%);
+      border: 1.5px solid rgba(255,255,255,0.35);
+      box-shadow: 0 6px 18px rgba(0,48,73,0.35), inset 0 1px 0 rgba(255,255,255,0.18);
       padding: 0.95rem 0.85rem 0.85rem;
     }
-    .card--cta .activity-row--featured .activity-name { color: var(--bleu-fonce); font-size: 1rem; }
-    .card--cta .activity-row--featured .activity-desc { color: #666; }
-    .card--cta .activity-row--featured .activity-badge { background: var(--bleu-fonce); color: white; }
-    .card--cta .activity-row--featured .activity-cta { background: var(--orange); color: white; }
+    .card--cta .activity-row--featured .activity-name { color: white; }
+    .card--cta .activity-row--featured .activity-desc { color: rgba(255,255,255,0.8); }
+    .card--cta .activity-row--featured .activity-badge { background: #ffd166; color: var(--bleu-fonce); }
+    .card--cta .activity-row--featured .activity-cta { background: #ffd166; color: var(--bleu-fonce); }
 
     .activity-row {
       display: flex;
