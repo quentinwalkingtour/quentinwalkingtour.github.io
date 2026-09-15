@@ -5,13 +5,18 @@
     "description": "Full meal, wine & pastries · 3h",
     "affiliateUrl": "https://app.justguide.app/book/quentin-walking-tour/iconic-food-tour-by-the-eiffel-tower-full-meal-wine-pastries",
     "platform": "justguide",
-    "badge": "-40%",
+    "badge": "-30%",
     "featured": true,
     "blogUrl": null,
     "active": true,
-    "image": "assets/images/food-tour/cheese.jpg",
-    "price": "€78",
-    "priceWas": "€130"
+    "price": "€89",
+    "priceWas": "€130",
+    "images": [
+      "assets/images/food-tour/eiffel.jpg",
+      "assets/images/food-tour/cheese.jpg",
+      "assets/images/food-tour/pastries.jpg"
+    ],
+    "ctaLabel": "Book"
   },
   {
     "emoji": "⚰️",
