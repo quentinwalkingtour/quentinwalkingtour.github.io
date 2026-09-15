@@ -12,9 +12,9 @@
     "price": "€89",
     "priceWas": "€130",
     "images": [
+      "assets/images/food-tour/toast.jpg",
       "assets/images/food-tour/eiffel.jpg",
-      "assets/images/food-tour/cheese.jpg",
-      "assets/images/food-tour/pastries.jpg"
+      "assets/images/food-tour/cheese.jpg"
     ],
     "ctaLabel": "Book"
   },
