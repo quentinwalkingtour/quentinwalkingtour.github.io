@@ -1927,8 +1927,10 @@ justify-content: baseline;
   text-align: center;
 }
 
-.food-facts b { display: block; color: white; }
-.food-facts small { display: block; color: rgba(253, 240, 213, 0.75); font-size: 0.85rem; }
+/* facts inherit the section's text colour; the dark food section brightens them */
+.food-facts b { display: block; color: inherit; }
+.food-facts small { display: block; opacity: 0.75; font-size: 0.85rem; }
+.food-tour .food-facts b { color: white; }
 
 /* price + CTA "ticket" */
 .food-ticket {
