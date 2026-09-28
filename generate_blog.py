@@ -24,7 +24,7 @@ OUTPUT_DIR   = Path('blog')
 TEMPLATE     = Path('template-blog.html')
 INDEX_OUTPUT = Path('blog/index.html')
 
-SITE_URL     = 'https://quentinwalkingtour.com'
+SITE_URL     = 'https://timemachinetours.fr'
 SITE_NAME    = 'Paris Time Machine'
 
 

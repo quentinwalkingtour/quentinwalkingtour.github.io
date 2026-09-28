@@ -1,6 +1,6 @@
 {
-    "name": "Quentin's Walking Tour",
-    "short_name": "Free Walking Tour",
+    "name": "Time Machine Tours",
+    "short_name": "Time Machine Tours",
     "icons": [
         {
             "src": "/assets/favicon/android-chrome-192x192.png",
@@ -11,8 +11,13 @@
             "src": "/assets/favicon/android-chrome-384x384.png",
             "sizes": "384x384",
             "type": "image/png"
+        },
+        {
+            "src": "/assets/favicon/favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml"
         }
     ],
-    "theme_color": "#ffffff",
+    "theme_color": "#02343F",
     "background_color": "#ffffff"
 }

@@ -91,7 +91,7 @@ A new, standalone blog index page. Its purposes are:
 - Sells the tour to potential readers who find it via search
 
 Structure:
-- `<head>`: full SEO meta tags, Open Graph, canonical URL `https://quentinwalkingtour.com/blog/`
+- `<head>`: full SEO meta tags, Open Graph, canonical URL `https://timemachinetours.fr/blog/`
 - Inlined CSS matching the site design (same CSS variables as `recommendation.html`)
 - Header: site logo + nav link back to homepage
 - Hero: short editorial intro from Quentin (2–3 sentences, first-person)

@@ -161,7 +161,7 @@ For each: Variable type = **Data Layer Variable**, Data Layer Variable Name = th
 ### Step 4 — Preview & test
 
 1. Top-right of GTM → **Preview**.
-2. Enter your site URL, e.g. `https://quentinwalkingtour.com/recommendation.html?type=freetour&guide=christina`.
+2. Enter your site URL, e.g. `https://timemachinetours.fr/recommendation.html?type=freetour&guide=christina`.
 3. This opens Tag Assistant in a connected tab. Click one of the review buttons on the live page.
 4. In Tag Assistant, find the `cta_click` event in the left timeline → click it → check the **Tags** tab confirms `GA4 Event - cta_click` fired, and the parameters show correct values (`cta_platform=guruwalk`, `guide=christina`, etc.).
 5. Repeat for `index.html`'s "Reserve Your Spot" button and the GuruWalk modal link, and for `book/book-a-tour.html`.
