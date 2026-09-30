@@ -1001,7 +1001,7 @@
     ══════════════════════════════════════════════════════════════ */
 
     const URL_PARAMS  = new URLSearchParams(window.location.search);
-    const TOUR_TYPE   = URL_PARAMS.get('type') || ''; // 'freetour' | 'prepaid' | 'hybrid'
+    const TOUR_TYPE   = URL_PARAMS.get('type') || ''; // 'freetour' | 'prepaid' | 'hybrid' | 'foodtour' — see TOUR_TYPES
     const GUIDE       = URL_PARAMS.get('guide') || '';          // 'quentin' | 'christina' | 'thomas' | 'scott'
     const POST_TOUR   = URL_PARAMS.has('type');                 // true only when coming from a tour QR code
 
@@ -1119,9 +1119,69 @@
       guruwalk:      'https://www.guruwalk.com/en/walks/59922/reviews/new',
       google:        'https://g.page/r/CbXKLOzFaHEXEAE/review',
       freetour:      'https://www.freetour.com/paris/paris-time-machine-free-tour-a-locals-perspective',
+      // GetYourGuide activity 875834 is now the Iconic Eiffel Tower Food Tour listing
       getyourguide:  'https://www.getyourguide.com/scan-review-qr?activity_id=875834&utm_medium=offline&utm_source=supplier_review_link&utm_campaign=supplier_review_qrcode&utm_content=875834',
       viator:        'https://www.tripadvisor.com/UserReviewEdit-g187147-d28211242-Paris_Time_Machine_A_local_perspective_English_Walking_Tour-Paris_Ile_de_France.html',
+      tripadvisorFood: 'https://www.tripadvisor.com/UserReviewEdit-g187147-d32876559-Iconic_Eiffel_Tower_Food_Tour_Oysters_Cheese_Wine_More-Paris_Ile_de_France.html',
     };
+
+    /* How each review platform's button looks */
+    const REVIEW_PLATFORMS = {
+      getyourguide: { label: 'Review on GetYourGuide', icon: 'getyourguide.png', style: 'primary-gyg-dark' },
+      guruwalk:     { label: 'Review on GuruWalk',     icon: 'guruwalk.png',     style: 'primary-gyg' },
+      tripadvisor:  { label: 'Review on Tripadvisor',  icon: 'tripadvisor.png',  style: 'viator' },
+      google:       { label: 'Leave a Google Review',  icon: 'google.png',       style: 'google' },
+    };
+
+    /* ══════════════════════════════════════════════════════════════
+       TOUR TYPES — one entry per ?type= value used in the tour QR codes.
+         reviews: buttons shown top-to-bottom (`note` = small line under the label)
+         orText:  line under the buttons
+         upsell:  show the "Want to explore more with us?" activities card
+       A missing or unknown ?type= falls back to 'hybrid'.
+    ══════════════════════════════════════════════════════════════ */
+
+    const TOUR_TYPES = {
+      prepaid: {
+        reviews: [
+          { platform: 'getyourguide', url: REVIEW_URLS.getyourguide },
+          { platform: 'tripadvisor',  url: REVIEW_URLS.viator },
+          { platform: 'google',       url: REVIEW_URLS.google, note: 'No matter where you booked from!' },
+        ],
+        orText: 'Or any other platform you prefer!',
+        upsell: true,
+      },
+      freetour: {
+        reviews: [
+          { platform: 'guruwalk',    url: REVIEW_URLS.guruwalk, note: 'If you booked through it!' },
+          { platform: 'tripadvisor', url: REVIEW_URLS.viator },
+          { platform: 'google',      url: REVIEW_URLS.google },
+        ],
+        orText: 'Or <strong>any other platform</strong> you prefer!',
+        upsell: true,
+      },
+      hybrid: {
+        reviews: [
+          { platform: 'guruwalk',    url: REVIEW_URLS.guruwalk },
+          { platform: 'tripadvisor', url: REVIEW_URLS.viator },
+          { platform: 'google',      url: REVIEW_URLS.google, note: 'No matter where you booked from!' },
+        ],
+        orText: 'Or any other platform you prefer!',
+        upsell: true,
+      },
+      foodtour: {
+        reviews: [
+          { platform: 'getyourguide', url: REVIEW_URLS.getyourguide },
+          { platform: 'tripadvisor',  url: REVIEW_URLS.tripadvisorFood },
+        ],
+        orText: 'Or any other platform you prefer!',
+        upsell: false,
+      },
+    };
+
+    const TOUR = TOUR_TYPES[TOUR_TYPE] || TOUR_TYPES.hybrid;
+
+    if (!TOUR.upsell) document.getElementById('section-activities').hidden = true;
 
     /* ══════════════════════════════════════════════════════════════
        GUIDE PHOTOS
@@ -1162,98 +1222,26 @@
 
     (function initReviewButtons() {
       const container = document.getElementById('review-buttons');
-      const orEl      = document.getElementById('review-or');
 
-      if (TOUR_TYPE === 'prepaid') {
-        container.innerHTML = `
-          <a class="review-btn review-btn--primary-gyg-dark"
-            href="${REVIEW_URLS.getyourguide}" target="_blank" rel="noopener" data-platform="getyourguide">
-            <img src="./assets/images/icons/getyourguide.png" class="btn-logo" alt="">
+      container.innerHTML = TOUR.reviews.map(({ platform, url, note }) => {
+        const p = REVIEW_PLATFORMS[platform];
+        return `
+          <a class="review-btn review-btn--${p.style}"
+            href="${url}" target="_blank" rel="noopener" data-platform="${platform}">
+            <img src="./assets/images/icons/${p.icon}" class="btn-logo" alt="">
             <span class="btn-text">
-              <span>Review on GetYourGuide</span>
-            </span>
-          </a>
-          <a class="review-btn review-btn--viator"
-            href="${REVIEW_URLS.viator}" target="_blank" rel="noopener" data-platform="tripadvisor">
-            <img src="./assets/images/icons/tripadvisor.png" class="btn-logo" alt="">
-            <span class="btn-text">
-              <span>Review on Tripadvisor</span>
-            </span>
-          </a>
-          <a class="review-btn review-btn--google"
-            href="${REVIEW_URLS.google}" target="_blank" rel="noopener" data-platform="google">
-            <img src="./assets/images/icons/google.png" class="btn-logo" alt="">
-            <span class="btn-text">
-              <span>Leave a Google Review</span>
-              <span class="review-btn-label">No matter where you booked from!</span>
+              <span>${p.label}</span>
+              ${note ? `<span class="review-btn-label">${note}</span>` : ''}
             </span>
           </a>`;
-          orEl.innerHTML = 'Or any other platform you prefer!';
-      } else if (TOUR_TYPE === 'freetour') {
-        container.innerHTML = `
-          <a class="review-btn review-btn--primary-gyg"
-            href="${REVIEW_URLS.guruwalk}" target="_blank" rel="noopener" data-platform="guruwalk">
-            <img src="./assets/images/icons/guruwalk.png" class="btn-logo" alt="">
-            <span class="btn-text">
-              <span>Review on GuruWalk</span>
-              <span class="review-btn-label">If you booked through it!</span>
-            </span>
-          </a>
-          <a class="review-btn review-btn--viator"
-            href="${REVIEW_URLS.viator}" target="_blank" rel="noopener" data-platform="tripadvisor">
-            <img src="./assets/images/icons/tripadvisor.png" class="btn-logo" alt="">
-            <span class="btn-text">
-              <span>Review on Tripadvisor</span>
-            </span>
-          </a>
-          <a class="review-btn review-btn--google"
-            href="${REVIEW_URLS.google}" target="_blank" rel="noopener" data-platform="google">
-            <img src="./assets/images/icons/google.png" class="btn-logo" alt="">
-            <span class="btn-text">
-              <span>Leave a Google Review</span>
-            </span>
-          </a>
-          `;
-        orEl.innerHTML = 'Or <strong>any other platform</strong> you prefer!';
-      } else {
-        /* hybrid — and fallback for any unrecognized type */
-        container.innerHTML = `
-          <a class="review-btn review-btn--primary-gyg"
-            href="${REVIEW_URLS.guruwalk}" target="_blank" rel="noopener" data-platform="guruwalk">
-            <img src="./assets/images/icons/guruwalk.png" class="btn-logo" alt="">
-            <span class="btn-text">
-              <span>Review on GuruWalk</span>
-            </span>
-          </a>
-          <a class="review-btn review-btn--viator"
-            href="${REVIEW_URLS.viator}" target="_blank" rel="noopener" data-platform="tripadvisor">
-            <img src="./assets/images/icons/tripadvisor.png" class="btn-logo" alt="">
-            <span class="btn-text">
-              <span>Review on Tripadvisor</span>
-            </span>
-          </a>
-          <a class="review-btn review-btn--google"
-            href="${REVIEW_URLS.google}" target="_blank" rel="noopener" data-platform="google">
-            <img src="./assets/images/icons/google.png" class="btn-logo" alt="">
-            <span class="btn-text">
-              <span>Leave a Google Review</span>
-              <span class="review-btn-label">No matter where you booked from!</span>
-            </span>
-          </a>`;
-        orEl.innerHTML = 'Or any other platform you prefer!';
-      }
+      }).join('');
+      document.getElementById('review-or').innerHTML = TOUR.orText;
 
       /* Review click tracking */
-      const PLATFORM_LABELS = {
-        guruwalk:     'Review on GuruWalk',
-        tripadvisor:  'Review on Tripadvisor',
-        google:       'Leave a Google Review',
-        getyourguide: 'Review on GetYourGuide',
-      };
       container.querySelectorAll('.review-btn').forEach(btn => {
         btn.addEventListener('click', () => {
           const platform = btn.dataset.platform;
-          trackCta({ category: 'review', platform, label: PLATFORM_LABELS[platform] || platform });
+          trackCta({ category: 'review', platform, label: REVIEW_PLATFORMS[platform].label });
         });
       });
     })();

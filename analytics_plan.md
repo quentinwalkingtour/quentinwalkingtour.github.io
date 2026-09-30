@@ -53,7 +53,7 @@ dataLayer.push({
   cta_platform: 'guruwalk',         // 'tripadvisor' | 'guruwalk' | 'freetour' | 'google' | 'getyourguide' | 'whatsapp' | 'email'
   cta_label:    'Review on GuruWalk', // human-readable button text, for sanity-checking reports
   guide:        'quentin',          // 'quentin' | 'christina' | 'thomas' | 'unknown'
-  tour_type:    'freetour',         // 'freetour' | 'prepaid' | 'hybrid' | 'n/a'  (recommendation.html only)
+  tour_type:    'freetour',         // 'freetour' | 'prepaid' | 'hybrid' | 'foodtour' | 'n/a'  (recommendation.html only)
   source:       'qrcode',           // from sessionStorage tour_source, 'direct' if absent
 });
 ```
