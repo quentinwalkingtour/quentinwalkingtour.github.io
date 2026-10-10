@@ -352,6 +352,33 @@ def generate_index(posts: list[dict]) -> None:
     print(f'  [ok] {INDEX_OUTPUT}')
 
 
+# ── Sitemap ────────────────────────────────────────────────────────────────────
+
+SITEMAP_OUTPUT = Path('sitemap.xml')
+
+# Public pages outside the blog, as their canonical paths
+STATIC_PAGES = [
+    '/',
+    '/book/book-a-tour',
+    '/book/paris-time-machine',
+    '/links',
+    '/recommendation.html',
+]
+
+def generate_sitemap(posts: list[dict]) -> None:
+    """Write sitemap.xml: static pages, the blog index and every published post."""
+    entries = [f'  <url><loc>{SITE_URL}{path}</loc></url>' for path in STATIC_PAGES + ['/blog/']]
+    entries += [
+        f"  <url><loc>{SITE_URL}/blog/{post['slug']}.html</loc><lastmod>{post['modified_date']}</lastmod></url>"
+        for post in posts
+    ]
+    xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
+           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+           + '\n'.join(entries) + '\n</urlset>\n')
+    SITEMAP_OUTPUT.write_text(xml, encoding='utf-8')
+    print(f'  [ok] {SITEMAP_OUTPUT}')
+
+
 # ── Entry point ────────────────────────────────────────────────────────────────
 
 def main():
@@ -365,6 +392,9 @@ def main():
 
     print('Generating blog index...')
     generate_index(posts)
+
+    print('Generating sitemap...')
+    generate_sitemap(posts)
 
     print('Done.')
 

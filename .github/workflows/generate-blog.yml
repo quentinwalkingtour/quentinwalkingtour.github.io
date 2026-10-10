@@ -41,6 +41,6 @@ jobs:
       run: |
         git config --global user.name 'GitHub Actions'
         git config --global user.email 'actions@github.com'
-        git add blog/ go/
+        git add blog/ go/ sitemap.xml
         git commit -m "chore: regenerate blog and redirects [skip ci]" || echo "No changes to commit"
         git push

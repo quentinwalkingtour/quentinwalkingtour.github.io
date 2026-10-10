@@ -43,6 +43,13 @@
         "@context": "https://schema.org",
         "@graph": [
           {
+            "@type": "WebSite",
+            "@id": "https://timemachinetours.fr/#website",
+            "name": "Time Machine Tours",
+            "url": "https://timemachinetours.fr/",
+            "publisher": { "@id": "https://timemachinetours.fr/#organization" }
+          },
+          {
             "@type": "Organization",
             "@id": "https://timemachinetours.fr/#organization",
             "name": "Time Machine Tours",
@@ -125,6 +132,8 @@
     <link rel="stylesheet" href="./index.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+    <!-- Google Search only uses favicons sized in multiples of 48px (or SVG) -->
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/favicon/android-chrome-192x192.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
     <link rel="manifest" href="./assets/favicon/site.webmanifest" />
