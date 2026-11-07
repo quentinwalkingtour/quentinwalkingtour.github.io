@@ -2159,3 +2159,124 @@ justify-content: baseline;
 
   .intro-text { font-size: 0.97rem; }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   PARIS TIME MACHINE FORMATS (#paris-time-machine)
+   Two cards side by side: free introduction + in-depth small group.
+   Stacked on phone.
+   ═══════════════════════════════════════════════════════════════ */
+
+.formats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.4rem 0 0;
+}
+
+.format-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 1.2rem;
+  border-radius: 1rem;
+  background: white;
+  border: 1px solid rgba(var(--bleu-fonce-rgb), 0.12);
+  box-shadow: 0 4px 16px rgba(var(--bleu-fonce-rgb), 0.07);
+}
+
+.format-card--deep {
+  background-color: var(--bleu-fonce);
+  background-image: radial-gradient(80% 90% at 100% 0%, rgba(193, 18, 31, 0.35), transparent 65%);
+  border-color: transparent;
+  color: var(--blanc);
+  box-shadow: 0 8px 24px rgba(var(--bleu-fonce-rgb), 0.28);
+}
+
+.format-tag {
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.22rem 0.5rem;
+  border-radius: 0.3rem;
+  background: var(--blanc-fonce);
+  color: var(--bleu-fonce);
+}
+
+.format-card--deep .format-tag {
+  background: var(--or);
+}
+
+.tour-text h3.format-title {
+  margin: 0;
+  font-size: 1.3rem !important; /* global h3 rule sets 2rem !important */
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+.format-card--deep .format-title { color: white; }
+
+.tour-text .format-desc {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.format-card--deep .format-desc { color: rgba(253, 240, 213, 0.85); }
+
+.format-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1.1rem;
+  margin: 0;
+  padding: 0;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.format-facts li {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.format-price {
+  font-size: 0.92rem;
+  color: rgba(253, 240, 213, 0.85);
+}
+
+.format-price b {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--or);
+  margin-right: 0.2rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* push both buttons to the bottom so they line up */
+.format-card .format-cta {
+  margin: auto 0 0;
+  width: 100%;
+  font-size: 1.05rem;
+  padding: 0.8rem 1rem;
+}
+
+.format-card--deep .format-cta {
+  background-image: linear-gradient(45deg, var(--or), var(--orange));
+  color: var(--bleu-fonce);
+  animation: none;
+}
+
+.tour-text .format-meeting {
+  margin: 1rem 0 0;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 1280px) and (min-width: 981px) {
+  .formats { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .formats { grid-template-columns: minmax(0, 1fr); }
+}

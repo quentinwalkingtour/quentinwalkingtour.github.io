@@ -1145,8 +1145,8 @@
 
     const TOUR_TYPES = {
       prepaid: {
+        // No GetYourGuide here: activity 875834 is now the food tour listing
         reviews: [
-          { platform: 'getyourguide', url: REVIEW_URLS.getyourguide },
           { platform: 'tripadvisor',  url: REVIEW_URLS.viator },
           { platform: 'google',       url: REVIEW_URLS.google, note: 'No matter where you booked from!' },
         ],
@@ -1164,7 +1164,7 @@
       },
       hybrid: {
         reviews: [
-          { platform: 'guruwalk',    url: REVIEW_URLS.guruwalk },
+          { platform: 'guruwalk',    url: REVIEW_URLS.guruwalk, note: 'If you booked through it!' },
           { platform: 'tripadvisor', url: REVIEW_URLS.viator },
           { platform: 'google',      url: REVIEW_URLS.google, note: 'No matter where you booked from!' },
         ],
