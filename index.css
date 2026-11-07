@@ -2189,37 +2189,20 @@ justify-content: baseline;
   box-shadow: 0 8px 24px rgba(var(--bleu-fonce-rgb), 0.28);
 }
 
-.format-tag {
-  align-self: flex-start;
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 0.22rem 0.5rem;
-  border-radius: 0.3rem;
-  background: rgba(48, 176, 255, 0.15);
-  color: var(--bleu-fonce);
-}
-
-.format-card--deep .format-tag {
-  background: rgba(255, 209, 102, 0.18);
-  color: var(--or);
-}
-
-/* title takes the same gradient as the card's button */
 .tour-text h3.format-title {
   margin: 0;
   font-size: 1.3rem !important; /* global h3 rule sets 2rem !important */
   line-height: 1.25;
   text-wrap: balance;
-  background-image: linear-gradient(45deg, #30b0ff, #19c99d);
+  color: var(--bleu-fonce);
+}
+
+/* small-group title takes the same orange gradient as its button */
+.format-card--deep h3.format-title {
+  background-image: linear-gradient(45deg, var(--or), var(--orange));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-}
-
-.format-card--deep h3.format-title {
-  background-image: linear-gradient(45deg, var(--or), var(--orange));
 }
 
 .tour-text .format-desc {
