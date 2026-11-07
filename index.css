@@ -2197,9 +2197,9 @@ justify-content: baseline;
   color: var(--bleu-fonce);
 }
 
-/* small-group title in bright yellow */
+/* small-group title: the yellow of its button (--or), no gradient */
 .format-card--deep h3.format-title {
-  color: #ffd60a;
+  color: var(--or);
 }
 
 .tour-text .format-desc {
