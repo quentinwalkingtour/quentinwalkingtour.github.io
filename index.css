@@ -2179,8 +2179,8 @@ justify-content: baseline;
   gap: 0.55rem;
   padding: 1.2rem;
   border-radius: 1rem;
-  background: var(--blanc);
-  box-shadow: 0 4px 18px rgba(var(--bleu-fonce-rgb), 0.12);
+  background: var(--blanc-clair);
+  box-shadow: 0 6px 22px rgba(var(--bleu-fonce-rgb), 0.16);
 }
 
 .format-card--deep {
