@@ -99,6 +99,7 @@
             "touristType": "Visitors who want an in-depth Paris walking tour in a small group",
             "offers": {
               "@type": "Offer",
+              "url": "https://www.viator.com/tours/Paris/Join-me-for-an-authentic-tour-with-a-Lyonnais/d479-5511082P1",
               "price": "35",
               "priceCurrency": "EUR",
               "availability": "https://schema.org/InStock"
@@ -392,7 +393,7 @@
             </div>
 
             <!-- Format 2: paid small-group tour, the in-depth version.
-                 TODO: put the JustGuide link in href (here, in the chooser below,
+                 TODO: replace the Viator link with the JustGuide one in href (here, in the chooser below,
                  in book/book-a-tour.html and in the JSON-LD in <head>). -->
             <div class="format-card format-card--deep">
               <span class="format-tag">The in-depth tour</span>
@@ -405,10 +406,10 @@
               <div class="format-price"><b>€35</b> per person</div>
               <a
                 class="cta-button format-cta"
-                href="#"
+                href="https://www.viator.com/tours/Paris/Join-me-for-an-authentic-tour-with-a-Lyonnais/d479-5511082P1"
                 target="_blank"
                 rel="noopener"
-                onclick="trackCta({category:'booking', platform:'justguide', label:'Book small-group tour (section)'})"
+                onclick="trackCta({category:'booking', platform:'viator', label:'Book small-group tour (section)'})"
               >Book your spot</a>
             </div>
           </div>
@@ -461,15 +462,15 @@
               </div>
             </div>
             <a
-              class="cta-button cta-button--food"
-              href="https://app.justguide.app/book/quentin-walking-tour/iconic-food-tour-by-the-eiffel-tower-full-meal-wine-pastries"
+              class="cta-button cta-button--food is-unavailable"
+              data-href="https://app.justguide.app/book/quentin-walking-tour/iconic-food-tour-by-the-eiffel-tower-full-meal-wine-pastries" aria-disabled="true"
               target="_blank"
               rel="noopener"
               onclick="trackCta({category:'booking', platform:'justguide', label:'Book food tour (section)'})"
             >
               <div style="display: flex; align-items: center; justify-content: center; gap: 0.6rem;">
-                <span>🍷</span>
-                <span>Book the food tour</span>
+                <span>😔</span>
+                <span>Sorry, not available yet</span>
               </div>
             </a>
           </div>
@@ -568,14 +569,14 @@
               </div>
             </a>
           </li>
-          <!-- Small-group tour (TODO: JustGuide link) -->
+          <!-- Small-group tour (TODO: Viator link for now, switch to JustGuide) -->
           <li>
             <a
               class="tour-option"
-              href="#"
+              href="https://www.viator.com/tours/Paris/Join-me-for-an-authentic-tour-with-a-Lyonnais/d479-5511082P1"
               target="_blank"
               rel="noopener"
-              onclick="trackCta({category:'booking', platform:'justguide', label:'Book small-group tour (chooser)'})"
+              onclick="trackCta({category:'booking', platform:'viator', label:'Book small-group tour (chooser)'})"
             >
               <div>
                 <div class="emoji">🔍</div>
@@ -594,8 +595,8 @@
           <!-- Food tour -->
           <li>
             <a
-              class="tour-option"
-              href="https://app.justguide.app/book/quentin-walking-tour/iconic-food-tour-by-the-eiffel-tower-full-meal-wine-pastries"
+              class="tour-option is-unavailable"
+              data-href="https://app.justguide.app/book/quentin-walking-tour/iconic-food-tour-by-the-eiffel-tower-full-meal-wine-pastries" aria-disabled="true"
               target="_blank"
               rel="noopener"
               onclick="trackCta({category:'booking', platform:'justguide', label:'Book food tour (chooser)'})"
@@ -604,7 +605,7 @@
                 <div class="emoji">🥐</div>
                 <div class="canal">
                   <span>Eiffel Tower Food Tour</span>
-                  <div class="canal-info">Full meal, wine &amp; pastries · 3h</div>
+                  <div class="canal-info">😔 Sorry, not available yet</div>
                 </div>
               </div>
               <div class="arrow">
@@ -978,12 +979,6 @@
             console.error("Could not copy text: ", err);
           });
       }
-
-      // Booking links not live yet (href="#"): do nothing on click
-      // instead of jumping to the top of the page.
-      document.querySelectorAll('a[href="#"]').forEach(function (a) {
-        a.addEventListener('click', function (e) { e.preventDefault(); });
-      });
 
       // On phone, reveal the sticky button only once the hero button
       // has scrolled out of view, so it reads as the same button going sticky.

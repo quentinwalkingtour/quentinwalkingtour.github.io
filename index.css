@@ -2275,3 +2275,13 @@ justify-content: baseline;
 @media (max-width: 600px) {
   .formats { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* Tour not bookable for now: the link is kept in data-href
+   (put it back in href and remove this class to reopen bookings). */
+.is-unavailable {
+  opacity: 0.55;
+  cursor: not-allowed;
+  animation: none !important;
+  filter: grayscale(0.6);
+}
+.is-unavailable:hover { transform: none !important; }

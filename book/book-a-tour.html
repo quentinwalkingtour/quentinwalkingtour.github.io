@@ -89,14 +89,14 @@
             </div>
           </a>
         </li>
-        <!-- Small-group tour (TODO: JustGuide link) -->
+        <!-- Small-group tour (TODO: Viator link for now, switch to JustGuide) -->
         <li>
           <a
             class="tour-option"
-            href="#"
+            href="https://www.viator.com/tours/Paris/Join-me-for-an-authentic-tour-with-a-Lyonnais/d479-5511082P1"
             target="_blank"
             rel="noopener"
-            onclick="trackCta({category:'booking', platform:'justguide', label:'Book small-group tour (book page)'})"
+            onclick="trackCta({category:'booking', platform:'viator', label:'Book small-group tour (book page)'})"
           >
             <div>
               <div class="emoji">🔍</div>
@@ -115,8 +115,8 @@
         <!-- Food tour -->
         <li>
           <a
-            class="tour-option"
-            href="https://app.justguide.app/book/quentin-walking-tour/iconic-food-tour-by-the-eiffel-tower-full-meal-wine-pastries"
+            class="tour-option is-unavailable"
+            data-href="https://app.justguide.app/book/quentin-walking-tour/iconic-food-tour-by-the-eiffel-tower-full-meal-wine-pastries" aria-disabled="true"
             target="_blank"
             rel="noopener"
             onclick="trackCta({category:'booking', platform:'justguide', label:'Book food tour (book page)'})"
@@ -125,7 +125,7 @@
               <div class="emoji">🥐</div>
               <div class="canal">
                 <span>Local Food Tour by the Eiffel Tower</span>
-                <div class="canal-info">Full meal, wine &amp; pastries · 3h · €89 per person</div>
+                <div class="canal-info">😔 Sorry, not available yet</div>
               </div>
             </div>
             <div class="arrow">
@@ -156,11 +156,6 @@
        dataLayer. Same event shape is reused on every page; see
        analytics_plan.md for the full taxonomy. -->
   <script>
-    // Booking links not live yet (href="#"): do nothing on click
-    document.querySelectorAll('a[href="#"]').forEach(function (a) {
-      a.addEventListener('click', function (e) { e.preventDefault(); });
-    });
-
     function trackCta({ category, platform, label }) {
       const params = new URLSearchParams(window.location.search);
       window.dataLayer = window.dataLayer || [];

@@ -1286,7 +1286,7 @@
       active.forEach(act => {
         const a = document.createElement('a');
         a.className = 'activity-feature';
-        a.href      = act.affiliateUrl || '#';
+        if (!act.unavailable) a.href = act.affiliateUrl || '#';
         a.target    = '_blank';
         a.rel       = 'noopener';
         a.addEventListener('click', () => {
@@ -1316,7 +1316,7 @@
             ${blogHtml}
             <div class="feature-foot">
               ${priceHtml}
-              <span class="feature-btn">${act.ctaLabel || 'Book'} →</span>
+              <span class="feature-btn">${act.unavailable ? '😔 Sorry, not available yet' : (act.ctaLabel || 'Book') + ' →'}</span>
             </div>
           </div>`;
         list.appendChild(a);

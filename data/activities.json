@@ -16,7 +16,8 @@
       "assets/images/food-tour/snails.jpg",
       "assets/images/food-tour/oysters.jpg"
     ],
-    "ctaLabel": "Book"
+    "ctaLabel": "Book",
+    "unavailable": true
   },
   {
     "emoji": "⚰️",
