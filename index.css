@@ -2180,13 +2180,13 @@ justify-content: baseline;
   padding: 1.2rem;
   border-radius: 1rem;
   background: var(--blanc);
-  border: 2px solid #30b0ff;
+  box-shadow: 0 4px 18px rgba(var(--bleu-fonce-rgb), 0.12);
 }
 
 .format-card--deep {
   background: var(--bleu-fonce);
-  border-color: var(--bleu-fonce);
   color: var(--blanc);
+  box-shadow: 0 8px 24px rgba(var(--bleu-fonce-rgb), 0.28);
 }
 
 .format-tag {
