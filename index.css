@@ -2268,11 +2268,6 @@ justify-content: baseline;
   animation: none;
 }
 
-.tour-text .format-meeting {
-  margin: 1rem 0 0;
-  font-size: 0.95rem;
-}
-
 @media (max-width: 1280px) and (min-width: 981px) {
   .formats { grid-template-columns: minmax(0, 1fr); }
 }
