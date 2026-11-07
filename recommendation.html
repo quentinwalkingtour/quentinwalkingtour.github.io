@@ -1121,7 +1121,7 @@
       guruwalk:      'https://www.guruwalk.com/en/walks/59922/reviews/new',
       google:        'https://g.page/r/CbXKLOzFaHEXEAE/review',
       freetour:      'https://www.freetour.com/paris/paris-time-machine-free-tour-a-locals-perspective',
-      // GetYourGuide activity 875834 is now the Iconic Eiffel Tower Food Tour listing
+      // GetYourGuide activity 875834 = the small-group walking tour (12 people max)
       getyourguide:  'https://www.getyourguide.com/scan-review-qr?activity_id=875834&utm_medium=offline&utm_source=supplier_review_link&utm_campaign=supplier_review_qrcode&utm_content=875834',
       viator:        'https://www.tripadvisor.com/UserReviewEdit-g187147-d28211242-Paris_Time_Machine_A_local_perspective_English_Walking_Tour-Paris_Ile_de_France.html',
       tripadvisorFood: 'https://www.tripadvisor.com/UserReviewEdit-g187147-d32876559-Iconic_Eiffel_Tower_Food_Tour_Oysters_Cheese_Wine_More-Paris_Ile_de_France.html',
@@ -1164,8 +1164,8 @@
       },
       hybrid: {
         reviews: [
-          { platform: 'guruwalk',    url: REVIEW_URLS.guruwalk },
           { platform: 'tripadvisor', url: REVIEW_URLS.viator },
+          { platform: 'guruwalk',    url: REVIEW_URLS.guruwalk },
           { platform: 'google',      url: REVIEW_URLS.google, note: 'No matter where you booked from!' },
         ],
         orText: 'Or any other platform you prefer!',
@@ -1286,7 +1286,7 @@
       active.forEach(act => {
         const a = document.createElement('a');
         a.className = 'activity-feature';
-        a.href      = act.affiliateUrl || '#';
+        if (!act.unavailable) a.href = act.affiliateUrl || '#';
         a.target    = '_blank';
         a.rel       = 'noopener';
         a.addEventListener('click', () => {
@@ -1316,7 +1316,7 @@
             ${blogHtml}
             <div class="feature-foot">
               ${priceHtml}
-              <span class="feature-btn">${act.ctaLabel || 'Book'} →</span>
+              <span class="feature-btn">${act.unavailable ? '😔 Sorry, not available yet' : (act.ctaLabel || 'Book') + ' →'}</span>
             </div>
           </div>`;
         list.appendChild(a);
