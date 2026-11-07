@@ -2179,17 +2179,14 @@ justify-content: baseline;
   gap: 0.55rem;
   padding: 1.2rem;
   border-radius: 1rem;
-  background: white;
-  border: 1px solid rgba(var(--bleu-fonce-rgb), 0.12);
-  box-shadow: 0 4px 16px rgba(var(--bleu-fonce-rgb), 0.07);
+  background: var(--blanc);
+  border: 2px solid #30b0ff;
 }
 
 .format-card--deep {
-  background-color: var(--bleu-fonce);
-  background-image: radial-gradient(80% 90% at 100% 0%, rgba(193, 18, 31, 0.35), transparent 65%);
-  border-color: transparent;
+  background: var(--bleu-fonce);
+  border-color: var(--bleu-fonce);
   color: var(--blanc);
-  box-shadow: 0 8px 24px rgba(var(--bleu-fonce-rgb), 0.28);
 }
 
 .format-tag {
@@ -2200,22 +2197,30 @@ justify-content: baseline;
   text-transform: uppercase;
   padding: 0.22rem 0.5rem;
   border-radius: 0.3rem;
-  background: var(--blanc-fonce);
+  background: rgba(48, 176, 255, 0.15);
   color: var(--bleu-fonce);
 }
 
 .format-card--deep .format-tag {
-  background: var(--or);
+  background: rgba(255, 209, 102, 0.18);
+  color: var(--or);
 }
 
+/* title takes the same gradient as the card's button */
 .tour-text h3.format-title {
   margin: 0;
   font-size: 1.3rem !important; /* global h3 rule sets 2rem !important */
   line-height: 1.25;
   text-wrap: balance;
+  background-image: linear-gradient(45deg, #30b0ff, #19c99d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
-.format-card--deep .format-title { color: white; }
+.format-card--deep h3.format-title {
+  background-image: linear-gradient(45deg, var(--or), var(--orange));
+}
 
 .tour-text .format-desc {
   margin: 0;
@@ -2225,11 +2230,12 @@ justify-content: baseline;
 
 .format-card--deep .format-desc { color: rgba(253, 240, 213, 0.85); }
 
+/* one fact per line */
 .format-facts {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.3rem 1.1rem;
-  margin: 0;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin: 0.2rem 0 0;
   padding: 0;
   font-size: 0.92rem;
   font-weight: 700;
@@ -2239,19 +2245,6 @@ justify-content: baseline;
   display: flex;
   gap: 0.4rem;
   align-items: center;
-}
-
-.format-price {
-  font-size: 0.92rem;
-  color: rgba(253, 240, 213, 0.85);
-}
-
-.format-price b {
-  font-size: 1.6rem;
-  font-weight: 800;
-  color: var(--or);
-  margin-right: 0.2rem;
-  font-variant-numeric: tabular-nums;
 }
 
 /* push both buttons to the bottom so they line up */
