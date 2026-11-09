@@ -1,0 +1,62 @@
+[
+  {
+    "id": "h01",
+    "hostel": "",
+    "destination": "/",
+    "active": true
+  },
+  {
+    "id": "h02",
+    "hostel": "",
+    "destination": "/",
+    "active": true
+  },
+  {
+    "id": "h03",
+    "hostel": "",
+    "destination": "/",
+    "active": true
+  },
+  {
+    "id": "h04",
+    "hostel": "",
+    "destination": "/",
+    "active": true
+  },
+  {
+    "id": "h05",
+    "hostel": "",
+    "destination": "/",
+    "active": true
+  },
+  {
+    "id": "h06",
+    "hostel": "",
+    "destination": "/",
+    "active": true
+  },
+  {
+    "id": "h07",
+    "hostel": "",
+    "destination": "/",
+    "active": true
+  },
+  {
+    "id": "h08",
+    "hostel": "",
+    "destination": "/",
+    "active": true
+  },
+  {
+    "id": "h09",
+    "hostel": "",
+    "destination": "/",
+    "active": true
+  },
+  {
+    "id": "h10",
+    "hostel": "",
+    "destination": "/",
+    "active": true
+  }
+]
