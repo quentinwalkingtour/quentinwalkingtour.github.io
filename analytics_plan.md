@@ -204,3 +204,15 @@ GA4 → **Admin** → **Events** → find `cta_click` in the list (appears after
 - ✅ §4 (code instrumentation) — implemented and verified with an automated click-through test (Playwright) confirming `cta_click` fires with correct `cta_category`/`cta_platform`/`guide`/`tour_type`/`source` on every button in the table above.
 - ⬜ §7 (GTM/GA4 configuration) — manual dashboard work, still to be done by you. Steps 0–5 are GTM; Step 6 is GA4; Steps 7–8 are optional/reporting.
 - ⬜ §5 (propagating `guide` to `index.html`/booking flyers) — open decision, not yet made.
+
+---
+
+## Hostel posters (QR codes) — `/h/h01` … `/h/h10`
+
+- Config: `h/posters.json` (id, optional hostel, `destination`, active). Run `python generate_posters.py` (needs `pip install qrcode pillow`) to regenerate `h/*.html` and `h/qr/*.png`.
+- Mapping ID → hostel: Google Sheet "Affiches auberges — suivi QR codes".
+- Flow: QR → `/h/h07` → pushes `poster_scan` (poster_id) → redirects to `destination?utm_source=hostel&utm_medium=poster&utm_campaign=h07&ref=h07`.
+- GA4 reads the UTMs natively (Traffic acquisition → Session campaign = h07). This is the reliable count; `poster_scan` may be lost because the redirect is instant.
+- `index.html` stores `ref` in sessionStorage (`poster_id`, `tour_source=poster`), adds `poster_id` to `cta_click`, and appends `ref` + `utm_*` to every JustGuide booking link.
+- **JustGuide (to do later):** read `ref` / `utm_campaign` on the booking page and save it with the booking → real bookings per hostel.
+- To retarget a poster after printing, change its `destination` (e.g. `/book/paris-time-machine`) and regenerate — the QR stays the same.

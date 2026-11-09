@@ -307,8 +307,40 @@
           guide:        params.get('guide') || 'unknown',
           tour_type:    params.get('type') || 'n/a',
           source:       sessionStorage.getItem('tour_source') || 'direct',
+          poster_id:    sessionStorage.getItem('poster_id') || 'none',
         });
       }
+
+      // Hostel poster attribution (see generate_posters.py).
+      // ?ref=h07 → remembered for the session, then forwarded to every
+      // JustGuide booking link (ref + utm_*) so the booking itself can be
+      // attributed to the poster once JustGuide reads those params.
+      (function () {
+        let ref = null;
+        try {
+          ref = new URLSearchParams(window.location.search).get('ref');
+          if (ref && /^[a-z0-9-]{1,20}$/i.test(ref)) {
+            sessionStorage.setItem('poster_id', ref.toLowerCase());
+            sessionStorage.setItem('tour_source', 'poster');
+          }
+          ref = sessionStorage.getItem('poster_id');
+        } catch (e) {}
+        if (!ref) return;
+        document.addEventListener('DOMContentLoaded', function () {
+          document.querySelectorAll('a[href*="justguide.app"], a[data-href*="justguide.app"]').forEach(function (a) {
+            ['href', 'data-href'].forEach(function (attr) {
+              const v = a.getAttribute(attr);
+              if (!v || v.indexOf('justguide.app') === -1) return;
+              const u = new URL(v);
+              u.searchParams.set('ref', ref);
+              u.searchParams.set('utm_source', 'hostel');
+              u.searchParams.set('utm_medium', 'poster');
+              u.searchParams.set('utm_campaign', ref);
+              a.setAttribute(attr, u.toString());
+            });
+          });
+        });
+      })();
     </script>
   </head>
 
