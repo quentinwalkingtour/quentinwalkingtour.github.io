@@ -1,7 +1,8 @@
 """
 Hostel poster redirect generator — reads h/posters.json and writes:
   - h/{id}.html      short redirect page (QR target: timemachinetours.fr/h/{id})
-  - h/qr/{ID}.png    print-ready QR code for that page
+  - h/qr/{ID}.png    QR code for that page (raster, ~1500px)
+  - h/qr/{ID}.svg    same QR code as vector (best for print / Canva)
 
 Each redirect page:
   - pushes a 'poster_scan' event to GTM's dataLayer (poster_id, hostel)
@@ -76,6 +77,26 @@ def make_qr(data, out):
     qr.add_data(data)
     qr.make(fit=True)
     qr.make_image(fill_color='black', back_color='white').save(out)
+
+    # Vector version: one horizontal stroke per run of dark modules.
+    m = qr.get_matrix()
+    n = len(m)
+    d = []
+    for y, row in enumerate(m):
+        x = 0
+        while x < n:
+            if row[x]:
+                s = x
+                while x < n and row[x]:
+                    x += 1
+                d.append(f'M{s} {y}h{x - s}')
+            else:
+                x += 1
+    svg = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {n} {n}" '
+           f'width="1000" height="1000" shape-rendering="crispEdges">'
+           f'<rect width="{n}" height="{n}" fill="#fff"/>'
+           f'<path stroke="#000" transform="translate(0 .5)" d="{"".join(d)}"/></svg>\n')
+    out.with_suffix('.svg').write_text(svg, encoding='utf-8')
 
 
 def main():
