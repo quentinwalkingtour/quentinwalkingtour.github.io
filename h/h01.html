@@ -21,9 +21,10 @@
     } catch (e) {}
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
-      event:     'poster_scan',
-      poster_id: 'h01',
-      hostel:    "",
+      event:   'qr_scan',
+      qr_id:   'h01',
+      qr_type: 'poster',
+      label:   "",
     });
     window.location.replace('/?utm_source=hostel&utm_medium=poster&utm_campaign=h01&ref=h01');
   </script>

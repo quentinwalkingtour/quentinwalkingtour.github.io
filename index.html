@@ -311,19 +311,29 @@
         });
       }
 
-      // Hostel poster attribution (see generate_posters.py).
-      // ?ref=h07 → remembered for the session, then forwarded to every
-      // JustGuide booking link (ref + utm_*) so the booking itself can be
-      // attributed to the poster once JustGuide reads those params.
+      // Printed QR attribution — posters (h01), flyers (f01), business
+      // cards (c01); see generate_qr_codes.py.
+      // ?ref=f01&utm_* → remembered for the session, then forwarded to every
+      // JustGuide booking link so the booking itself can be attributed to
+      // the printed item once JustGuide reads those params.
       (function () {
-        let ref = null;
+        const SAFE = /^[a-z0-9_-]{1,30}$/i;
+        let ref = null, utm = {};
         try {
-          ref = new URLSearchParams(window.location.search).get('ref');
-          if (ref && /^[a-z0-9-]{1,20}$/i.test(ref)) {
-            sessionStorage.setItem('poster_id', ref.toLowerCase());
-            sessionStorage.setItem('tour_source', 'poster');
+          const p = new URLSearchParams(window.location.search);
+          const r = p.get('ref');
+          if (r && SAFE.test(r)) {
+            sessionStorage.setItem('poster_id', r.toLowerCase());
+            ['utm_source', 'utm_medium', 'utm_campaign'].forEach(function (k) {
+              const v = p.get(k);
+              if (v && SAFE.test(v)) sessionStorage.setItem(k, v);
+            });
+            sessionStorage.setItem('tour_source', sessionStorage.getItem('utm_medium') || 'print');
           }
           ref = sessionStorage.getItem('poster_id');
+          ['utm_source', 'utm_medium', 'utm_campaign'].forEach(function (k) {
+            utm[k] = sessionStorage.getItem(k);
+          });
         } catch (e) {}
         if (!ref) return;
         document.addEventListener('DOMContentLoaded', function () {
@@ -333,9 +343,9 @@
               if (!v || v.indexOf('justguide.app') === -1) return;
               const u = new URL(v);
               u.searchParams.set('ref', ref);
-              u.searchParams.set('utm_source', 'hostel');
-              u.searchParams.set('utm_medium', 'poster');
-              u.searchParams.set('utm_campaign', ref);
+              u.searchParams.set('utm_source', utm.utm_source || 'print');
+              u.searchParams.set('utm_medium', utm.utm_medium || 'print');
+              u.searchParams.set('utm_campaign', utm.utm_campaign || ref);
               a.setAttribute(attr, u.toString());
             });
           });
