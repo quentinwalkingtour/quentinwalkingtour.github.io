@@ -207,12 +207,20 @@ GA4 → **Admin** → **Events** → find `cta_click` in the list (appears after
 
 ---
 
-## Hostel posters (QR codes) — `/h/h01` … `/h/h10`
+## Printed QR codes — posters `/h/h01`, flyers `/f/f01`, business cards `/c/c01`
 
-- Config: `h/posters.json` (id, optional hostel, `destination`, active). Run `python generate_posters.py` (needs `pip install qrcode pillow`) to regenerate `h/*.html` and `h/qr/*.png`.
-- Mapping ID → hostel: Google Sheet "Affiches auberges — suivi QR codes".
-- Flow: QR → `/h/h07` → pushes `poster_scan` (poster_id) → redirects to `destination?utm_source=hostel&utm_medium=poster&utm_campaign=h07&ref=h07`.
-- GA4 reads the UTMs natively (Traffic acquisition → Session campaign = h07). This is the reliable count; `poster_scan` may be lost because the redirect is instant.
-- `index.html` stores `ref` in sessionStorage (`poster_id`, `tour_source=poster`), adds `poster_id` to `cta_click`, and appends `ref` + `utm_*` to every JustGuide booking link.
-- **JustGuide (to do later):** read `ref` / `utm_campaign` on the booking page and save it with the booking → real bookings per hostel.
-- To retarget a poster after printing, change its `destination` (e.g. `/book/paris-time-machine`) and regenerate — the QR stays the same.
+- Config: `qr-codes.json` (id, `type` = poster | flyer | card, optional `label`, `destination`, active). Run `python generate_qr_codes.py` (needs `pip install qrcode pillow`) to regenerate `{h,f,c}/*.html` and `{h,f,c}/qr/*.png|svg`.
+- Mapping ID → hostel / batch: Google Sheet "Affiches auberges — suivi QR codes".
+
+| Type | ID | QR target | utm_source | utm_medium |
+|---|---|---|---|---|
+| Hostel poster | h01… | `/h/h01` | hostel | poster |
+| Flyer | f01… | `/f/f01` | handout | flyer |
+| Business card | c01… | `/c/c01` | handout | card |
+
+- Flow: QR → `/f/f01` → pushes `qr_scan` (qr_id, qr_type, label) → redirects to `destination?utm_source=…&utm_medium=…&utm_campaign=f01&ref=f01`.
+- GA4 reads the UTMs natively (Traffic acquisition → Session campaign = f01, or Session medium = flyer to compare supports). This is the reliable count; `qr_scan` may be lost because the redirect is instant.
+- `index.html` stores `ref` + `utm_*` in sessionStorage (`poster_id`, `tour_source` = medium), adds `poster_id` to `cta_click`, and appends `ref` + the same `utm_*` to every JustGuide booking link.
+- **JustGuide (to do later):** read `ref` / `utm_*` on the booking page and save them with the booking → real bookings per poster / flyer / card.
+- To retarget a printed code, change its `destination` (e.g. `/book/paris-time-machine`) and regenerate — the QR stays the same.
+- New code: add an entry to `qr-codes.json` (e.g. `{"id": "f02", "type": "flyer", ...}`) and regenerate.
